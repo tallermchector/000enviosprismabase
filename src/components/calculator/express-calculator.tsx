@@ -11,7 +11,7 @@ import RouteMap from './route-map';
 import { AddressAutocomplete } from './address-autocomplete';
 import { useToast } from '@/hooks/use-toast';
 import { quoteShipment } from '@/app/ordenes/actions';
-import { ServiceTypeEnum } from '../../../generated/prisma/enums.ts';
+import { ServiceTypeEnum } from '../../../generated/prisma/enums';
 import type { QuoteDetails } from '@/types/order-actions';
 
 
@@ -20,7 +20,7 @@ export default function ExpressCalculator() {
   const [destination, setDestination] = useState('');
   const [isCalculating, setIsCalculating] = useState(false);
   const [quoteDetails, setQuoteDetails] = useState<QuoteDetails | null>(null);
-  
+
   const { toast } = useToast();
 
   const mapCoordinates = useMemo(() => {
@@ -43,29 +43,29 @@ export default function ExpressCalculator() {
     }
     setIsCalculating(true);
     setQuoteDetails(null);
-    
+
     const result = await quoteShipment({
-        originAddress: origin,
-        destinationAddress: destination,
-        serviceType: ServiceTypeEnum.EXPRESS,
+      originAddress: origin,
+      destinationAddress: destination,
+      serviceType: ServiceTypeEnum.EXPRESS,
     });
 
     setIsCalculating(false);
 
     if (result.success && result.data) {
-        setQuoteDetails(result.data);
-        const priceText = result.data.price !== null ? `$${result.data.price.toLocaleString('es-AR')}` : "Consultar";
-        toast({
-            title: "Cotización Exitosa",
-            description: `Distancia: ${result.data.distanceText}. Precio: ${priceText}`,
-            variant: "default",
-        });
+      setQuoteDetails(result.data);
+      const priceText = result.data.price !== null ? `$${result.data.price.toLocaleString('es-AR')}` : "Consultar";
+      toast({
+        title: "Cotización Exitosa",
+        description: `Distancia: ${result.data.distanceText}. Precio: ${priceText}`,
+        variant: "default",
+      });
     } else {
-        toast({
-            variant: "destructive",
-            title: "Error de Cálculo",
-            description: result.error || "No se pudo calcular la ruta o el precio. Verifica las direcciones o inténtalo más tarde.",
-        });
+      toast({
+        variant: "destructive",
+        title: "Error de Cálculo",
+        description: result.error || "No se pudo calcular la ruta o el precio. Verifica las direcciones o inténtalo más tarde.",
+      });
     }
   };
 
@@ -131,7 +131,7 @@ export default function ExpressCalculator() {
                 destination={mapCoordinates.destination}
               />
             )}
-            
+
             {quoteDetails && !isCalculating && (
               <Card className="mt-6 md:mt-8 bg-primary/10 border-primary/20 rounded-2xl overflow-hidden backdrop-blur-sm">
                 <CardHeader className="pb-4">
@@ -168,8 +168,8 @@ export default function ExpressCalculator() {
                   )}
                 </CardContent>
                 <CardFooter className="flex flex-col sm:flex-row gap-3 pt-4 md:pt-6">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-slate-900 font-display font-bold uppercase tracking-tight text-label-md rounded-xl"
                     disabled={quoteDetails.price === null}
                     onClick={() => alert('Funcionalidad "Confirmar Envío" pendiente de implementación.')}
