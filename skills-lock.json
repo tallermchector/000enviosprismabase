@@ -30,6 +30,12 @@
       "sourceType": "github",
       "skillPath": "prisma-upgrade-v7/SKILL.md",
       "computedHash": "075d1fc3156d5593c3e9a559ebb07f82a2991db07125ff9df16ad90270f5c584"
+    },
+    "ui-ux-pro-max": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ui-ux-pro-max/SKILL.md",
+      "computedHash": "6337038fe1fe6bbe1b9f252ab678ee575859190bab6f0f246f4061824eb40875"
     }
   }
 }
