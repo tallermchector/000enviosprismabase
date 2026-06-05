@@ -1,8 +1,3 @@
-onlyBuiltDependencies:
-  - '@firebase/util'
-  - '@prisma/engines'
-  - esbuild
-  - prisma
-  - protobufjs
-  - sharp
-  - unrs-resolver
+packages:
+  - 'apps/*'
+  - 'packages/*'
