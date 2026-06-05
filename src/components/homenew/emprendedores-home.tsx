@@ -57,7 +57,7 @@ export const EmprendedoresHome = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-3 px-3 py-1.5 rounded-md bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.4em] mb-10 uppercase"
+              className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.4em] mb-10 uppercase"
             >
               <Building2 size={16} className="animate-pulse" /> Soluciones Corporativas y PyME
             </motion.div>
@@ -66,10 +66,10 @@ export const EmprendedoresHome = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-headline-lg-mobile md:text-display-lg text-slate-900 font-bold uppercase"
+              className="text-headline-lg-mobile md:text-display-lg text-foreground font-bold uppercase"
             >
               Potencia tu <span className="text-primary">Logística</span> <br />
-              con <span className="text-secondary">DosRuedas</span>
+              con <span className="text-tertiary">DosRuedas</span>
             </motion.h2>
           </div>
           <motion.div
@@ -77,19 +77,19 @@ export const EmprendedoresHome = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:border-l lg:border-slate-200 lg:pl-12"
+            className="lg:border-l lg:border-outline-variant lg:pl-12"
           >
-            <p className="text-slate-600 text-body-lg mb-10">
+            <p className="text-muted-foreground text-body-lg mb-10">
               Transformamos la última milla de tu empresa con una flota ágil y especializada de alta precisión. Beneficios exclusivos para clientes corporativos.
             </p>
             <div className="flex gap-8">
               <div className="flex flex-col gap-1">
-                <span className="text-secondary text-headline-md font-bold uppercase">500+</span>
-                <span className="text-label-sm text-slate-500 uppercase">Empresas</span>
+                <span className="text-primary text-headline-md font-bold uppercase">500+</span>
+                <span className="text-label-sm text-muted-foreground uppercase">Empresas</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-secondary text-headline-md font-bold uppercase">24/7</span>
-                <span className="text-label-sm text-slate-500 uppercase">Operativa</span>
+                <span className="text-tertiary text-headline-md font-bold uppercase">24/7</span>
+                <span className="text-label-sm text-muted-foreground uppercase">Operativa</span>
               </div>
             </div>
           </motion.div>
@@ -104,7 +104,7 @@ export const EmprendedoresHome = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -10 }}
-              className="group relative h-full rounded-lg overflow-hidden border border-slate-100 bg-white hover:border-primary/30 transition-all duration-500 shadow-md hover:shadow-lg flex flex-col justify-between"
+              className="group relative h-full rounded-xl overflow-hidden border border-outline-variant bg-card hover:border-primary/40 transition-all duration-500 shadow-md hover:shadow-lg flex flex-col justify-between"
             >
               <div className="relative w-full h-48 sm:h-56">
                 <Image
@@ -114,10 +114,10 @@ export const EmprendedoresHome = () => {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
                 
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-md bg-white border border-slate-200 text-[9px] font-black text-primary uppercase tracking-[0.2em] shadow-sm">
+                  <span className="px-3 py-1 rounded-full bg-card border border-outline-variant text-[9px] font-black text-primary uppercase tracking-[0.2em] shadow-sm">
                     {solution.badge}
                   </span>
                 </div>
@@ -125,21 +125,21 @@ export const EmprendedoresHome = () => {
 
               <div className="p-8 flex flex-col flex-grow justify-between">
                 <div>
-                  <div className="w-12 h-12 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center text-primary mb-6 transition-all duration-500 group-hover:bg-primary group-hover:text-white shadow-sm">
+                  <div className="w-12 h-12 rounded-lg bg-surface-variant/40 border border-outline-variant flex items-center justify-center text-primary mb-6 transition-all duration-500 group-hover:bg-primary group-hover:text-primary-foreground shadow-sm">
                     <solution.icon size={24} />
                   </div>
 
-                  <h3 className="text-headline-md text-slate-900 font-semibold mb-4 uppercase group-hover:text-primary transition-colors">
+                  <h3 className="text-headline-md text-foreground font-semibold mb-4 uppercase group-hover:text-primary transition-colors">
                     {solution.title}
                   </h3>
 
-                  <p className="text-slate-600 text-body-md mb-6">
+                  <p className="text-muted-foreground text-body-md mb-6">
                     {solution.description}
                   </p>
 
                   <div className="space-y-3 mb-8">
                     {solution.features.map((feature, fIdx) => (
-                      <div key={fIdx} className="flex items-center gap-3 text-label-sm text-slate-600">
+                      <div key={fIdx} className="flex items-center gap-3 text-label-sm text-muted-foreground">
                         <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                           <CheckCircle2 size={12} className="text-primary" />
                         </div>
@@ -151,7 +151,7 @@ export const EmprendedoresHome = () => {
 
                 <Link
                   href={solution.link}
-                  className="group/btn w-full py-3 rounded-md bg-slate-100 border border-slate-200 text-primary text-label-md text-center flex items-center justify-center gap-4 hover:bg-primary hover:text-white transition-all duration-300 uppercase shadow-sm active:scale-95 font-semibold"
+                  className="group/btn w-full py-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 text-label-md text-center flex items-center justify-center gap-4 uppercase shadow-sm active:scale-95 font-semibold"
                 >
                   CONFIGURAR PLAN <ArrowRight size={18} className="group-hover/btn:translate-x-2 transition-transform" />
                 </Link>
@@ -162,7 +162,7 @@ export const EmprendedoresHome = () => {
       </div>
 
       {/* Dynamic Floor Element */}
-      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-slate-200 to-transparent opacity-50" />
+      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent opacity-50" />
     </section>
   );
 };

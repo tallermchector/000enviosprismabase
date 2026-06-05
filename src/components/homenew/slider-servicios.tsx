@@ -12,7 +12,7 @@ const services = [
     bajada: "Prioridad absoluta y certeza total.",
     desc: "Diseñado para operaciones de alta criticidad horaria. Vos elegís el rango exacto de entrega con solo 2 horas de anticipación. Garantizamos precisión en el tiempo de tu cliente final.",
     icon: <Zap />,
-    theme: { bg: "bg-red-50", text: "text-red-600", border: "border-red-100", accent: "text-red-600" },
+    theme: { bg: "bg-error-container", text: "text-on-error-container", border: "border-error-container/30", accent: "text-error" },
     href: "/servicios/envios-express",
     badge: "ALTA PRIORIDAD",
     buttonText: "Solicitar Express"
@@ -22,7 +22,7 @@ const services = [
     bajada: "Máxima rentabilidad y eficiencia en ruteo masivo.",
     desc: "Variabilizá tus costos logísticos. Ingresá tus pedidos antes de las 13:00 hs y te garantizamos la entrega en el día antes de las 19:00 hs.",
     icon: <Clock />,
-    theme: { bg: "bg-amber-50", text: "text-amber-700", border: "border-amber-100", accent: "text-amber-700" },
+    theme: { bg: "bg-secondary-container", text: "text-on-secondary-container", border: "border-secondary-container/30", accent: "text-secondary" },
     href: "/servicios/envios-lowcost",
     badge: "RENTABILIDAD",
     buttonText: "Ahorrá con LowCost"
@@ -32,7 +32,7 @@ const services = [
     bajada: "Potenciá tu reputación al máximo.",
     desc: "Somos expertos en MercadoLibre. Despachá hasta las 15:00 hs y nosotros cumplimos tus acuerdos de nivel de servicio (SLAs) Same-Day para que tu termómetro siempre esté en verde.",
     icon: <Package />,
-    theme: { bg: "bg-blue-50", text: "text-blue-600", border: "border-blue-100", accent: "text-blue-600" },
+    theme: { bg: "bg-primary-container", text: "text-on-primary-container", border: "border-primary-container/30", accent: "text-primary" },
     href: "/servicios/enviosflex",
     badge: "MERCADOLIBRE",
     buttonText: "Activar Envíos Flex"
@@ -42,7 +42,7 @@ const services = [
     bajada: "Tercerización integral y cuentas corrientes.",
     desc: "Más que un envío, somos tu depósito y tu equipo. Soluciones escalables para PyMEs y plataformas digitales, con facturación mensual centralizada.",
     icon: <Truck />,
-    theme: { bg: "bg-emerald-50", text: "text-emerald-700", border: "border-emerald-100", accent: "text-emerald-700" },
+    theme: { bg: "bg-tertiary-container", text: "text-on-tertiary-container", border: "border-tertiary-container/30", accent: "text-tertiary" },
     href: "/servicios/plan-emprendedores",
     badge: "INTEGRAL",
     buttonText: "Hablar con un asesor"
@@ -65,10 +65,10 @@ export default function SliderServicios() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-md bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.25em] mb-8 uppercase font-sans">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.25em] mb-8 uppercase font-sans">
               <LayoutGrid size={12} className="text-primary animate-pulse" /> CAPACIDADES DINÁMICAS
             </div>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 uppercase tracking-tighter mb-4">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground uppercase tracking-tighter mb-4">
               SOLUCIONES A <span className="text-primary">MEDIDA</span>
             </h2>
           </motion.div>
@@ -78,9 +78,9 @@ export default function SliderServicios() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-md lg:border-l lg:border-slate-200 lg:pl-10"
+            className="max-w-md lg:border-l lg:border-outline-variant lg:pl-10"
           >
-            <p className="text-slate-600 text-lg md:text-xl leading-relaxed">
+            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
               Hemos redefinido los estándares de la logística urbana para ofrecerte una ventaja competitiva real en un mercado en constante evolución.
             </p>
           </motion.div>
@@ -95,10 +95,10 @@ export default function SliderServicios() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -10 }}
-              className="group p-6 md:p-8 rounded-lg bg-white border border-slate-100 hover:border-primary/20 transition-all duration-500 relative overflow-hidden flex flex-col min-h-[420px] h-auto shadow-md hover:shadow-lg"
+              className="group p-6 md:p-8 rounded-xl bg-card border border-outline-variant hover:border-primary/40 transition-all duration-500 relative overflow-hidden flex flex-col min-h-[420px] h-auto shadow-md hover:shadow-lg"
             >
               {/* Internal Accent Light */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 blur-[40px] rounded-full group-hover:bg-primary/5 transition-all duration-700" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 blur-[40px] rounded-full group-hover:bg-primary/5 transition-all duration-700" />
 
               <div
                 className={cn(
@@ -113,34 +113,34 @@ export default function SliderServicios() {
 
               <div className="mb-auto">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em]">{service.badge}</span>
-                  <div className="h-px w-6 bg-slate-100" />
+                  <span className="text-[9px] font-black text-muted-foreground/80 uppercase tracking-[0.3em]">{service.badge}</span>
+                  <div className="h-px w-6 bg-outline-variant/30" />
                 </div>
-                <h3 className="font-display text-2xl font-bold text-slate-900 mb-1 uppercase tracking-tight group-hover:text-primary transition-colors leading-tight">
+                <h3 className="font-display text-2xl font-bold text-foreground mb-1 uppercase tracking-tight group-hover:text-primary transition-colors leading-tight">
                   {service.title}
                 </h3>
                 <p className={cn("text-[10px] font-black uppercase tracking-[0.2em] mb-4", service.theme.accent)}>
                   {service.bajada}
                 </p>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {service.desc}
                 </p>
               </div>
 
               <Link
                 href={service.href}
-                className="flex items-center gap-3 text-slate-600 text-xs font-semibold uppercase tracking-[0.2em] hover:text-primary transition-all pt-4 mt-auto border-t border-slate-100"
+                className="flex items-center gap-3 text-muted-foreground text-xs font-semibold uppercase tracking-[0.2em] hover:text-primary transition-all pt-4 mt-auto border-t border-outline-variant/30"
               >
                 {service.buttonText} <ChevronRight size={16} />
               </Link>
 
               {/* Decorative Side Accent */}
-              <div className="absolute bottom-10 -right-1 w-[2px] h-20 bg-gradient-to-b from-transparent via-slate-100 to-transparent group-hover:via-primary/50 transition-all" />
+              <div className="absolute bottom-10 -right-1 w-[2px] h-20 bg-gradient-to-b from-transparent via-outline-variant/30 to-transparent group-hover:via-primary/55 transition-all" />
 
               {/* Specific Visual for certain cards */}
               {idx === 0 && (
                 <div className="absolute bottom-20 right-10 opacity-5 group-hover:opacity-10 transition-opacity">
-                  <Zap size={100} className="text-slate-400" />
+                  <Zap size={100} className="text-muted-foreground/20" />
                 </div>
               )}
             </motion.div>
@@ -152,20 +152,20 @@ export default function SliderServicios() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="mt-24 flex flex-col items-center gap-8 py-12 border-t border-slate-200"
+          className="mt-24 flex flex-col items-center gap-8 py-12 border-t border-outline-variant"
         >
           <div className="flex items-center gap-10">
-            <div className="flex items-center gap-3 text-slate-400">
+            <div className="flex items-center gap-3 text-muted-foreground">
               <Zap size={14} />
               <span className="text-[9px] font-black tracking-[0.5em] uppercase">MÁXIMO PODER</span>
             </div>
-            <div className="w-2 h-2 rounded-full bg-slate-300" />
-            <div className="flex items-center gap-3 text-slate-400">
+            <div className="w-2 h-2 rounded-full bg-outline-variant" />
+            <div className="flex items-center gap-3 text-muted-foreground">
               <Globe size={14} />
               <span className="text-[9px] font-black tracking-[0.5em] uppercase">INFRAESTRUCTURA TOTAL</span>
             </div>
           </div>
-          <p className="text-slate-400 text-[8px] font-black uppercase tracking-[1em] text-center max-w-lg leading-loose opacity-60">
+          <p className="text-muted-foreground text-[8px] font-black uppercase tracking-[1em] text-center max-w-lg leading-loose opacity-60">
             ENGINEERING LOGISTICS FOR THE MODERN ERA OF COMMERCE IN MAR DEL PLATA
           </p>
         </motion.div>

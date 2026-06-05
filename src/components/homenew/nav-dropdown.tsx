@@ -31,7 +31,7 @@ export function NavDropdown({ group }: NavDropdownProps) {
             "relative flex cursor-pointer items-center space-x-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200",
             groupIsActive
               ? "bg-primary/10 text-primary border border-primary/20"
-              : "text-slate-700 hover:text-primary hover:bg-slate-200/50",
+              : "text-muted-foreground hover:text-primary hover:bg-primary/5",
           )}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -42,13 +42,13 @@ export function NavDropdown({ group }: NavDropdownProps) {
           {groupIsActive && (
             <motion.div
               layoutId="active-indicator"
-              className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary shadow-[0_0_8px_rgba(30,58,138,0.5)]"
+              className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary shadow-[0_0_8px_rgba(103,80,164,0.5)]"
               transition={{ type: "spring", stiffness: 380, damping: 30 }}
             />
           )}
         </motion.div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="mt-2 w-64 bg-white border-slate-200 text-slate-800 shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-2">
+      <DropdownMenuContent className="mt-2 w-64 bg-card border border-outline-variant text-foreground shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-2">
         {group.items.map((item: any) => {
           const ItemIcon = item.icon;
           return (
@@ -57,12 +57,12 @@ export function NavDropdown({ group }: NavDropdownProps) {
                 href={item.href}
                 className={cn(
                   "flex items-center space-x-4",
-                  isActive(item.href) ? "text-primary font-bold" : "text-slate-700",
+                  isActive(item.href) ? "text-primary font-bold" : "text-muted-foreground",
                 )}
               >
                 <div className={cn(
                   "w-8 h-8 rounded-lg flex items-center justify-center transition-colors",
-                  isActive(item.href) ? "bg-primary/10 text-primary" : "bg-slate-100 text-slate-500"
+                  isActive(item.href) ? "bg-primary/10 text-primary" : "bg-surface-variant text-muted-foreground"
                 )}>
                   {ItemIcon && <ItemIcon className="h-4 w-4" />}
                 </div>

@@ -77,17 +77,17 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
     <div className="lg:hidden">
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="text-slate-800 hover:bg-slate-100 w-12 h-12 rounded-lg" aria-label="Abrir menú de navegación">
+          <Button variant="ghost" size="icon" className="text-foreground hover:bg-surface-variant w-12 h-12 rounded-lg" aria-label="Abrir menú de navegación">
             <Menu className="h-7 w-7" />
             <span className="sr-only">Abrir menú</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="right" className="w-[320px] bg-white border-l border-slate-100 text-slate-900 pt-12 p-6 shadow-xl">
+        <SheetContent side="right" className="w-[320px] bg-card border-l border-outline-variant text-foreground pt-12 p-6 shadow-xl">
           <SheetHeader className="mb-12 flex flex-row items-center space-x-4">
             <div className="relative w-10 h-10 rounded-lg flex items-center justify-center">
               <Image src="/LogoEnviosDosRuedas.webp" alt="Logo Dos Ruedas" fill className="object-contain" sizes="40px" />
             </div>
-            <SheetTitle className="text-slate-900 font-display font-bold text-xl tracking-tighter uppercase whitespace-nowrap">
+            <SheetTitle className="text-foreground font-display font-bold text-xl tracking-tighter uppercase whitespace-nowrap">
               Envíos Dos <span className="text-primary">Ruedas</span>
             </SheetTitle>
           </SheetHeader>
@@ -106,7 +106,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                     "flex items-center space-x-5 py-4 px-5 rounded-lg transition-all duration-300 w-full mb-2 border",
                     isActive("/")
                       ? "bg-primary/10 text-primary border-primary/20 shadow-sm"
-                      : "text-slate-600 border-transparent hover:text-slate-900 hover:bg-slate-50",
+                      : "text-muted-foreground border-transparent hover:text-foreground hover:bg-surface-variant/30",
                   )}
                 >
                   <Home className="w-5 h-5" />
@@ -128,7 +128,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                           "py-4 px-5 rounded-lg transition-all duration-300 w-full justify-between group border",
                           groupIsActive
                             ? "text-primary font-bold bg-primary/10 border-primary/20 [&[data-state=open]]:bg-primary/10"
-                            : "text-slate-600 border-transparent hover:text-slate-900 hover:bg-slate-50",
+                            : "text-muted-foreground border-transparent hover:text-foreground hover:bg-surface-variant/30",
                           "hover:no-underline",
                         )}
                       >
@@ -138,7 +138,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                         </div>
                       </AccordionTrigger>
                       <AccordionContent className="pt-2 pb-0">
-                        <div className="flex flex-col space-y-1 pl-10 border-l border-slate-100 ml-7 my-2">
+                        <div className="flex flex-col space-y-1 pl-10 border-l border-outline-variant/30 ml-7 my-2">
                           {group.items.map((item: any) => {
                             const ItemIcon = item.icon;
                             return (
@@ -149,7 +149,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                                     "flex items-center space-x-4 py-3.5 px-5 rounded-lg transition-all duration-300 w-full text-left",
                                     isActive(item.href)
                                       ? "bg-primary/10 text-primary font-bold"
-                                      : "text-slate-500 hover:text-slate-800 hover:bg-slate-50",
+                                      : "text-muted-foreground hover:text-foreground hover:bg-surface-variant/30",
                                   )}
                                 >
                                   {ItemIcon && <ItemIcon className="w-4 h-4" />}
@@ -174,7 +174,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                     "flex items-center space-x-5 py-4 px-5 rounded-lg transition-all duration-300 w-full group border",
                     isActive("/contacto")
                       ? "bg-primary/10 text-primary border-primary/20 shadow-sm"
-                      : "text-slate-600 border-transparent hover:text-slate-900 hover:bg-slate-50",
+                      : "text-muted-foreground border-transparent hover:text-foreground hover:bg-surface-variant/30",
                   )}
                 >
                   <Mail className="w-5 h-5" />
@@ -188,7 +188,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                 <Link href="/cotizar/express" className="block w-full">
                   <Button
                     size="lg"
-                    className="w-full h-12 bg-secondary hover:bg-amber-500 text-slate-950 font-bold rounded-lg shadow-md uppercase tracking-wider active:scale-[0.95] transition-transform flex items-center justify-center"
+                    className="w-full h-12 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-full shadow-md uppercase tracking-wider active:scale-[0.95] transition-transform flex items-center justify-center"
                   >
                     <CalculatorIcon className="w-5 h-5 mr-3" />
                     Cotizar Envío
@@ -196,10 +196,10 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                 </Link>
               </SheetClose>
               <div className="mt-6 flex items-center justify-center gap-6">
-                <Link href="https://instagram.com/enviosdosruedas" aria-label="Visitar nuestro Instagram" className="w-12 h-12 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-600 hover:text-primary hover:bg-slate-100 transition-all active:scale-[0.95]">
+                <Link href="https://instagram.com/enviosdosruedas" aria-label="Visitar nuestro Instagram" className="w-12 h-12 rounded-lg bg-surface-variant/40 border border-outline-variant flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-surface-variant transition-all active:scale-[0.95]">
                   <InstagramIcon className="w-5 h-5" />
                 </Link>
-                <a href="tel:+5492236602699" aria-label="Llamar a Envios DosRuedas" className="w-12 h-12 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-secondary hover:bg-white/10 hover:border-secondary transition-all active:scale-[0.95]">
+                <a href="tel:+5492236602699" aria-label="Llamar a Envios DosRuedas" className="w-12 h-12 rounded-lg bg-surface-variant/40 border border-outline-variant flex items-center justify-center text-tertiary hover:bg-surface-variant hover:text-primary transition-all active:scale-[0.95]">
                   <Phone className="w-5 h-5" />
                 </a>
               </div>

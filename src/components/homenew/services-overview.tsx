@@ -21,48 +21,48 @@ type ServiceTheme = {
 
 const THEMES: Record<string, ServiceTheme> = {
   express: {
-    card: "bg-white border border-slate-100 hover:border-red-200 shadow-md hover:shadow-lg transition-all duration-300",
-    icon: "bg-red-50 text-red-600 border border-red-100",
-    accent: "text-red-600 font-semibold",
-    text: "text-slate-900",
-    desc: "text-slate-600 [&>span]:text-slate-900",
-    button: "text-slate-600 hover:text-red-600 group-hover:text-red-600 font-semibold",
-    badge: "bg-red-50 text-red-600 border border-red-200/50",
-    accentColor: "red-600",
-    glowColor: "rgba(239,68,68,0.03)"
+    card: "bg-card border border-outline-variant hover:border-error/40 shadow-md hover:shadow-lg transition-all duration-300",
+    icon: "bg-error-container text-on-error-container border border-error-container/20",
+    accent: "text-error font-semibold",
+    text: "text-foreground",
+    desc: "text-muted-foreground [&>span]:text-foreground",
+    button: "text-muted-foreground hover:text-error group-hover:text-error font-semibold",
+    badge: "bg-error-container text-on-error-container border border-error-container/50",
+    accentColor: "error",
+    glowColor: "rgba(186,26,26,0.04)"
   },
   lowcost: {
-    card: "bg-white border border-slate-100 hover:border-cyan-200 shadow-md hover:shadow-lg transition-all duration-300",
-    icon: "bg-cyan-50 text-cyan-700 border border-cyan-100",
-    accent: "text-cyan-700 font-semibold",
-    text: "text-slate-900",
-    desc: "text-slate-600 [&>span]:text-slate-900",
-    button: "text-slate-600 hover:text-cyan-700 group-hover:text-cyan-700 font-semibold",
-    badge: "bg-cyan-50 text-cyan-700 border border-cyan-200/50",
-    accentColor: "cyan-700",
-    glowColor: "rgba(6,182,212,0.03)"
+    card: "bg-card border border-outline-variant hover:border-secondary/40 shadow-md hover:shadow-lg transition-all duration-300",
+    icon: "bg-secondary-container text-on-secondary-container border border-secondary-container/20",
+    accent: "text-secondary font-semibold",
+    text: "text-foreground",
+    desc: "text-muted-foreground [&>span]:text-foreground",
+    button: "text-muted-foreground hover:text-secondary group-hover:text-secondary font-semibold",
+    badge: "bg-secondary-container text-on-secondary-container border border-secondary-container/50",
+    accentColor: "secondary",
+    glowColor: "rgba(98,91,113,0.04)"
   },
   meli: {
-    card: "bg-white border border-slate-100 hover:border-yellow-200 shadow-md hover:shadow-lg transition-all duration-300",
-    icon: "bg-yellow-50 text-yellow-700 border border-yellow-100",
-    accent: "text-yellow-700 font-semibold",
-    text: "text-slate-900",
-    desc: "text-slate-600 [&>span]:text-slate-900",
-    button: "text-slate-600 hover:text-yellow-700 group-hover:text-yellow-700 font-semibold",
-    badge: "bg-yellow-50 text-yellow-700 border border-yellow-200/50",
-    accentColor: "yellow-700",
-    glowColor: "rgba(234,179,8,0.03)"
+    card: "bg-card border border-outline-variant hover:border-primary/40 shadow-md hover:shadow-lg transition-all duration-300",
+    icon: "bg-primary-container text-on-primary-container border border-primary-container/20",
+    accent: "text-primary font-semibold",
+    text: "text-foreground",
+    desc: "text-muted-foreground [&>span]:text-foreground",
+    button: "text-muted-foreground hover:text-primary group-hover:text-primary font-semibold",
+    badge: "bg-primary-container text-on-primary-container border border-primary-container/50",
+    accentColor: "primary",
+    glowColor: "rgba(103,80,164,0.04)"
   },
   ecommerce: {
-    card: "bg-white border border-slate-100 hover:border-emerald-200 shadow-md hover:shadow-lg transition-all duration-300",
-    icon: "bg-emerald-50 text-emerald-700 border border-emerald-100",
-    accent: "text-emerald-700 font-semibold",
-    text: "text-slate-900",
-    desc: "text-slate-600 [&>span]:text-slate-900",
-    button: "text-slate-600 hover:text-emerald-700 group-hover:text-emerald-700 font-semibold",
-    badge: "bg-emerald-50 text-emerald-700 border border-emerald-200/50",
-    accentColor: "emerald-700",
-    glowColor: "rgba(16,185,129,0.03)"
+    card: "bg-card border border-outline-variant hover:border-tertiary/40 shadow-md hover:shadow-lg transition-all duration-300",
+    icon: "bg-tertiary-container text-on-tertiary-container border border-tertiary-container/20",
+    accent: "text-tertiary font-semibold",
+    text: "text-foreground",
+    desc: "text-muted-foreground [&>span]:text-foreground",
+    button: "text-muted-foreground hover:text-tertiary group-hover:text-tertiary font-semibold",
+    badge: "bg-tertiary-container text-on-tertiary-container border border-tertiary-container/50",
+    accentColor: "tertiary",
+    glowColor: "rgba(125,82,96,0.04)"
   }
 };
 
@@ -135,8 +135,8 @@ export const ServicesOverview = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[160px] pointer-events-none opacity-50" />
       
       {/* Section Transition Lines */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-10">
@@ -146,10 +146,10 @@ export const ServicesOverview = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-3 px-3 py-1.5 rounded-md bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.2em] mb-8 uppercase">
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.2em] mb-8 uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" /> Nuestros Servicios
             </div>
-            <h2 className="text-headline-lg-mobile md:text-display-lg uppercase text-slate-900 font-bold">
+            <h2 className="text-headline-lg-mobile md:text-display-lg uppercase text-foreground font-bold">
               Soluciones <br />
               <span className="text-primary">Logísticas</span>
             </h2>
@@ -160,9 +160,9 @@ export const ServicesOverview = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="max-w-md lg:border-l lg:border-slate-200 lg:pl-10"
+            className="max-w-md lg:border-l lg:border-outline-variant lg:pl-10"
           >
-            <p className="text-slate-600 text-body-lg">
+            <p className="text-muted-foreground text-body-lg">
               Infraestructura moderna para negocios que no se detienen. Inteligencia aplicada a cada kilómetro.
             </p>
           </motion.div>
@@ -183,7 +183,7 @@ export const ServicesOverview = () => {
                 variants={itemVariants}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
                 className={cn(
-                  "group p-6 lg:p-10 rounded-lg transition-all duration-500 flex flex-col justify-between relative overflow-hidden",
+                  "group p-6 lg:p-10 transition-all duration-500 flex flex-col justify-between relative overflow-hidden rounded-xl",
                   theme.card,
                   service.className
                 )}
@@ -229,12 +229,12 @@ export const ServicesOverview = () => {
                 </div>
 
                 {/* Decorative side border accent */}
-                <div className={cn("absolute top-1/2 -right-1 w-[2px] h-20 bg-gradient-to-b from-transparent via-slate-200 to-transparent group-hover:via-current transition-all", theme.accent)} />
+                <div className={cn("absolute top-1/2 -right-1 w-[2px] h-20 bg-gradient-to-b from-transparent via-outline-variant to-transparent group-hover:via-current transition-all", theme.accent)} />
 
                 {/* Specific Visual for the first card */}
                 {idx === 0 && (
                   <div className="absolute top-10 right-10 opacity-5 group-hover:opacity-10 transition-opacity" aria-hidden="true">
-                    <MousePointer2 size={120} className="rotate-12 text-slate-400" />
+                    <MousePointer2 size={120} className="rotate-12 text-muted-foreground" />
                   </div>
                 )}
               </motion.div>

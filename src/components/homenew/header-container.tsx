@@ -21,7 +21,9 @@ export function HeaderContainer({ children }: HeaderContainerProps) {
     <motion.header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4 px-4 md:px-8",
-        scrolled ? "bg-white/90 backdrop-blur-2xl border-b border-slate-200 py-3 shadow-sm" : "bg-transparent py-6"
+        scrolled
+          ? "bg-background/90 backdrop-blur-2xl border-b border-outline-variant py-3 shadow-sm"
+          : "bg-transparent py-6"
       )}
       initial={{ y: -100 }}
       animate={{ y: 0 }}

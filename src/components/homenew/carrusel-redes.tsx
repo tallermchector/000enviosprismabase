@@ -76,13 +76,13 @@ export const CarruselRedes = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-20">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-primary/10 border border-primary/20 text-primary text-xxs font-bold tracking-widest mb-6 uppercase">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xxs font-bold tracking-widest mb-6 uppercase">
               <Heart size={12} className="fill-primary" /> CONECTA CON NOSOTROS
             </div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 uppercase tracking-tighter">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground uppercase tracking-tighter">
               SIGUE NUESTRO <span className="text-primary">MOVIMIENTO</span>
             </h2>
-            <p className="text-slate-600 text-lg mt-4 max-w-xl">
+            <p className="text-muted-foreground text-lg mt-4 max-w-xl">
               Únete a nuestra comunidad digital y mantente al día con las últimas noticias de logística en Mar del Plata.
             </p>
           </div>
@@ -92,7 +92,7 @@ export const CarruselRedes = () => {
               <button
                 key={idx}
                 onClick={net.isWhatsApp ? handleWhatsAppClick : () => window.open(net.href, "_blank")}
-                className="group flex items-center gap-4 p-4 rounded-md bg-white border border-slate-100 hover:border-primary/30 transition-all shadow-sm hover:shadow-md text-slate-900"
+                className="group flex items-center gap-4 p-4 rounded-lg bg-card border border-outline-variant hover:border-primary/40 transition-all shadow-sm hover:shadow-md text-foreground"
                 aria-label={`Seguinos en ${net.name}`}
               >
                 <div
@@ -103,8 +103,8 @@ export const CarruselRedes = () => {
                   <net.icon size={24} />
                 </div>
                 <div className="text-left hidden lg:block">
-                  <div className="text-sm font-bold uppercase tracking-tight text-slate-800 group-hover:text-primary transition-colors">{net.name}</div>
-                  <div className="text-[10px] text-slate-500 uppercase tracking-widest">{net.description}</div>
+                  <div className="text-sm font-bold uppercase tracking-tight text-foreground/80 group-hover:text-primary transition-colors">{net.name}</div>
+                  <div className="text-[10px] text-muted-foreground uppercase tracking-widest">{net.description}</div>
                 </div>
               </button>
             ))}
@@ -125,18 +125,18 @@ export const CarruselRedes = () => {
                   href={(item as any).postUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-72 h-72 shrink-0 rounded-lg overflow-hidden relative group border border-slate-200 shadow-md transition-all hover:border-primary/30 block"
+                  className="w-72 h-72 shrink-0 rounded-xl overflow-hidden relative group border border-outline-variant shadow-md transition-all hover:border-primary/40 block"
                   aria-label={`Ver publicación ${item.id} en ${item.type === 'ig' ? 'Instagram' : 'Facebook'}`}
                 >
                   <img src={item.image} alt={`Publicación de ${item.type === 'ig' ? 'Instagram' : 'Facebook'}`} className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-white/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-6 p-8">
+                  <div className="absolute inset-0 bg-card/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-6 p-8">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shadow-sm">
                       {item.type === 'ig' && <Instagram size={24} />}
                       {item.type === 'fb' && <Facebook size={24} />}
                     </div>
                     <div className="text-center">
-                      <div className="text-slate-900 font-bold uppercase tracking-tight mb-2 text-sm">VER POST</div>
-                      <ExternalLink size={20} className="text-secondary mx-auto" />
+                      <div className="text-foreground font-bold uppercase tracking-tight mb-2 text-sm">VER POST</div>
+                      <ExternalLink size={20} className="text-primary mx-auto" />
                     </div>
                   </div>
                 </a>
