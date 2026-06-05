@@ -1,4 +1,4 @@
-import { Truck, Zap, Clock, Package, Building2, ShieldCheck, Mail, Share2 } from 'lucide-react';
+import { Truck, Zap, Clock, Package, Building2, ShieldCheck, Mail, Share2, Calculator } from 'lucide-react';
 
 export const navGroups = [
   {
@@ -10,6 +10,15 @@ export const navGroups = [
       { label: 'Envíos LowCost', href: '/servicios/envios-lowcost', icon: Clock },
       { label: 'Envíos Flex (MeLi)', href: '/servicios/enviosflex', icon: Package },
       { label: 'E-Commerce & 3PL', href: '/servicios/plan-emprendedores', icon: Building2 },
+    ],
+  },
+  {
+    label: 'Cotizar',
+    basePath: '/cotizar',
+    icon: Calculator,
+    items: [
+      { label: 'Cotizar Express', href: '/cotizar/express', icon: Zap },
+      { label: 'Cotizar LowCost', href: '/cotizar/lowcost', icon: Clock },
     ],
   },
   {
