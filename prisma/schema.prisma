@@ -28,3 +28,44 @@ model Post {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model SocialPost {
+  id        Int                @id @default(autoincrement())
+  platform  SocialPlatformEnum
+  userName  String
+  userAvatar String?
+  userUrl   String?
+  content   String             @db.Text
+  postUrl   String             @unique
+  imageUrl  String?
+  imageHint String?
+  likes     Int?
+  comments  Int?
+  shares    Int?
+  timestamp DateTime           @default(now())
+}
+
+model PriceRange {
+  id             Int             @id @default(autoincrement())
+  serviceType    ServiceTypeEnum
+  distanciaMinKm Decimal         @db.Decimal(10, 2)
+  distanciaMaxKm Decimal         @db.Decimal(10, 2)
+  precioRango    Decimal         @db.Decimal(10, 2)
+  isActive       Boolean         @default(true)
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+
+  @@unique([serviceType, distanciaMinKm, distanciaMaxKm])
+}
+
+enum SocialPlatformEnum {
+  facebook
+  instagram
+  whatsapp
+}
+
+enum ServiceTypeEnum {
+  EXPRESS
+  LOW_COST
+  PUNTO_DE_RETIRO
+}
