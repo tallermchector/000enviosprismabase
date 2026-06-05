@@ -52,9 +52,20 @@ Please audit the input code against the following key criteria:
 
 ---
 
-## 3. Input Code to Optimize
+## 3. Targeted Workspace Files & Repo Context
+The agent must operate directly on the repository filesystem. Do not expect code inputs via prompt text. Locate, analyze, and refactor the files declared below in-place:
 
-[PASTE YOUR COMPONENT OR PAGE CODE HERE]
+### 📍 Target Execution Path
+[SPECIFY_FILE_OR_DIRECTORY_PATH_HERE] <!-- Example: src/components/shipping/DeliveryForm.tsx -->
+
+### 📂 Dependency Verification
+1. Open the file defined in the target execution path.
+2. Scan its internal import tree to locate child components or related styles within the local workspace.
+3. If the refactor requires extending global utility boundaries, you are authorized to read and update `tailwind.config.js` or the main layout file.
+
+### 🚫 Mutation Restrictions
+- Modify exclusively UI presentation layers and layout properties within the declared paths.
+- Do not remove, rename, or break any existing React hooks, local states, server-side data fetching calls, or TypeScript interface contracts.
 
 ---
 
