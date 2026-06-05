@@ -14,13 +14,13 @@ import {
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetClose, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, Calculator as CalculatorIcon, Mail, ChevronDown, Home, Users } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { navGroups } from "@/lib/navigation"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { HeaderContainer } from "./header-container"
 import { ThemeToggle } from "@/components/theme-toggle"
 
-const mobileNavVariants = {
+const mobileNavVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -30,7 +30,7 @@ const mobileNavVariants = {
   },
 }
 
-const mobileNavItemVariants = {
+const mobileNavItemVariants: Variants = {
   hidden: { opacity: 0, x: -30, scale: 0.95 },
   visible: {
     opacity: 1,
