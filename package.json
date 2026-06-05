@@ -24,6 +24,7 @@
     "@genkit-ai/next": "^1.36.0",
     "@hookform/resolvers": "^5.4.0",
     "@microsoft/clarity": "^1.0.2",
+    "@netlify/plugin-nextjs": "^5.15.11",
     "@opentelemetry/exporter-jaeger": "^2.7.1",
     "@paper-design/shaders-react": "^0.0.76",
     "@prisma/adapter-pg": "^7.8.0",
