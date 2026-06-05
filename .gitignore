@@ -43,3 +43,4 @@ Thumbs.db
 .gemini/settings.json
 src/generated/
 next-env.d.ts
+tsconfig.tsbuildinfo

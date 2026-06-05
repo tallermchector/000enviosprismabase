@@ -1,0 +1,21 @@
+# Netlify Configuration File
+
+[[edge_functions]]
+  path = "/"
+  function = "serve-markdown"
+
+[[edge_functions]]
+  path = "/nosotros/*"
+  function = "serve-markdown"
+
+[[edge_functions]]
+  path = "/servicios/*"
+  function = "serve-markdown"
+
+[[edge_functions]]
+  path = "/politica-de-privacidad"
+  function = "serve-markdown"
+
+[[edge_functions]]
+  path = "/terminos-y-condiciones"
+  function = "serve-markdown"
