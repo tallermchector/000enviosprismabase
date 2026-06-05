@@ -28,7 +28,7 @@ export function NavDropdown({ group }: NavDropdownProps) {
       <DropdownMenuTrigger asChild>
         <motion.div
           className={cn(
-            "relative flex cursor-pointer items-center space-x-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200",
+            "relative flex cursor-pointer items-center space-x-2 rounded px-4 py-2 text-sm font-medium transition-all duration-200",
             groupIsActive
               ? "bg-primary/10 text-primary border border-primary/20"
               : "text-muted-foreground hover:text-primary hover:bg-primary/5",
@@ -52,7 +52,7 @@ export function NavDropdown({ group }: NavDropdownProps) {
         {group.items.map((item: any) => {
           const ItemIcon = item.icon;
           return (
-            <DropdownMenuItem key={item.href} asChild className="focus:bg-primary/10 focus:text-primary cursor-pointer rounded-lg p-3 transition-colors">
+            <DropdownMenuItem key={item.href} asChild className="focus:bg-primary/10 focus:text-primary cursor-pointer rounded p-3 transition-colors">
               <Link
                 href={item.href}
                 className={cn(
@@ -61,7 +61,7 @@ export function NavDropdown({ group }: NavDropdownProps) {
                 )}
               >
                 <div className={cn(
-                  "w-8 h-8 rounded-lg flex items-center justify-center transition-colors",
+                  "w-8 h-8 rounded flex items-center justify-center transition-colors",
                   isActive(item.href) ? "bg-primary/10 text-primary" : "bg-surface-variant text-muted-foreground"
                 )}>
                   {ItemIcon && <ItemIcon className="h-4 w-4" />}

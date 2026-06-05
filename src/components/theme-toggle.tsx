@@ -15,7 +15,7 @@ export function ThemeToggle() {
       size="icon"
       onClick={toggleTheme}
       aria-label={isDark ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
-      className="rounded-full border-outline-variant text-foreground hover:bg-surface-variant/50 w-10 h-10 flex items-center justify-center transition-all shrink-0"
+      className="rounded border-outline-variant text-foreground hover:bg-surface-variant/50 w-10 h-10 flex items-center justify-center transition-all shrink-0"
     >
       {isDark ? (
         <Sun className="h-5 w-5 text-tertiary" />

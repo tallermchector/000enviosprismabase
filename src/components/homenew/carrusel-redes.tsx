@@ -76,7 +76,7 @@ export const CarruselRedes = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-20">
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xxs font-bold tracking-widest mb-6 uppercase">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded bg-primary/10 border border-primary/20 text-primary text-xxs font-bold tracking-widest mb-6 uppercase">
               <Heart size={12} className="fill-primary" /> CONECTA CON NOSOTROS
             </div>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground uppercase tracking-tighter">
@@ -92,7 +92,7 @@ export const CarruselRedes = () => {
               <button
                 key={idx}
                 onClick={net.isWhatsApp ? handleWhatsAppClick : () => window.open(net.href, "_blank")}
-                className="group flex items-center gap-4 p-4 rounded-lg bg-card border border-outline-variant hover:border-primary/40 transition-all shadow-sm hover:shadow-md text-foreground"
+                className="group flex items-center gap-4 p-4 rounded bg-card border border-outline-variant hover:border-primary/40 transition-all shadow-sm hover:shadow-md text-foreground"
                 aria-label={`Seguinos en ${net.name}`}
               >
                 <div
@@ -125,12 +125,12 @@ export const CarruselRedes = () => {
                   href={(item as any).postUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-72 h-72 shrink-0 rounded-xl overflow-hidden relative group border border-outline-variant shadow-md transition-all hover:border-primary/40 block"
+                  className="w-72 h-72 shrink-0 rounded overflow-hidden relative group border border-outline-variant shadow-md transition-all hover:border-primary/40 block"
                   aria-label={`Ver publicación ${item.id} en ${item.type === 'ig' ? 'Instagram' : 'Facebook'}`}
                 >
                   <img src={item.image} alt={`Publicación de ${item.type === 'ig' ? 'Instagram' : 'Facebook'}`} className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-card/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-6 p-8">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shadow-sm">
+                    <div className="w-12 h-12 rounded bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shadow-sm">
                       {item.type === 'ig' && <Instagram size={24} />}
                       {item.type === 'fb' && <Facebook size={24} />}
                     </div>

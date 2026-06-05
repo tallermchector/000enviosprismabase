@@ -77,14 +77,14 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
     <div className="lg:hidden">
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="text-foreground hover:bg-surface-variant w-12 h-12 rounded-lg" aria-label="Abrir menú de navegación">
+          <Button variant="ghost" size="icon" className="text-foreground hover:bg-surface-variant w-12 h-12 rounded" aria-label="Abrir menú de navegación">
             <Menu className="h-7 w-7" />
             <span className="sr-only">Abrir menú</span>
           </Button>
         </SheetTrigger>
         <SheetContent side="right" className="w-[320px] bg-card border-l border-outline-variant text-foreground pt-12 p-6 shadow-xl">
           <SheetHeader className="mb-12 flex flex-row items-center space-x-4">
-            <div className="relative w-10 h-10 rounded-lg flex items-center justify-center">
+            <div className="relative w-10 h-10 rounded flex items-center justify-center">
               <Image src="/LogoEnviosDosRuedas.webp" alt="Logo Dos Ruedas" fill className="object-contain" sizes="40px" />
             </div>
             <SheetTitle className="text-foreground font-display font-bold text-xl tracking-tighter uppercase whitespace-nowrap">
@@ -103,7 +103,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                 <Link
                   href="/"
                   className={cn(
-                    "flex items-center space-x-5 py-4 px-5 rounded-lg transition-all duration-300 w-full mb-2 border",
+                    "flex items-center space-x-5 py-4 px-5 rounded transition-all duration-300 w-full mb-2 border",
                     isActive("/")
                       ? "bg-primary/10 text-primary border-primary/20 shadow-sm"
                       : "text-muted-foreground border-transparent hover:text-foreground hover:bg-surface-variant/30",
@@ -125,7 +125,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                     <AccordionItem value={group.label} className="border-b-0">
                       <AccordionTrigger
                         className={cn(
-                          "py-4 px-5 rounded-lg transition-all duration-300 w-full justify-between group border",
+                          "py-4 px-5 rounded transition-all duration-300 w-full justify-between group border",
                           groupIsActive
                             ? "text-primary font-bold bg-primary/10 border-primary/20 [&[data-state=open]]:bg-primary/10"
                             : "text-muted-foreground border-transparent hover:text-foreground hover:bg-surface-variant/30",
@@ -146,7 +146,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                                 <Link
                                   href={item.href}
                                   className={cn(
-                                    "flex items-center space-x-4 py-3.5 px-5 rounded-lg transition-all duration-300 w-full text-left",
+                                    "flex items-center space-x-4 py-3.5 px-5 rounded transition-all duration-300 w-full text-left",
                                     isActive(item.href)
                                       ? "bg-primary/10 text-primary font-bold"
                                       : "text-muted-foreground hover:text-foreground hover:bg-surface-variant/30",
@@ -171,7 +171,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                 <Link
                   href="/contacto"
                   className={cn(
-                    "flex items-center space-x-5 py-4 px-5 rounded-lg transition-all duration-300 w-full group border",
+                    "flex items-center space-x-5 py-4 px-5 rounded transition-all duration-300 w-full group border",
                     isActive("/contacto")
                       ? "bg-primary/10 text-primary border-primary/20 shadow-sm"
                       : "text-muted-foreground border-transparent hover:text-foreground hover:bg-surface-variant/30",
@@ -188,7 +188,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                 <Link href="/cotizar/express" className="block w-full">
                   <Button
                     size="lg"
-                    className="w-full h-12 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-full shadow-md uppercase tracking-wider active:scale-[0.95] transition-transform flex items-center justify-center"
+                    className="w-full h-12 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded shadow-md uppercase tracking-wider active:scale-[0.95] transition-transform flex items-center justify-center"
                   >
                     <CalculatorIcon className="w-5 h-5 mr-3" />
                     Cotizar Envío
@@ -196,10 +196,10 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                 </Link>
               </SheetClose>
               <div className="mt-6 flex items-center justify-center gap-6">
-                <Link href="https://instagram.com/enviosdosruedas" aria-label="Visitar nuestro Instagram" className="w-12 h-12 rounded-lg bg-surface-variant/40 border border-outline-variant flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-surface-variant transition-all active:scale-[0.95]">
+                <Link href="https://instagram.com/enviosdosruedas" aria-label="Visitar nuestro Instagram" className="w-12 h-12 rounded bg-surface-variant/40 border border-outline-variant flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-surface-variant transition-all active:scale-[0.95]">
                   <InstagramIcon className="w-5 h-5" />
                 </Link>
-                <a href="tel:+5492236602699" aria-label="Llamar a Envios DosRuedas" className="w-12 h-12 rounded-lg bg-surface-variant/40 border border-outline-variant flex items-center justify-center text-tertiary hover:bg-surface-variant hover:text-primary transition-all active:scale-[0.95]">
+                <a href="tel:+5492236602699" aria-label="Llamar a Envios DosRuedas" className="w-12 h-12 rounded bg-surface-variant/40 border border-outline-variant flex items-center justify-center text-tertiary hover:bg-surface-variant hover:text-primary transition-all active:scale-[0.95]">
                   <Phone className="w-5 h-5" />
                 </a>
               </div>

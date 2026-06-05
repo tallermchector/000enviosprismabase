@@ -57,7 +57,7 @@ export const EmprendedoresHome = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.4em] mb-10 uppercase"
+              className="inline-flex items-center gap-3 px-4 py-2 rounded bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.4em] mb-10 uppercase"
             >
               <Building2 size={16} className="animate-pulse" /> Soluciones Corporativas y PyME
             </motion.div>
@@ -104,7 +104,7 @@ export const EmprendedoresHome = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -10 }}
-              className="group relative h-full rounded-xl overflow-hidden border border-outline-variant bg-card hover:border-primary/40 transition-all duration-500 shadow-md hover:shadow-lg flex flex-col justify-between"
+              className="group relative h-full rounded overflow-hidden border border-outline-variant bg-card hover:border-primary/40 transition-all duration-500 shadow-md hover:shadow-lg flex flex-col justify-between"
             >
               <div className="relative w-full h-48 sm:h-56">
                 <Image
@@ -117,7 +117,7 @@ export const EmprendedoresHome = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
                 
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full bg-card border border-outline-variant text-[9px] font-black text-primary uppercase tracking-[0.2em] shadow-sm">
+                  <span className="px-3 py-1 rounded bg-card border border-outline-variant text-[9px] font-black text-primary uppercase tracking-[0.2em] shadow-sm">
                     {solution.badge}
                   </span>
                 </div>
@@ -125,7 +125,7 @@ export const EmprendedoresHome = () => {
 
               <div className="p-8 flex flex-col flex-grow justify-between">
                 <div>
-                  <div className="w-12 h-12 rounded-lg bg-surface-variant/40 border border-outline-variant flex items-center justify-center text-primary mb-6 transition-all duration-500 group-hover:bg-primary group-hover:text-primary-foreground shadow-sm">
+                  <div className="w-12 h-12 rounded bg-surface-variant/40 border border-outline-variant flex items-center justify-center text-primary mb-6 transition-all duration-500 group-hover:bg-primary group-hover:text-primary-foreground shadow-sm">
                     <solution.icon size={24} />
                   </div>
 
@@ -151,7 +151,7 @@ export const EmprendedoresHome = () => {
 
                 <Link
                   href={solution.link}
-                  className="group/btn w-full py-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 text-label-md text-center flex items-center justify-center gap-4 uppercase shadow-sm active:scale-95 font-semibold"
+                  className="group/btn w-full py-3 rounded bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 text-label-md text-center flex items-center justify-center gap-4 uppercase shadow-sm active:scale-95 font-semibold"
                 >
                   CONFIGURAR PLAN <ArrowRight size={18} className="group-hover/btn:translate-x-2 transition-transform" />
                 </Link>

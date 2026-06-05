@@ -20,7 +20,7 @@ export function ActiveLink({ href, children, className, activeClassName }: Activ
     <Link href={href}>
       <motion.div
         className={cn(
-          "relative flex items-center space-x-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300",
+          "relative flex items-center space-x-2 rounded px-4 py-2 text-sm font-medium transition-all duration-300",
           isActive ? activeClassName : className
         )}
         whileHover={{ scale: 1.05 }}

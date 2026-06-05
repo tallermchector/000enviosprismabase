@@ -34,7 +34,7 @@ export const Footer = () => {
           {/* Brand Identity */}
           <div className="lg:col-span-4">
             <Link href="/" className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-10 group shrink-0 active:scale-[0.98] transition-transform" aria-label="Volver al inicio desde el pie de página">
-              <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center shrink-0 transition-all group-hover:rotate-6 group-hover:scale-105">
+              <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded flex items-center justify-center shrink-0 transition-all group-hover:rotate-6 group-hover:scale-105">
                 <Image src="/LogoEnviosDosRuedas.webp" alt="Logo Dos Ruedas" fill className="object-contain" sizes="(max-width: 640px) 48px, 56px" />
               </div>
               <div className="flex flex-col justify-center">
@@ -94,7 +94,7 @@ export const Footer = () => {
             <h3 className="font-display font-bold mb-8 tracking-[0.3em] text-xxs uppercase text-primary-container">Contacto Rápido</h3>
             <ul className="space-y-6">
               <li className="flex items-start gap-4 group">
-                <div className="w-10 h-10 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 flex items-center justify-center shrink-0 group-hover:bg-primary-container group-hover:border-primary-container/40 transition-all text-primary-foreground group-hover:text-primary">
+                <div className="w-10 h-10 rounded bg-primary-foreground/10 border border-primary-foreground/20 flex items-center justify-center shrink-0 group-hover:bg-primary-container group-hover:border-primary-container/40 transition-all text-primary-foreground group-hover:text-primary">
                   <MapPin size={18} className="text-primary-container group-hover:text-primary" />
                 </div>
                 <div className="flex flex-col">
@@ -104,7 +104,7 @@ export const Footer = () => {
               </li>
 
               <li className="flex items-center gap-4 group">
-                <div className="w-10 h-10 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 flex items-center justify-center shrink-0 group-hover:bg-primary-container group-hover:border-primary-container/40 transition-all text-primary-foreground group-hover:text-primary">
+                <div className="w-10 h-10 rounded bg-primary-foreground/10 border border-primary-foreground/20 flex items-center justify-center shrink-0 group-hover:bg-primary-container group-hover:border-primary-container/40 transition-all text-primary-foreground group-hover:text-primary">
                   <Phone size={18} className="text-primary-foreground group-hover:text-primary" />
                 </div>
                 <div className="flex flex-col">
@@ -114,7 +114,7 @@ export const Footer = () => {
               </li>
 
               <li className="flex items-center gap-4 group">
-                <div className="w-10 h-10 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 flex items-center justify-center shrink-0 group-hover:bg-primary-container group-hover:border-primary-container/40 transition-all text-primary-foreground group-hover:text-primary">
+                <div className="w-10 h-10 rounded bg-primary-foreground/10 border border-primary-foreground/20 flex items-center justify-center shrink-0 group-hover:bg-primary-container group-hover:border-primary-container/40 transition-all text-primary-foreground group-hover:text-primary">
                   <Mail size={18} className="text-primary-foreground group-hover:text-primary" />
                 </div>
                 <div className="flex flex-col">
@@ -127,7 +127,7 @@ export const Footer = () => {
         </div>
 
         {/* Global Stats/Trust Banner */}
-        <div className="mb-12 grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-y border-primary-foreground/10 bg-primary-foreground/5 rounded-lg">
+        <div className="mb-12 grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-y border-primary-foreground/10 bg-primary-foreground/5 rounded font-sans">
           {[
             { icon: <ShieldCheck className="text-primary-foreground" />, label: "SEGURIDAD", value: "CERTIFICADA" },
             { icon: <Zap className="text-primary-container" />, label: "VELOCIDAD", value: "MÁXIMA" },
@@ -152,7 +152,7 @@ export const Footer = () => {
           <div className="flex items-center gap-10">
             <Link href="/politica-de-privacidad" className="text-[9px] text-primary-container hover:text-primary-foreground uppercase tracking-widest font-black transition-colors">Privacidad</Link>
             <Link href="/terminos-y-condiciones" className="text-[9px] text-primary-container hover:text-primary-foreground uppercase tracking-widest font-black transition-colors">Términos</Link>
-            <div className="w-8 h-8 rounded-full border border-primary-foreground/10 flex items-center justify-center text-primary-foreground" aria-hidden="true">
+            <div className="w-8 h-8 rounded border border-primary-foreground/10 flex items-center justify-center text-primary-foreground" aria-hidden="true">
               <Globe size={14} />
             </div>
           </div>
