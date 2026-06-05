@@ -44,3 +44,6 @@ Thumbs.db
 src/generated/
 next-env.d.ts
 tsconfig.tsbuildinfo
+
+# Local Netlify folder
+.netlify
