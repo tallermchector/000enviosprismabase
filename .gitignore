@@ -1,0 +1,4 @@
+.gemini/settings.json
+src/generated
+node_modules
+.env
