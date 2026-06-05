@@ -155,14 +155,6 @@ export const OptimizedHeader = () => {
 
       {/* Right side Actions */}
       <div className="flex items-center gap-3">
-        {/* Portal Cliente button for desktop */}
-        <div className="hidden lg:block">
-          <NavLink href="/repartidor" isActive={isActive("/repartidor")} variant="outline">
-            <Users className="mr-2 h-4 w-4" />
-            Portal Cliente
-          </NavLink>
-        </div>
-
         <ThemeToggle />
 
         {/* Mobile Navigation (Sheet) */}
@@ -291,21 +283,8 @@ export const OptimizedHeader = () => {
                   </motion.div>
                 </div>
 
-                {/* Portal Cliente en Móvil */}
-                <motion.div variants={mobileNavItemVariants} className="mt-auto">
-                  <SheetClose asChild>
-                    <Link href="/repartidor" className="block w-full">
-                      <Button
-                        variant="outline"
-                        size="lg"
-                        className="w-full h-11 border-white/30 text-white hover:border-[#fbc107]/50 hover:text-[#fbc107] font-semibold rounded-xl flex items-center justify-center"
-                      >
-                        <Users className="w-5 h-5 mr-3" />
-                        Portal Cliente
-                      </Button>
-                    </Link>
-                  </SheetClose>
-                </motion.div>
+                {/* Sin Portal Cliente en Móvil */}
+                <div></div>
               </motion.div>
             </SheetContent>
           </Sheet>
