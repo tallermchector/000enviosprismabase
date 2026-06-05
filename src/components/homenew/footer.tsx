@@ -20,6 +20,7 @@ export const Footer = () => {
       { label: "Envíos LowCost", href: "/servicios/envios-lowcost" },
       { label: "Envíos Flex (MeLi)", href: "/servicios/enviosflex" },
       { label: "E-Commerce & 3PL", href: "/servicios/plan-emprendedores" }
+    ]
   };
 
   return (
