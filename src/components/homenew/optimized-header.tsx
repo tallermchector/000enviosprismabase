@@ -14,6 +14,7 @@ import { HeaderContainer } from './header-container';
 import { MobileMenu } from './mobile-menu';
 import { ActiveLink } from './active-link';
 import { NavDropdown } from './nav-dropdown';
+import { ThemeToggle } from '@/components/theme-toggle';
 import { navGroups } from '@/lib/navigation';
 
 export const OptimizedHeader = () => {
@@ -71,6 +72,8 @@ export const OptimizedHeader = () => {
         <a href="tel:+5492236602699" aria-label="Llamar al +54 223 660-2699" className="hidden xl:flex items-center gap-3 px-5 py-2.5 rounded-full bg-surface-variant text-foreground border border-outline-variant text-xxs font-bold tracking-[0.1em] hover:text-primary hover:bg-surface-variant/80 transition-all uppercase active:scale-[0.95]">
           <Phone size={14} className="text-primary animate-pulse" aria-hidden="true" /> +54 223 660-2699
         </a>
+
+        <ThemeToggle />
 
         <MobileMenu navGroups={navGroups} />
       </div>
