@@ -30,19 +30,19 @@ model Post {
 }
 
 model SocialPost {
-  id        Int                @id @default(autoincrement())
-  platform  SocialPlatformEnum
-  userName  String
-  userAvatar String?
-  userUrl   String?
-  content   String             @db.Text
-  postUrl   String             @unique
-  imageUrl  String?
-  imageHint String?
-  likes     Int?
-  comments  Int?
-  shares    Int?
-  timestamp DateTime           @default(now())
+  id         Int                @id @default(autoincrement())
+  platform   SocialPlatformEnum
+  userName   String             @default("Envios DosRuedas")
+  userAvatar String?            @default("/LogoEnviosDosRuedas.webp")
+  userUrl    String?
+  content    String             @db.Text
+  postUrl    String             @unique
+  imageUrl   String?
+  imageHint  String?
+  likes      Int?               @default(dbgenerated("floor(random() * 100)::integer"))
+  comments   Int?               @default(dbgenerated("floor(random() * 50)::integer"))
+  shares     Int?               @default(dbgenerated("floor(random() * 20)::integer"))
+  timestamp  DateTime           @default(now())
 }
 
 model PriceRange {
