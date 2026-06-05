@@ -68,10 +68,13 @@ const config: Config = {
         md: "16px",
         lg: "32px",
         xl: "64px",
-        gutter: "16px",
+        gutter: "24px",
         "margin-mobile": "16px",
-        "margin-desktop": "32px",
-        "container-max": "1400px",
+        "margin-desktop": "48px",
+        "container-max": "1280px",
+        "stack-sm": "8px",
+        "stack-md": "16px",
+        "stack-lg": "32px",
       },
       keyframes: {
         "accordion-down": {
@@ -104,7 +107,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
-        display: ["var(--font-orbitron)", "monospace"],
+        display: ["var(--font-montserrat)", "sans-serif"],
       },
     },
   },

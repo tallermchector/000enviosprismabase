@@ -70,19 +70,19 @@ export const CarruselRedes = () => {
   }
 
   return (
-    <section className="py-32 px-6 bg-surface-light overflow-hidden relative">
+    <section className="py-20 lg:py-32 px-6 bg-transparent overflow-hidden relative">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-1/2 bg-primary/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-20">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-yellow-500 text-xxs font-bold tracking-widest mb-6 uppercase">
-              <Heart size={12} className="fill-yellow-500" /> CONECTA CON NOSOTROS
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-primary/10 border border-primary/20 text-primary text-xxs font-bold tracking-widest mb-6 uppercase">
+              <Heart size={12} className="fill-primary" /> CONECTA CON NOSOTROS
             </div>
-            <h2 className="font-[family-name:var(--font-orbitron)] text-4xl md:text-5xl font-black text-white uppercase italic tracking-tighter">
-              SIGUE NUESTRO <span className="text-secondary">MOVIMIENTO</span>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 uppercase tracking-tighter">
+              SIGUE NUESTRO <span className="text-primary">MOVIMIENTO</span>
             </h2>
-            <p className="text-gray-400 text-lg mt-4 font-[family-name:var(--font-roboto)] max-w-xl">
+            <p className="text-slate-600 text-lg mt-4 max-w-xl">
               Únete a nuestra comunidad digital y mantente al día con las últimas noticias de logística en Mar del Plata.
             </p>
           </div>
@@ -92,19 +92,19 @@ export const CarruselRedes = () => {
               <button
                 key={idx}
                 onClick={net.isWhatsApp ? handleWhatsAppClick : () => window.open(net.href, "_blank")}
-                className="group flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-white/10 transition-all text-slate-900"
+                className="group flex items-center gap-4 p-4 rounded-md bg-white border border-slate-100 hover:border-primary/30 transition-all shadow-sm hover:shadow-md text-slate-900"
                 aria-label={`Seguinos en ${net.name}`}
               >
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110"
+                  className="w-12 h-12 rounded-md flex items-center justify-center transition-transform group-hover:scale-110"
                   style={{ backgroundColor: `${net.color}15`, color: net.color }}
                   aria-hidden="true"
                 >
                   <net.icon size={24} />
                 </div>
                 <div className="text-left hidden lg:block">
-                  <div className="text-sm font-bold font-[family-name:var(--font-orbitron)] tracking-tight uppercase">{net.name}</div>
-                  <div className="text-xxs text-gray-400 uppercase tracking-widest">{net.description}</div>
+                  <div className="text-sm font-bold uppercase tracking-tight text-slate-800 group-hover:text-primary transition-colors">{net.name}</div>
+                  <div className="text-[10px] text-slate-500 uppercase tracking-widest">{net.description}</div>
                 </div>
               </button>
             ))}
@@ -125,17 +125,17 @@ export const CarruselRedes = () => {
                   href={(item as any).postUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-72 h-72 shrink-0 rounded-3xl overflow-hidden relative group border border-white/10 shadow-2xl transition-all hover:border-primary/50 block"
+                  className="w-72 h-72 shrink-0 rounded-lg overflow-hidden relative group border border-slate-200 shadow-md transition-all hover:border-primary/30 block"
                   aria-label={`Ver publicación ${item.id} en ${item.type === 'ig' ? 'Instagram' : 'Facebook'}`}
                 >
-                  <img src={item.image} alt={`Publicación de ${item.type === 'ig' ? 'Instagram' : 'Facebook'}`} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-surface-light/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-6 p-8">
-                    <div className="w-16 h-16 rounded-2xl bg-primary/20 backdrop-blur-md border border-primary/30 flex items-center justify-center text-slate-900">
-                      {item.type === 'ig' && <Instagram size={32} />}
-                      {item.type === 'fb' && <Facebook size={32} />}
+                  <img src={item.image} alt={`Publicación de ${item.type === 'ig' ? 'Instagram' : 'Facebook'}`} className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-white/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-6 p-8">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shadow-sm">
+                      {item.type === 'ig' && <Instagram size={24} />}
+                      {item.type === 'fb' && <Facebook size={24} />}
                     </div>
                     <div className="text-center">
-                      <div className="text-slate-900 font-[family-name:var(--font-orbitron)] font-bold uppercase tracking-tight mb-2">VER POST</div>
+                      <div className="text-slate-900 font-bold uppercase tracking-tight mb-2 text-sm">VER POST</div>
                       <ExternalLink size={20} className="text-secondary mx-auto" />
                     </div>
                   </div>
@@ -145,8 +145,8 @@ export const CarruselRedes = () => {
           </div>
 
           {/* Side Gradients */}
-          <div className="absolute top-0 left-0 w-40 h-full bg-gradient-to-r from-surface-light to-transparent z-10 pointer-events-none" />
-          <div className="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-surface-light to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 left-0 w-40 h-full bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
         </div>
       </div>
     </section>

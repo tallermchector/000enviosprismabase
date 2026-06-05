@@ -7,8 +7,8 @@ import Image from 'next/image';
 
 export const VisionSection = () => {
   const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.95, 1]);
-  const y = useTransform(scrollYProgress, [0, 0.5], [50, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [0.98, 1]);
+  const y = useTransform(scrollYProgress, [0, 0.5], [30, 0]);
 
   const features = [
     { icon: <Zap className="text-secondary" />, title: "Entregas a Tiempo", text: "Puntualidad garantizada en cada envío" },
@@ -18,7 +18,7 @@ export const VisionSection = () => {
   const stats = [
     { label: "Confianza local comprobada", value: "+5.000", color: "text-secondary" },
     { label: "Innovación constante en última milla", value: "7 Años", color: "text-primary" },
-    { label: "Motocicletas dedicadas para máxima agilidad urbana", value: "Flota Exclusiva", color: "text-blue-400" }
+    { label: "Motocicletas dedicadas para máxima agilidad urbana", value: "Flota Exclusiva", color: "text-blue-600" }
   ];
 
   return (
@@ -38,17 +38,17 @@ export const VisionSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-card border border-primary/20 text-blue-400 text-xxs font-black tracking-[0.3em] mb-10 uppercase">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" /> Partner Logístico Especializado
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-md bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.3em] mb-10 uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" /> Partner Logístico Especializado
             </div>
 
-            <h2 className="text-headline-lg-mobile md:text-display-lg mb-10 uppercase text-white">
+            <h2 className="text-headline-lg-mobile md:text-display-lg mb-10 uppercase text-slate-900 font-bold">
               Nuestra Visión <br />
-              <span className="text-primary italic drop-shadow-[0_0_20px_rgba(37,99,235,0.4)]">Logística</span>
+              <span className="text-primary">Logística</span>
             </h2>
 
-            <p className="text-gray-400 text-body-lg mb-12 max-w-2xl">
-              Transformamos <span className="font-bold text-gray-300">tus costos fijos en solutions flexibles</span> que acompañan el crecimiento de tu negocio.
+            <p className="text-slate-600 text-body-lg mb-12 max-w-2xl">
+              Transformamos <span className="font-bold text-slate-900">tus costos fijos en soluciones flexibles</span> que acompañan el crecimiento de tu negocio.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-16">
@@ -56,27 +56,27 @@ export const VisionSection = () => {
                 <motion.div
                   key={i}
                   className="flex items-start gap-5 group"
-                  whileHover={{ x: 10 }}
+                  whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-white/[0.08] group-hover:border-primary/50 transition-all shadow-xl backdrop-blur-sm">
+                  <div className="w-14 h-14 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center shrink-0 group-hover:bg-white group-hover:border-primary transition-all shadow-sm group-hover:shadow-md">
                     {React.cloneElement(item.icon, { size: 28 })}
                   </div>
                   <div>
-                    <h3 className="text-headline-md text-sm text-white uppercase mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
-                    <p className="text-gray-400 text-body-md text-xs">{item.text}</p>
+                    <h3 className="text-headline-md text-sm text-slate-900 font-semibold uppercase mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
+                    <p className="text-slate-600 text-body-md text-xs">{item.text}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            <div className="flex flex-wrap items-center gap-x-16 gap-y-10 pt-10 border-t border-white/10">
+            <div className="flex flex-wrap items-center gap-x-16 gap-y-10 pt-10 border-t border-slate-200">
               {stats.map((stat, i) => (
                 <div key={i} className="flex flex-col max-w-[200px]">
-                  <span className={`text-headline-lg-mobile md:text-headline-lg ${stat.color} tracking-tighter italic drop-shadow-lg leading-tight`}>
+                  <span className={`text-headline-lg-mobile md:text-headline-lg ${stat.color} font-bold tracking-tighter leading-tight`}>
                     {stat.value}
                   </span>
-                  <span className="text-label-sm text-gray-400 uppercase mt-2">
+                  <span className="text-label-sm text-slate-600 uppercase mt-2">
                     {stat.label}
                   </span>
                 </div>
@@ -84,7 +84,7 @@ export const VisionSection = () => {
 
               <motion.div
                 whileHover={{ rotate: 90 }}
-                className="hidden md:flex ml-auto w-16 h-16 rounded-full border border-white/10 items-center justify-center text-white/10 opacity-40"
+                className="hidden md:flex ml-auto w-16 h-16 rounded-lg border border-slate-200 items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-colors"
               >
                 <Globe size={24} />
               </motion.div>
@@ -95,43 +95,43 @@ export const VisionSection = () => {
             className="lg:col-span-5 relative"
             style={{ scale, y }}
           >
-            {/* Visual Glass Frame */}
-            <div className="relative aspect-[4/5] rounded-[60px] overflow-hidden group border border-white/10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)]">
+            {/* Visual Frame */}
+            <div className="relative aspect-[4/5] rounded-lg overflow-hidden group border border-slate-200 shadow-lg">
               <Image
                 src="/hero/mapa_background.jpeg"
                 alt="Vanguardia Logística"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover transition-transform duration-[3000ms] group-hover:scale-110 filter brightness-90 contrast-110"
+                className="object-cover transition-transform duration-[3000ms] group-hover:scale-105 filter brightness-95 contrast-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d16] via-transparent to-transparent opacity-90" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-70" />
 
               {/* Animated Inner Glow */}
-              <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+              <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
               {/* Floating Interactive Hub */}
-              <div className="absolute bottom-10 left-8 right-8 p-10 rounded-[40px] bg-[#0a0d16]/40 backdrop-blur-3xl border border-white/10 flex items-center justify-between group-hover:bg-[#0a0d16]/60 transition-all duration-700 shadow-2xl">
-                <div>
-                  <h3 className="font-display text-orbitron text-2xl font-black text-white uppercase tracking-tight mb-2">Conocé más sobre nosotros</h3>
-                  <div className="flex items-center gap-3 text-xxs text-blue-400 font-black tracking-[0.2em] uppercase">
-                    <CheckCircle2 size={14} className="animate-pulse" aria-hidden="true" /> ¿Listo para formar parte de nuestra familia de clientes satisfechos?
+              <div className="absolute bottom-6 left-6 right-6 p-6 lg:p-8 rounded-lg bg-white border border-slate-100 flex items-center justify-between transition-all duration-700 shadow-xl">
+                <div className="mr-4">
+                  <h3 className="font-display text-lg font-bold text-slate-900 uppercase tracking-tight mb-2">Conocé más sobre nosotros</h3>
+                  <div className="flex items-center gap-2 text-xxs text-slate-600 font-semibold uppercase">
+                    <CheckCircle2 size={12} className="text-primary animate-pulse" aria-hidden="true" /> ¿Listo para sumarte?
                   </div>
                 </div>
                 <motion.button
-                  whileHover={{ scale: 1.1, rotate: 12 }}
-                  whileTap={{ scale: 0.9 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   aria-label="Ir a página sobre nosotros"
-                  className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white shadow-[0_10px_30px_-5px_rgba(37,99,235,0.6)] hover:bg-blue-500 transition-all border border-blue-400/30"
+                  className="w-12 h-12 rounded-lg bg-secondary hover:bg-amber-500 flex items-center justify-center text-slate-950 shadow-md transition-all shrink-0"
                   onClick={() => window.location.href = '/nosotros/sobre-nosotros'}
                 >
-                  <Play size={24} fill="currentColor" className="ml-1" aria-hidden="true" />
+                  <Play size={20} fill="currentColor" className="ml-0.5" aria-hidden="true" />
                 </motion.button>
               </div>
 
               {/* Holographic Status */}
-              <div className="absolute top-10 right-10 flex flex-col items-end gap-3">
-                <div className="px-3 py-1.5 rounded-lg bg-blue-500/20 backdrop-blur-md border border-blue-500/40 text-[9px] font-black text-blue-400 uppercase tracking-widest flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-ping" />
+              <div className="absolute top-6 right-6 flex flex-col items-end gap-3">
+                <div className="px-3 py-1.5 rounded-md bg-blue-50 border border-blue-100 text-[9px] font-black text-blue-600 uppercase tracking-widest flex items-center gap-2 shadow-sm">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-ping" />
                   EN LÍNEA
                 </div>
                 <div className="w-px h-12 bg-gradient-to-b from-blue-500/50 to-transparent mr-4" />
@@ -139,8 +139,8 @@ export const VisionSection = () => {
             </div>
 
             {/* Background Light Leaks */}
-            <div className="absolute -z-10 -bottom-20 -right-20 w-[400px] h-[400px] bg-blue-600/20 rounded-full blur-[120px] mix-blend-screen opacity-50" />
-            <div className="absolute -z-10 -top-20 -left-20 w-[300px] h-[300px] bg-yellow-500/10 rounded-full blur-[100px] mix-blend-screen opacity-30" />
+            <div className="absolute -z-10 -bottom-20 -right-20 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[120px] opacity-50" />
+            <div className="absolute -z-10 -top-20 -left-20 w-[300px] h-[300px] bg-yellow-500/5 rounded-full blur-[100px] opacity-30" />
           </motion.div>
         </div>
       </div>

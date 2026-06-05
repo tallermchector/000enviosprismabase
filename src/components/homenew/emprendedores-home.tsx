@@ -40,15 +40,14 @@ export const EmprendedoresHome = () => {
   return (
     <section className="relative min-h-[100dvh] flex items-center py-20 lg:py-32 px-4 overflow-hidden bg-transparent">
       {/* Background Decorative Tech Elements */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.05]">
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.02]">
         <Image
           src="/hero/delivery_background.jpeg"
           alt="Background Delivery"
           fill
           className="object-cover"
         />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary rounded-full blur-[150px] mix-blend-screen" />
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_20%,#3b82f633_0,transparent_50%)]" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary rounded-full blur-[150px]" />
       </div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
@@ -58,7 +57,7 @@ export const EmprendedoresHome = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-xxs font-black tracking-[0.4em] mb-10 uppercase backdrop-blur-md"
+              className="inline-flex items-center gap-3 px-3 py-1.5 rounded-md bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.4em] mb-10 uppercase"
             >
               <Building2 size={16} className="animate-pulse" /> Soluciones Corporativas y PyME
             </motion.div>
@@ -67,10 +66,10 @@ export const EmprendedoresHome = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-headline-lg-mobile md:text-display-lg italic text-white uppercase"
+              className="text-headline-lg-mobile md:text-display-lg text-slate-900 font-bold uppercase"
             >
-              Potencia tu <span className="text-primary drop-shadow-[0_0_20px_rgba(37,99,235,0.4)]">Logística</span> <br />
-              con <span className="text-secondary drop-shadow-[0_0_15px_rgba(234,179,8,0.2)]">DosRuedas</span>
+              Potencia tu <span className="text-primary">Logística</span> <br />
+              con <span className="text-secondary">DosRuedas</span>
             </motion.h2>
           </div>
           <motion.div
@@ -78,25 +77,25 @@ export const EmprendedoresHome = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:border-l lg:border-white/10 lg:pl-12"
+            className="lg:border-l lg:border-slate-200 lg:pl-12"
           >
-            <p className="text-gray-400 text-body-lg mb-10">
+            <p className="text-slate-600 text-body-lg mb-10">
               Transformamos la última milla de tu empresa con una flota ágil y especializada de alta precisión. Beneficios exclusivos para clientes corporativos.
             </p>
             <div className="flex gap-8">
               <div className="flex flex-col gap-1">
-                <span className="text-secondary text-headline-md italic uppercase">500+</span>
-                <span className="text-label-sm text-gray-500 uppercase">Empresas</span>
+                <span className="text-secondary text-headline-md font-bold uppercase">500+</span>
+                <span className="text-label-sm text-slate-500 uppercase">Empresas</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-secondary text-headline-md italic uppercase">24/7</span>
-                <span className="text-label-sm text-gray-500 uppercase">Operativa</span>
+                <span className="text-secondary text-headline-md font-bold uppercase">24/7</span>
+                <span className="text-label-sm text-slate-500 uppercase">Operativa</span>
               </div>
             </div>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-auto lg:h-[650px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-auto">
           {solutions.map((solution, idx) => (
             <motion.div
               key={idx}
@@ -104,51 +103,55 @@ export const EmprendedoresHome = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              whileHover={{ y: -15, scale: 1.02 }}
-              className="group relative h-full rounded-[48px] overflow-hidden border border-white/5 bg-[#0a0d16] hover:border-primary/40 transition-all duration-700 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6)]"
+              whileHover={{ y: -10 }}
+              className="group relative h-full rounded-lg overflow-hidden border border-slate-100 bg-white hover:border-primary/30 transition-all duration-500 shadow-md hover:shadow-lg flex flex-col justify-between"
             >
-              <Image
-                src={solution.image}
-                alt={solution.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover opacity-15 grayscale group-hover:grayscale-0 group-hover:opacity-40 group-hover:scale-110 transition-all duration-1000"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d16] via-[#0a0d16]/80 to-transparent" />
-
-              <div className="absolute inset-0 p-12 flex flex-col justify-end">
-                <div className="flex justify-between items-start mb-auto">
-                  <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 text-[9px] font-black text-primary uppercase tracking-[0.3em] shadow-lg">
+              <div className="relative w-full h-48 sm:h-56">
+                <Image
+                  src={solution.image}
+                  alt={solution.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+                
+                <div className="absolute top-4 left-4">
+                  <span className="px-3 py-1 rounded-md bg-white border border-slate-200 text-[9px] font-black text-primary uppercase tracking-[0.2em] shadow-sm">
                     {solution.badge}
                   </span>
                 </div>
+              </div>
 
-                <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white mb-10 group-hover:bg-primary group-hover:text-slate-900 transition-all duration-500 group-hover:rotate-6 shadow-2xl backdrop-blur-sm">
-                  <solution.icon size={32} />
-                </div>
+              <div className="p-8 flex flex-col flex-grow justify-between">
+                <div>
+                  <div className="w-12 h-12 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center text-primary mb-6 transition-all duration-500 group-hover:bg-primary group-hover:text-white shadow-sm">
+                    <solution.icon size={24} />
+                  </div>
 
-                <h3 className="text-headline-md text-white mb-6 uppercase">
-                  {solution.title}
-                </h3>
+                  <h3 className="text-headline-md text-slate-900 font-semibold mb-4 uppercase group-hover:text-primary transition-colors">
+                    {solution.title}
+                  </h3>
 
-                <p className="text-gray-400 text-body-md mb-10">
-                  {solution.description}
-                </p>
+                  <p className="text-slate-600 text-body-md mb-6">
+                    {solution.description}
+                  </p>
 
-                <div className="space-y-4 mb-12">
-                  {solution.features.map((feature, fIdx) => (
-                    <div key={fIdx} className="flex items-center gap-4 text-label-sm text-gray-400">
-                      <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                        <CheckCircle2 size={12} className="text-primary" />
+                  <div className="space-y-3 mb-8">
+                    {solution.features.map((feature, fIdx) => (
+                      <div key={fIdx} className="flex items-center gap-3 text-label-sm text-slate-600">
+                        <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                          <CheckCircle2 size={12} className="text-primary" />
+                        </div>
+                        <span className="uppercase">{feature}</span>
                       </div>
-                      <span className="uppercase">{feature}</span>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
 
                 <Link
                   href={solution.link}
-                  className="group/btn w-full py-6 rounded-2xl bg-white/5 border border-white/10 text-white text-label-md text-center flex items-center justify-center gap-4 hover:bg-white/10 hover:text-white transition-all duration-500 uppercase shadow-xl backdrop-blur-sm active:scale-95"
+                  className="group/btn w-full py-3 rounded-md bg-slate-100 border border-slate-200 text-primary text-label-md text-center flex items-center justify-center gap-4 hover:bg-primary hover:text-white transition-all duration-300 uppercase shadow-sm active:scale-95 font-semibold"
                 >
                   CONFIGURAR PLAN <ArrowRight size={18} className="group-hover/btn:translate-x-2 transition-transform" />
                 </Link>
@@ -159,7 +162,7 @@ export const EmprendedoresHome = () => {
       </div>
 
       {/* Dynamic Floor Element */}
-      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-50" />
+      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-slate-200 to-transparent opacity-50" />
     </section>
   );
 };

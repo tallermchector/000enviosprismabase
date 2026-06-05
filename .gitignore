@@ -44,6 +44,7 @@ Thumbs.db
 src/generated/
 next-env.d.ts
 tsconfig.tsbuildinfo
+.agents_skills/
 
 # Local Netlify folder
 .netlify

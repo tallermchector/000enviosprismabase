@@ -21,48 +21,48 @@ type ServiceTheme = {
 
 const THEMES: Record<string, ServiceTheme> = {
   express: {
-    card: "bg-[#0a0d16]/80 border-red-500/20 hover:border-red-500/40 shadow-2xl backdrop-blur-md",
-    icon: "bg-red-500/10 border border-red-500/20 text-red-400 drop-shadow-[0_0_15px_rgba(239,68,68,0.4)]",
-    accent: "text-red-400",
-    text: "text-white",
-    desc: "text-gray-400 [&>span]:text-white",
-    button: "text-gray-300 hover:text-white group-hover:text-red-400",
-    badge: "bg-red-500/10 text-red-400 border-red-500/20",
-    accentColor: "red-400",
-    glowColor: "rgba(239,68,68,0.1)"
+    card: "bg-white border border-slate-100 hover:border-red-200 shadow-md hover:shadow-lg transition-all duration-300",
+    icon: "bg-red-50 text-red-600 border border-red-100",
+    accent: "text-red-600 font-semibold",
+    text: "text-slate-900",
+    desc: "text-slate-600 [&>span]:text-slate-900",
+    button: "text-slate-600 hover:text-red-600 group-hover:text-red-600 font-semibold",
+    badge: "bg-red-50 text-red-600 border border-red-200/50",
+    accentColor: "red-600",
+    glowColor: "rgba(239,68,68,0.03)"
   },
   lowcost: {
-    card: "bg-[#0a0d16]/80 border-cyan-500/20 hover:border-cyan-500/40 shadow-2xl backdrop-blur-md",
-    icon: "bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 drop-shadow-[0_0_15px_rgba(6,182,212,0.4)]",
-    accent: "text-cyan-400",
-    text: "text-white",
-    desc: "text-gray-400 [&>span]:text-white",
-    button: "text-gray-300 hover:text-white group-hover:text-cyan-400",
-    badge: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
-    accentColor: "cyan-400",
-    glowColor: "rgba(6,182,212,0.1)"
+    card: "bg-white border border-slate-100 hover:border-cyan-200 shadow-md hover:shadow-lg transition-all duration-300",
+    icon: "bg-cyan-50 text-cyan-700 border border-cyan-100",
+    accent: "text-cyan-700 font-semibold",
+    text: "text-slate-900",
+    desc: "text-slate-600 [&>span]:text-slate-900",
+    button: "text-slate-600 hover:text-cyan-700 group-hover:text-cyan-700 font-semibold",
+    badge: "bg-cyan-50 text-cyan-700 border border-cyan-200/50",
+    accentColor: "cyan-700",
+    glowColor: "rgba(6,182,212,0.03)"
   },
   meli: {
-    card: "bg-[#0a0d16]/80 border-yellow-500/20 hover:border-yellow-500/40 shadow-2xl backdrop-blur-md",
-    icon: "bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 drop-shadow-[0_0_15px_rgba(234,179,8,0.3)]",
-    accent: "text-yellow-400",
-    text: "text-white",
-    desc: "text-gray-400 [&>span]:text-yellow-400",
-    button: "text-gray-300 hover:text-white group-hover:text-yellow-400",
-    badge: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
-    accentColor: "yellow-400",
-    glowColor: "rgba(234,179,8,0.1)"
+    card: "bg-white border border-slate-100 hover:border-yellow-200 shadow-md hover:shadow-lg transition-all duration-300",
+    icon: "bg-yellow-50 text-yellow-700 border border-yellow-100",
+    accent: "text-yellow-700 font-semibold",
+    text: "text-slate-900",
+    desc: "text-slate-600 [&>span]:text-slate-900",
+    button: "text-slate-600 hover:text-yellow-700 group-hover:text-yellow-700 font-semibold",
+    badge: "bg-yellow-50 text-yellow-700 border border-yellow-200/50",
+    accentColor: "yellow-700",
+    glowColor: "rgba(234,179,8,0.03)"
   },
   ecommerce: {
-    card: "bg-[#0a0d16]/80 border-emerald-500/20 hover:border-emerald-500/40 shadow-2xl backdrop-blur-md",
-    icon: "bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 drop-shadow-[0_0_15px_rgba(16,185,129,0.3)]",
-    accent: "text-emerald-400",
-    text: "text-white",
-    desc: "text-gray-400 [&>span]:text-emerald-400",
-    button: "text-gray-300 hover:text-white group-hover:text-emerald-400",
-    badge: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-    accentColor: "emerald-500",
-    glowColor: "rgba(16,185,129,0.1)"
+    card: "bg-white border border-slate-100 hover:border-emerald-200 shadow-md hover:shadow-lg transition-all duration-300",
+    icon: "bg-emerald-50 text-emerald-700 border border-emerald-100",
+    accent: "text-emerald-700 font-semibold",
+    text: "text-slate-900",
+    desc: "text-slate-600 [&>span]:text-slate-900",
+    button: "text-slate-600 hover:text-emerald-700 group-hover:text-emerald-700 font-semibold",
+    badge: "bg-emerald-50 text-emerald-700 border border-emerald-200/50",
+    accentColor: "emerald-700",
+    glowColor: "rgba(16,185,129,0.03)"
   }
 };
 
@@ -135,8 +135,8 @@ export const ServicesOverview = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[160px] pointer-events-none opacity-50" />
       
       {/* Section Transition Lines */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-10">
@@ -146,12 +146,12 @@ export const ServicesOverview = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-3 px-3 py-1.5 rounded-full glass-card border border-primary/20 text-blue-400 text-xxs font-black tracking-[0.2em] mb-8 uppercase">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" /> Nuestros Servicios
+            <div className="inline-flex items-center gap-3 px-3 py-1.5 rounded-md bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.2em] mb-8 uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" /> Nuestros Servicios
             </div>
-            <h2 className="text-headline-lg-mobile md:text-display-lg italic uppercase text-white">
+            <h2 className="text-headline-lg-mobile md:text-display-lg uppercase text-slate-900 font-bold">
               Soluciones <br />
-              <span className="text-primary drop-shadow-[0_0_20px_rgba(37,99,235,0.4)]">Logísticas</span>
+              <span className="text-primary">Logísticas</span>
             </h2>
           </motion.div>
 
@@ -160,9 +160,9 @@ export const ServicesOverview = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="max-w-md lg:border-l lg:border-white/10 lg:pl-10"
+            className="max-w-md lg:border-l lg:border-slate-200 lg:pl-10"
           >
-            <p className="text-gray-400 text-body-lg">
+            <p className="text-slate-600 text-body-lg">
               Infraestructura moderna para negocios que no se detienen. Inteligencia aplicada a cada kilómetro.
             </p>
           </motion.div>
@@ -183,7 +183,7 @@ export const ServicesOverview = () => {
                 variants={itemVariants}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
                 className={cn(
-                  "group p-6 lg:p-10 rounded-[32px] lg:rounded-[40px] glass-card transition-all duration-500 flex flex-col justify-between relative overflow-hidden",
+                  "group p-6 lg:p-10 rounded-lg transition-all duration-500 flex flex-col justify-between relative overflow-hidden",
                   theme.card,
                   service.className
                 )}
@@ -196,13 +196,13 @@ export const ServicesOverview = () => {
 
                 <div className="relative z-10">
                   <div className={cn(
-                    "w-12 h-12 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl flex items-center justify-center mb-6 lg:mb-10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6",
+                    "w-12 h-12 lg:w-16 lg:h-16 rounded-lg flex items-center justify-center mb-6 lg:mb-10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6",
                     theme.icon
                   )}>
                     {React.cloneElement(service.icon as React.ReactElement<any>, { size: service.theme === 'express' ? 32 : 28 })}
                   </div>
 
-                  <h3 className={cn("text-headline-md mb-1 uppercase", theme.text)}>
+                  <h3 className={cn("text-headline-md mb-1 uppercase font-semibold", theme.text)}>
                     {service.title}
                   </h3>
                   <p className={cn("text-label-sm uppercase mb-4", theme.accent)}>
@@ -222,19 +222,19 @@ export const ServicesOverview = () => {
                   </Link>
 
                   {service.badge && (
-                    <div className={cn("hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full text-[9px] font-black tracking-widest uppercase border", theme.badge)}>
+                    <div className={cn("hidden md:flex items-center gap-2 px-3 py-1.5 rounded-md text-[9px] font-black tracking-widest uppercase border", theme.badge)}>
                       {service.badge}
                     </div>
                   )}
                 </div>
 
                 {/* Decorative side border accent */}
-                <div className={cn("absolute top-1/2 -right-1 w-[2px] h-20 bg-gradient-to-b from-transparent via-white/10 to-transparent group-hover:via-current transition-all", theme.accent)} />
+                <div className={cn("absolute top-1/2 -right-1 w-[2px] h-20 bg-gradient-to-b from-transparent via-slate-200 to-transparent group-hover:via-current transition-all", theme.accent)} />
 
                 {/* Specific Visual for the first card */}
                 {idx === 0 && (
                   <div className="absolute top-10 right-10 opacity-5 group-hover:opacity-10 transition-opacity" aria-hidden="true">
-                    <MousePointer2 size={120} className="rotate-12 text-white" />
+                    <MousePointer2 size={120} className="rotate-12 text-slate-400" />
                   </div>
                 )}
               </motion.div>

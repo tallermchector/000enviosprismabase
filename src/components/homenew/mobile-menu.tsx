@@ -77,17 +77,17 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
     <div className="lg:hidden">
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 w-12 h-12 rounded-xl" aria-label="Abrir menú de navegación">
+          <Button variant="ghost" size="icon" className="text-slate-800 hover:bg-slate-100 w-12 h-12 rounded-lg" aria-label="Abrir menú de navegación">
             <Menu className="h-7 w-7" />
             <span className="sr-only">Abrir menú</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="right" className="w-[320px] bg-[#0a0d16]/95 border-white/10 text-white backdrop-blur-2xl pt-12 p-6 shadow-2xl">
+        <SheetContent side="right" className="w-[320px] bg-white border-l border-slate-100 text-slate-900 pt-12 p-6 shadow-xl">
           <SheetHeader className="mb-12 flex flex-row items-center space-x-4">
-            <div className="relative w-10 h-10 rounded-xl flex items-center justify-center drop-shadow-[0_0_10px_rgba(37,99,235,0.4)]">
+            <div className="relative w-10 h-10 rounded-lg flex items-center justify-center">
               <Image src="/LogoEnviosDosRuedas.webp" alt="Logo Dos Ruedas" fill className="object-contain" sizes="40px" />
             </div>
-            <SheetTitle className="text-white font-display text-orbitron font-black italic text-xl tracking-tighter uppercase whitespace-nowrap">
+            <SheetTitle className="text-slate-900 font-display font-bold text-xl tracking-tighter uppercase whitespace-nowrap">
               Envíos Dos <span className="text-primary">Ruedas</span>
             </SheetTitle>
           </SheetHeader>
@@ -103,14 +103,14 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                 <Link
                   href="/"
                   className={cn(
-                    "flex items-center space-x-5 py-4 px-5 rounded-2xl transition-all duration-300 w-full mb-2",
+                    "flex items-center space-x-5 py-4 px-5 rounded-lg transition-all duration-300 w-full mb-2 border",
                     isActive("/")
-                      ? "bg-primary/20 text-blue-400 border border-primary/30 shadow-xl"
-                      : "text-gray-300 hover:text-white hover:bg-white/5",
+                      ? "bg-primary/10 text-primary border-primary/20 shadow-sm"
+                      : "text-slate-600 border-transparent hover:text-slate-900 hover:bg-slate-50",
                   )}
                 >
                   <Home className="w-5 h-5" />
-                  <span className="font-black font-display text-orbitron text-xs tracking-[0.1em] uppercase">Inicio</span>
+                  <span className="font-bold text-xs tracking-[0.1em] uppercase">Inicio</span>
                 </Link>
               </SheetClose>
             </motion.div>
@@ -125,20 +125,20 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                     <AccordionItem value={group.label} className="border-b-0">
                       <AccordionTrigger
                         className={cn(
-                          "py-4 px-5 rounded-2xl transition-all duration-300 w-full justify-between group",
+                          "py-4 px-5 rounded-lg transition-all duration-300 w-full justify-between group border",
                           groupIsActive
-                            ? "text-blue-400 font-bold [&[data-state=open]]:bg-primary/20 border border-primary/30"
-                            : "text-gray-300 hover:text-white hover:bg-white/5",
+                            ? "text-primary font-bold bg-primary/10 border-primary/20 [&[data-state=open]]:bg-primary/10"
+                            : "text-slate-600 border-transparent hover:text-slate-900 hover:bg-slate-50",
                           "hover:no-underline",
                         )}
                       >
                         <div className="flex items-center space-x-5">
                           <GroupIcon className="w-5 h-5" />
-                          <span className="font-black font-display text-orbitron text-xs tracking-[0.1em] uppercase">{group.label}</span>
+                          <span className="font-bold text-xs tracking-[0.1em] uppercase">{group.label}</span>
                         </div>
                       </AccordionTrigger>
                       <AccordionContent className="pt-2 pb-0">
-                        <div className="flex flex-col space-y-1 pl-10 border-l border-white/5 ml-7 my-2">
+                        <div className="flex flex-col space-y-1 pl-10 border-l border-slate-100 ml-7 my-2">
                           {group.items.map((item: any) => {
                             const ItemIcon = item.icon;
                             return (
@@ -146,10 +146,10 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                                 <Link
                                   href={item.href}
                                   className={cn(
-                                    "flex items-center space-x-4 py-3.5 px-5 rounded-xl transition-all duration-300 w-full text-left",
+                                    "flex items-center space-x-4 py-3.5 px-5 rounded-lg transition-all duration-300 w-full text-left",
                                     isActive(item.href)
-                                      ? "bg-primary/20 text-blue-400 font-bold"
-                                      : "text-gray-400 hover:text-white hover:bg-white/5",
+                                      ? "bg-primary/10 text-primary font-bold"
+                                      : "text-slate-500 hover:text-slate-800 hover:bg-slate-50",
                                   )}
                                 >
                                   {ItemIcon && <ItemIcon className="w-4 h-4" />}
@@ -171,14 +171,14 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                 <Link
                   href="/contacto"
                   className={cn(
-                    "flex items-center space-x-5 py-4 px-5 rounded-2xl transition-all duration-300 w-full group",
+                    "flex items-center space-x-5 py-4 px-5 rounded-lg transition-all duration-300 w-full group border",
                     isActive("/contacto")
-                      ? "bg-primary/20 text-blue-400 border border-primary/30 shadow-xl"
-                      : "text-gray-300 hover:text-white hover:bg-white/5",
+                      ? "bg-primary/10 text-primary border-primary/20 shadow-sm"
+                      : "text-slate-600 border-transparent hover:text-slate-900 hover:bg-slate-50",
                   )}
                 >
                   <Mail className="w-5 h-5" />
-                  <span className="font-black font-display text-orbitron text-xs tracking-[0.1em] uppercase">Contacto</span>
+                  <span className="font-bold text-xs tracking-[0.1em] uppercase">Contacto</span>
                 </Link>
               </SheetClose>
             </motion.div>
@@ -188,19 +188,19 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                 <Link href="/cotizar/express" className="block w-full">
                   <Button
                     size="lg"
-                    className="w-full h-16 bg-secondary hover:bg-secondary/90 text-black font-display text-orbitron font-black rounded-2xl shadow-xl shadow-secondary/20 uppercase tracking-tighter active:scale-[0.95] transition-transform"
+                    className="w-full h-12 bg-secondary hover:bg-amber-500 text-slate-950 font-bold rounded-lg shadow-md uppercase tracking-wider active:scale-[0.95] transition-transform flex items-center justify-center"
                   >
-                    <CalculatorIcon className="w-6 h-6 mr-3" />
+                    <CalculatorIcon className="w-5 h-5 mr-3" />
                     Cotizar Envío
                   </Button>
                 </Link>
               </SheetClose>
               <div className="mt-6 flex items-center justify-center gap-6">
-                <Link href="https://instagram.com/enviosdosruedas" aria-label="Visitar nuestro Instagram" className="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all active:scale-[0.95]">
-                  <InstagramIcon className="w-6 h-6" />
+                <Link href="https://instagram.com/enviosdosruedas" aria-label="Visitar nuestro Instagram" className="w-12 h-12 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-600 hover:text-primary hover:bg-slate-100 transition-all active:scale-[0.95]">
+                  <InstagramIcon className="w-5 h-5" />
                 </Link>
-                <a href="tel:+5492236602699" aria-label="Llamar a Envios DosRuedas" className="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-secondary hover:bg-white/10 transition-all active:scale-[0.95]">
-                  <Phone className="w-6 h-6" />
+                <a href="tel:+5492236602699" aria-label="Llamar a Envios DosRuedas" className="w-12 h-12 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-secondary hover:bg-white/10 hover:border-secondary transition-all active:scale-[0.95]">
+                  <Phone className="w-5 h-5" />
                 </a>
               </div>
             </motion.div>

@@ -1,0 +1,17 @@
+{
+  "name": "projects/15674018069544034850",
+  "projectId": "15674018069544034850",
+  "title": "Envíos DosRuedas Design System",
+  "visibility": "PRIVATE",
+  "projectType": "PROJECT_DESIGN",
+  "origin": "STITCH",
+  "deviceType": "DESKTOP",
+  "designTheme": {
+    "colorMode": "DARK",
+    "font": "INTER",
+    "roundness": "ROUND_EIGHT",
+    "customColor": "#2563eb",
+    "saturation": 3
+  },
+  "screens": {}
+}

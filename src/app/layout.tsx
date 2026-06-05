@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Orbitron } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
 import { WhatsAppReviewButton } from "@/components/seo/WhatsAppReviewButton";
 import "./globals.css";
@@ -10,16 +10,16 @@ const inter = Inter({
   display: 'swap',
 });
 
-const orbitron = Orbitron({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
-  variable: "--font-orbitron",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-montserrat",
   display: 'swap',
 });
 
 export const viewport: Viewport = {
-  themeColor: "#050810",
-  colorScheme: "dark",
+  themeColor: "#F8FAFC",
+  colorScheme: "light",
   width: 'device-width',
   initialScale: 1,
 };
@@ -149,7 +149,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${orbitron.variable} font-sans antialiased`}
+        className={`${inter.variable} ${montserrat.variable} font-sans antialiased`}
       >
         {children}
         <WhatsAppReviewButton />

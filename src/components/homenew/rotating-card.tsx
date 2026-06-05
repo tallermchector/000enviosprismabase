@@ -60,10 +60,10 @@ export default function RotatingCard({
           will-change: transform;
           background: transparent;
           box-shadow: 
-            0 40px 80px rgba(0, 0, 0, 0.5),
-            0 0 0 1px rgba(255, 255, 255, 0.15),
-            inset 0 1px 0 rgba(255, 255, 255, 0.25),
-            0 0 30px rgba(251, 193, 7, 0.1);
+            0 20px 40px rgba(15, 23, 42, 0.15),
+            0 0 0 1px rgba(15, 23, 42, 0.05),
+            inset 0 1px 0 rgba(255, 255, 255, 0.8),
+            0 0 30px rgba(251, 193, 7, 0.05);
         }
         
         .card-face {
@@ -75,7 +75,7 @@ export default function RotatingCard({
           border-radius: 18px;
           transform-style: preserve-3d;
           backface-visibility: hidden;
-          border: 2px solid rgba(251, 193, 7, 0.2);
+          border: 1px solid rgba(15, 23, 42, 0.08);
         }
         
         .card-front {
