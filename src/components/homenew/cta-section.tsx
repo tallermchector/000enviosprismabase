@@ -33,7 +33,7 @@ export const CtaSection = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="relative p-12 md:p-20 rounded bg-primary text-primary-foreground overflow-hidden shadow-lg border border-primary-foreground/10 group"
+          className="relative p-12 md:p-20 rounded-lg bg-primary text-primary-foreground overflow-hidden shadow-lg border border-primary-foreground/10 group"
         >
           {/* Internal Glow Effects */}
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary-foreground/5 blur-[80px] rounded-full group-hover:bg-primary-foreground/10 transition-all duration-1000" />
@@ -44,14 +44,14 @@ export const CtaSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-3 px-4 py-2 rounded bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground text-xxs font-black tracking-[0.4em] mb-8 uppercase"
+              className="inline-flex items-center gap-3 px-4 py-2 rounded-sm bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground text-xxs font-black tracking-[0.4em] mb-8 uppercase"
             >
               <Zap size={16} className="fill-primary-container text-primary-container animate-pulse" /> ¡Empezá Ahora!
             </motion.div>
 
             <h2 className="text-headline-lg-mobile md:text-display-lg text-primary-foreground mb-8 uppercase font-bold">
               ¿Listo para escalar la <br />
-              <span className="text-primary-container">logística de tu E-Commerce?</span>
+              <span className="text-secondary-container">logística de tu E-Commerce?</span>
             </h2>
 
             <p className="text-primary-foreground/80 text-body-lg mb-12 max-w-4xl mx-auto opacity-90">
@@ -62,7 +62,7 @@ export const CtaSection = () => {
               <Link
                 href="https://wa.me/5492236602699?text=Hola%20Envios%20DosRuedas,%20vengo%20desde%20la%20web."
                 aria-label="Contactanos por WhatsApp para servicios logísticos"
-                className="group w-full sm:w-auto px-8 py-4 bg-primary-container text-on-primary-container hover:bg-primary-container/95 font-semibold text-label-md rounded transition-all shadow-md flex items-center justify-center gap-4 uppercase"
+                className="group w-full sm:w-auto px-8 py-4 bg-secondary-container text-primary hover:bg-secondary-container/90 font-semibold text-label-md rounded transition-all shadow-cta flex items-center justify-center gap-4 uppercase"
               >
                 Contactanos por WhatsApp <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </Link>

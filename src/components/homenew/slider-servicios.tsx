@@ -65,7 +65,7 @@ export default function SliderServicios() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.25em] mb-8 uppercase font-sans">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-sm bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.25em] mb-8 uppercase font-sans">
               <LayoutGrid size={12} className="text-primary animate-pulse" /> CAPACIDADES DINÁMICAS
             </div>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground uppercase tracking-tighter mb-4">
@@ -95,7 +95,7 @@ export default function SliderServicios() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -10 }}
-              className="group p-6 md:p-8 rounded bg-card border border-outline-variant hover:border-primary/40 transition-all duration-500 relative overflow-hidden flex flex-col min-h-[420px] h-auto shadow-md hover:shadow-lg"
+              className="group p-6 md:p-8 rounded-lg bg-card border border-outline-variant hover:border-primary/40 transition-all duration-500 relative overflow-hidden flex flex-col min-h-[420px] h-auto shadow-md hover:shadow-lg"
             >
               {/* Internal Accent Light */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 blur-[40px] rounded-full group-hover:bg-primary/5 transition-all duration-700" />

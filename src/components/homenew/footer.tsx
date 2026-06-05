@@ -127,7 +127,7 @@ export const Footer = () => {
         </div>
 
         {/* Global Stats/Trust Banner */}
-        <div className="mb-12 grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-y border-primary-foreground/10 bg-primary-foreground/5 rounded font-sans">
+        <div className="mb-12 grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-y border-primary-foreground/10 bg-primary-foreground/5 rounded-lg font-sans">
           {[
             { icon: <ShieldCheck className="text-primary-foreground" />, label: "SEGURIDAD", value: "CERTIFICADA" },
             { icon: <Zap className="text-primary-container" />, label: "VELOCIDAD", value: "MÁXIMA" },

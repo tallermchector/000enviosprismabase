@@ -76,7 +76,7 @@ export const CarruselRedes = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-20">
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded bg-primary/10 border border-primary/20 text-primary text-xxs font-bold tracking-widest mb-6 uppercase">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-primary/10 border border-primary/20 text-primary text-xxs font-bold tracking-widest mb-6 uppercase">
               <Heart size={12} className="fill-primary" /> CONECTA CON NOSOTROS
             </div>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground uppercase tracking-tighter">
@@ -125,7 +125,7 @@ export const CarruselRedes = () => {
                   href={(item as any).postUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-72 h-72 shrink-0 rounded overflow-hidden relative group border border-outline-variant shadow-md transition-all hover:border-primary/40 block"
+                  className="w-72 h-72 shrink-0 rounded-lg overflow-hidden relative group border border-outline-variant shadow-md transition-all hover:border-primary/40 block"
                   aria-label={`Ver publicación ${item.id} en ${item.type === 'ig' ? 'Instagram' : 'Facebook'}`}
                 >
                   <img src={item.image} alt={`Publicación de ${item.type === 'ig' ? 'Instagram' : 'Facebook'}`} className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />

@@ -146,7 +146,7 @@ export const ServicesOverview = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.2em] mb-8 uppercase">
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-sm bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.2em] mb-8 uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" /> Nuestros Servicios
             </div>
             <h2 className="text-headline-lg-mobile md:text-display-lg uppercase text-foreground font-bold">
@@ -183,7 +183,7 @@ export const ServicesOverview = () => {
                 variants={itemVariants}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
                 className={cn(
-                  "group p-6 lg:p-10 transition-all duration-500 flex flex-col justify-between relative overflow-hidden rounded",
+                  "group p-6 lg:p-10 transition-all duration-500 flex flex-col justify-between relative overflow-hidden rounded-lg",
                   theme.card,
                   service.className
                 )}
@@ -222,7 +222,7 @@ export const ServicesOverview = () => {
                   </Link>
 
                   {service.badge && (
-                    <div className={cn("hidden md:flex items-center gap-2 px-3 py-1.5 rounded text-[9px] font-black tracking-widest uppercase border", theme.badge)}>
+                    <div className={cn("hidden md:flex items-center gap-2 px-3 py-1.5 rounded-sm text-[9px] font-black tracking-widest uppercase border", theme.badge)}>
                       {service.badge}
                     </div>
                   )}

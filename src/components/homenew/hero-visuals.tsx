@@ -67,7 +67,7 @@ export function HeroVisuals() {
           >
             <RotatingCard 
               frontImageSrc="/cards/card_mapa.webp"
-              className="w-full h-full shadow-xl border border-outline-variant/30 rounded" 
+              className="w-full h-full shadow-xl border border-outline-variant/30 rounded-lg" 
             />
 
             <motion.div
@@ -89,12 +89,12 @@ export function HeroVisuals() {
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 0.5 }}
               className="absolute -bottom-10 -left-6 px-5 py-4 rounded bg-card border border-outline-variant flex items-center gap-4 shadow-lg z-20"
             >
-              <div className="w-12 h-12 rounded bg-tertiary/20 flex items-center justify-center text-tertiary border border-tertiary/20">
+              <div className="w-12 h-12 rounded bg-secondary-container/20 flex items-center justify-center text-secondary border border-secondary-container/20">
                 <ShieldCheck size={24} />
               </div>
               <div>
                 <div className="text-[9px] text-muted-foreground uppercase font-bold tracking-[0.1em] mb-0.5">SEGURIDAD</div>
-                <div className="text-sm font-bold text-tertiary uppercase italic font-display">VERIFICADO</div>
+                <div className="text-sm font-bold text-secondary uppercase italic font-display">VERIFICADO</div>
               </div>
             </motion.div>
           </motion.div>

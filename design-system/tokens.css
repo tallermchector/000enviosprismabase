@@ -1,0 +1,23 @@
+:root {
+  --color-primary: rgba(248, 250, 252, 0.7);
+  --color-secondary: rgba(0, 0, 0, 0);
+  --font-heading: Orbitron;
+  --font-body: Orbitron;
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 6px;
+  --space-4: 8px;
+  --space-5: 10px;
+  --space-6: 12px;
+  --space-7: 16px;
+  --space-8: 24px;
+  --space-9: 32px;
+  --space-10: 40px;
+  --space-11: 48px;
+  --space-12: 64px;
+  --space-13: 80px;
+  --space-14: 96px;
+  --space-15: 112px;
+  --space-16: 128px;
+  --space-17: 187.5px;
+}

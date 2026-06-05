@@ -1,21 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Roboto, Hanken_Grotesk } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
 import { WhatsAppReviewButton } from "@/components/seo/WhatsAppReviewButton";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
-const roboto = Roboto({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
-  variable: "--font-roboto",
+  variable: "--font-inter",
   display: 'swap',
 });
 
-const hankenGrotesk = Hanken_Grotesk({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-hanken-grotesk",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-montserrat",
   display: 'swap',
 });
 
@@ -165,7 +164,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${hankenGrotesk.variable} ${roboto.variable} font-sans antialiased`}
+        className={`${inter.variable} ${montserrat.variable} font-sans antialiased`}
       >
         <ThemeProvider>
           {children}

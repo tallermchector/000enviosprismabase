@@ -13,7 +13,7 @@ export default function HeroAnimado() {
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
         <div className="lg:col-span-7 text-center lg:text-left">
           {/* Badge - Animation with CSS */}
-          <div className="inline-flex items-center gap-3 px-4 py-2 rounded bg-primary/5 border border-primary/15 text-primary text-xxs font-black tracking-[0.2em] mb-8 uppercase animate-in fade-in slide-in-from-bottom-4 duration-1000 fill-mode-both">
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-sm bg-primary/5 border border-primary/15 text-primary text-xxs font-black tracking-[0.2em] mb-8 uppercase animate-in fade-in slide-in-from-bottom-4 duration-1000 fill-mode-both">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -22,7 +22,7 @@ export default function HeroAnimado() {
           </div>
 
           <h1 className="text-headline-lg-mobile md:text-display-lg mb-4 xl:mb-6 uppercase text-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 fill-mode-both">
-            Mensajería y <span className="text-primary">Logística E-Commerce</span> en <span className="text-tertiary italic">Mar del Plata</span>
+            Mensajería y <span className="text-primary">Logística E-Commerce</span> en <span className="text-secondary italic font-bold">Mar del Plata</span>
           </h1>
 
           <p className="text-muted-foreground text-body-lg mb-8 xl:mb-10 max-w-2xl mx-auto lg:mx-0 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500 fill-mode-both">
@@ -33,12 +33,12 @@ export default function HeroAnimado() {
             <Link
               href="/cotizar/express"
               aria-label="Solicitar Servicio de mensajería desde el héroe"
-              className="group relative px-10 py-5 bg-primary hover:bg-primary/90 text-primary-foreground text-label-md rounded transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 uppercase overflow-hidden active:scale-95 font-semibold"
+              className="group relative px-10 py-5 bg-secondary-container hover:bg-secondary-container/90 text-primary text-label-md rounded transition-all shadow-cta hover:shadow-lg hover:-translate-y-0.5 uppercase overflow-hidden active:scale-95 font-semibold"
             >
               <span className="relative z-10 flex items-center gap-2">
                 Solicitar Servicio <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
             </Link>
 
             <Link

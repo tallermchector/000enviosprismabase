@@ -57,7 +57,7 @@ export const EmprendedoresHome = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-3 px-4 py-2 rounded bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.4em] mb-10 uppercase"
+              className="inline-flex items-center gap-3 px-4 py-2 rounded-sm bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.4em] mb-10 uppercase"
             >
               <Building2 size={16} className="animate-pulse" /> Soluciones Corporativas y PyME
             </motion.div>
@@ -69,7 +69,7 @@ export const EmprendedoresHome = () => {
               className="text-headline-lg-mobile md:text-display-lg text-foreground font-bold uppercase"
             >
               Potencia tu <span className="text-primary">Logística</span> <br />
-              con <span className="text-tertiary">DosRuedas</span>
+              con <span className="text-secondary-container text-secondary font-black">DosRuedas</span>
             </motion.h2>
           </div>
           <motion.div
@@ -88,7 +88,7 @@ export const EmprendedoresHome = () => {
                 <span className="text-label-sm text-muted-foreground uppercase">Empresas</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-tertiary text-headline-md font-bold uppercase">24/7</span>
+                <span className="text-secondary text-headline-md font-bold uppercase">24/7</span>
                 <span className="text-label-sm text-muted-foreground uppercase">Operativa</span>
               </div>
             </div>
@@ -104,7 +104,7 @@ export const EmprendedoresHome = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -10 }}
-              className="group relative h-full rounded overflow-hidden border border-outline-variant bg-card hover:border-primary/40 transition-all duration-500 shadow-md hover:shadow-lg flex flex-col justify-between"
+              className="group relative h-full rounded-lg overflow-hidden border border-outline-variant bg-card hover:border-primary/40 transition-all duration-500 shadow-md hover:shadow-lg flex flex-col justify-between"
             >
               <div className="relative w-full h-48 sm:h-56">
                 <Image
@@ -117,7 +117,7 @@ export const EmprendedoresHome = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
                 
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded bg-card border border-outline-variant text-[9px] font-black text-primary uppercase tracking-[0.2em] shadow-sm">
+                  <span className="px-3 py-1 rounded-sm bg-card border border-outline-variant text-[9px] font-black text-primary uppercase tracking-[0.2em] shadow-sm">
                     {solution.badge}
                   </span>
                 </div>
