@@ -67,34 +67,34 @@ export function HeroVisuals() {
           >
             <RotatingCard 
               frontImageSrc="/cards/card_mapa.webp"
-              className="w-full h-full shadow-xl border border-outline-variant/30 rounded-lg" 
+              className="w-full h-full drop-shadow-[0_45px_70px_-15px_rgba(0,0,0,0.7)]" 
             />
 
             <motion.div
               animate={{ y: [0, -15, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute -top-8 -right-8 px-5 py-4 rounded bg-card border border-outline-variant flex items-center gap-4 shadow-lg z-20"
+              className="absolute -top-8 -right-8 px-5 py-4 rounded-2xl bg-white/5 backdrop-blur-2xl border border-white/10 flex items-center gap-4 shadow-2xl z-20"
             >
-              <div className="w-12 h-12 rounded bg-[#2563eb]/10 flex items-center justify-center text-[#2563eb] border border-[#2563eb]/20">
+              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 border border-blue-500/20">
                 <MousePointer2 size={24} />
               </div>
               <div>
-                <div className="text-[9px] text-muted-foreground uppercase font-bold tracking-[0.1em] mb-0.5">ESTADO REAL</div>
-                <div className="text-sm font-bold text-[#2563eb] uppercase italic font-display">EN TRÁNSITO</div>
+                <div className="text-[9px] text-gray-400 uppercase font-black tracking-[0.2em] mb-0.5">ESTADO REAL</div>
+                <div className="text-sm font-black text-blue-400 uppercase italic font-display text-orbitron">EN TRÁNSITO</div>
               </div>
             </motion.div>
 
             <motion.div
               animate={{ y: [0, 15, 0] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 0.5 }}
-              className="absolute -bottom-10 -left-6 px-5 py-4 rounded bg-card border border-outline-variant flex items-center gap-4 shadow-lg z-20"
+              className="absolute -bottom-10 -left-6 px-5 py-4 rounded-2xl bg-white/5 backdrop-blur-2xl border border-white/10 flex items-center gap-4 shadow-2xl z-20"
             >
-              <div className="w-12 h-12 rounded bg-[#fbc107]/10 flex items-center justify-center text-[#fbc107] border border-[#fbc107]/20">
+              <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center text-secondary border border-secondary/20">
                 <ShieldCheck size={24} />
               </div>
               <div>
-                <div className="text-[9px] text-muted-foreground uppercase font-bold tracking-[0.1em] mb-0.5">SEGURIDAD</div>
-                <div className="text-sm font-bold text-[#fbc107] uppercase italic font-display">VERIFICADO</div>
+                <div className="text-[9px] text-gray-400 uppercase font-black tracking-[0.2em] mb-0.5">SEGURIDAD</div>
+                <div className="text-sm font-black text-secondary uppercase italic font-display text-orbitron">VERIFICADO</div>
               </div>
             </motion.div>
           </motion.div>

@@ -1,33 +1,26 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Montserrat, Orbitron } from "next/font/google";
+import { Roboto, Orbitron } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
 import { WhatsAppReviewButton } from "@/components/seo/WhatsAppReviewButton";
-import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
-const inter = Inter({
+const roboto = Roboto({
   subsets: ["latin"],
-  variable: "--font-inter",
-  display: 'swap',
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-montserrat",
+  weight: ["400", "500", "700"],
+  variable: "--font-roboto",
   display: 'swap',
 });
 
 const orbitron = Orbitron({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "700", "900"],
   variable: "--font-orbitron",
   display: 'swap',
 });
 
 export const viewport: Viewport = {
-  themeColor: "#F8FAFC",
-  colorScheme: "light",
+  themeColor: "#050810",
+  colorScheme: "dark",
   width: 'device-width',
   initialScale: 1,
 };
@@ -157,18 +150,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${montserrat.variable} ${orbitron.variable} font-sans antialiased`}
+        className={`${roboto.variable} ${orbitron.variable} font-sans antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-          <WhatsAppReviewButton />
-          <Toaster />
-        </ThemeProvider>
+        {children}
+        <WhatsAppReviewButton />
+        <Toaster />
       </body>
     </html>
   );

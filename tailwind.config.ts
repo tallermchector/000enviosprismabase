@@ -1,173 +1,114 @@
-import type { Config } from 'tailwindcss';
-import { fontFamily } from 'tailwindcss/defaultTheme';
+import type { Config } from "tailwindcss"
 
 const config: Config = {
-    darkMode: ['class'],
-    content: [
-        './pages/**/*.{js,ts,jsx,tsx,mdx}',
-        './components/**/*.{js,ts,jsx,tsx,mdx}',
-        './app/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/**/*.{js,ts,jsx,tsx,mdx}',
-    ],
-    theme: {
-        container: {
-            center: true,
-            padding: '2rem',
-            screens: {
-                '2xl': '1400px',
-            },
-        },
-        extend: {
-            fontFamily: {
-                sans: ['var(--font-sans)', ...fontFamily.sans],
-                display: ['var(--font-display)', ...fontFamily.sans],
-                orbitron: ['var(--font-orbitron)', 'sans-serif'],
-            },
-            colors: {
-                background: 'hsl(var(--background))',
-                foreground: 'hsl(var(--foreground))',
-                card: {
-                    DEFAULT: 'hsl(var(--card))',
-                    foreground: 'hsl(var(--card-foreground))',
-                },
-                popover: {
-                    DEFAULT: 'hsl(var(--popover))',
-                    foreground: 'hsl(var(--popover-foreground))',
-                },
-                primary: {
-                    DEFAULT: 'hsl(var(--primary))',
-                    foreground: 'hsl(var(--primary-foreground))',
-                },
-                secondary: {
-                    DEFAULT: 'hsl(var(--secondary))',
-                    foreground: 'hsl(var(--secondary-foreground))',
-                },
-                muted: {
-                    DEFAULT: 'hsl(var(--muted))',
-                    foreground: 'hsl(var(--muted-foreground))',
-                },
-                accent: {
-                    DEFAULT: 'hsl(var(--accent))',
-                    foreground: 'hsl(var(--accent-foreground))',
-                },
-                destructive: {
-                    DEFAULT: 'hsl(var(--destructive))',
-                    foreground: 'hsl(var(--destructive-foreground))',
-                },
-                border: 'hsl(var(--border))',
-                input: 'hsl(var(--input))',
-                ring: 'hsl(var(--ring))',
-                chart: {
-                    '1': 'hsl(var(--chart-1))',
-                    '2': 'hsl(var(--chart-2))',
-                    '3': 'hsl(var(--chart-3))',
-                    '4': 'hsl(var(--chart-4))',
-                    '5': 'hsl(var(--chart-5))',
-                },
-                sidebar: {
-                    DEFAULT: 'hsl(var(--sidebar-background))',
-                    foreground: 'hsl(var(--sidebar-foreground))',
-                    primary: 'hsl(var(--sidebar-primary))',
-                    'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-                    accent: 'hsl(var(--sidebar-accent))',
-                    'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-                    border: 'hsl(var(--sidebar-border))',
-                    ring: 'hsl(var(--sidebar-ring))',
-                },
-                // Mappings to support legacy code using CSS variables directly
-                "surface-variant": "var(--surface-variant)",
-                "on-surface-variant": "var(--on-surface-variant)",
-                "outline-variant": "var(--outline-variant)",
-                "brand-blue": "var(--brand-blue)",
-                "brand-blue-foreground": "var(--brand-blue-foreground)",
-                "brand-yellow": "var(--brand-yellow)",
-                "brand-yellow-foreground": "var(--brand-yellow-foreground)",
-                "extracted-primary": "var(--color-primary)",
-                "extracted-secondary": "var(--color-secondary)",
-            },
-            borderRadius: {
-                lg: 'var(--radius)',
-                md: 'calc(var(--radius) - 2px)',
-                sm: 'calc(var(--radius) - 4px)',
-            },
-            spacing: {
-                base: "4px",
-                xs: "4px",
-                sm: "8px",
-                md: "16px",
-                lg: "32px",
-                xl: "64px",
-                gutter: "24px",
-                "margin-mobile": "16px",
-                "margin-desktop": "48px",
-                "container-max": "1280px",
-                "stack-sm": "8px",
-                "stack-md": "16px",
-                "stack-lg": "32px",
-                x1: "4px",
-                x2: "8px",
-                x3: "12px",
-                x4: "16px",
-                x6: "24px",
-                x8: "32px",
-                "space-1": "var(--space-1)",
-                "space-2": "var(--space-2)",
-                "space-3": "var(--space-3)",
-                "space-4": "var(--space-4)",
-                "space-5": "var(--space-5)",
-                "space-6": "var(--space-6)",
-                "space-7": "var(--space-7)",
-                "space-8": "var(--space-8)",
-                "space-9": "var(--space-9)",
-                "space-10": "var(--space-10)",
-                "space-11": "var(--space-11)",
-                "space-12": "var(--space-12)",
-                "space-13": "var(--space-13)",
-                "space-14": "var(--space-14)",
-                "space-15": "var(--space-15)",
-                "space-16": "var(--space-16)",
-                "space-17": "var(--space-17)",
-            },
-            keyframes: {
-                'accordion-down': {
-                    from: {
-                        height: '0',
-                    },
-                    to: {
-                        height: 'var(--radix-accordion-content-height)',
-                    },
-                },
-                'accordion-up': {
-                    from: {
-                        height: 'var(--radix-accordion-content-height)',
-                    },
-                    to: {
-                        height: '0',
-                    },
-                },
-                'h-scroll': {
-                    from: { transform: 'translateX(0)' },
-                    to: { transform: 'translateX(-50%)' },
-                },
-                float: {
-                  "0%, 100%": { transform: "translateY(0px)" },
-                  "50%": { transform: "translateY(-10px)" },
-                },
-                "spin-slow": {
-                  from: { transform: "rotate(0deg)" },
-                  to: { transform: "rotate(360deg)" },
-                },
-            },
-            animation: {
-                'accordion-down': 'accordion-down 0.2s ease-out',
-                'accordion-up': 'accordion-up 0.2s ease-out',
-                'h-scroll': 'h-scroll 60s linear infinite',
-                float: "float 6s ease-in-out infinite",
-                "spin-slow": "spin-slow 8s linear infinite",
-            },
-        },
+  darkMode: ["class"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
     },
-    plugins: [require('tailwindcss-animate')],
-} satisfies Config;
+    extend: {
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        xl: "1.5rem",
+        lg: "1rem",
+        md: "0.75rem",
+        DEFAULT: "0.5rem",
+        sm: "0.25rem",
+        full: "9999px",
+      },
+      spacing: {
+        base: "4px",
+        xs: "4px",
+        sm: "8px",
+        md: "16px",
+        lg: "32px",
+        xl: "64px",
+        gutter: "16px",
+        "margin-mobile": "16px",
+        "margin-desktop": "32px",
+        "container-max": "1400px",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "h-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "spin-slow": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "h-scroll": "h-scroll 45s linear infinite",
+        float: "float 6s ease-in-out infinite",
+        "spin-slow": "spin-slow 8s linear infinite",
+      },
+      fontFamily: {
+        sans: ["var(--font-roboto)", "sans-serif"],
+        display: ["var(--font-orbitron)", "monospace"],
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config
 
-export default config;
+export default config

@@ -28,10 +28,10 @@ export function NavDropdown({ group }: NavDropdownProps) {
       <DropdownMenuTrigger asChild>
         <motion.div
           className={cn(
-            "relative flex cursor-pointer items-center space-x-2 rounded px-4 py-2 text-sm font-medium transition-all duration-200",
+            "flex cursor-pointer items-center space-x-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200",
             groupIsActive
-              ? "bg-[#fbc107]/10 text-[#fbc107] border border-[#fbc107]/20"
-              : "text-white/80 hover:text-[#fbc107] hover:bg-white/5",
+              ? "bg-primary/20 text-blue-400 border border-primary/30"
+              : "text-gray-300 hover:text-white hover:bg-white/10",
           )}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -39,30 +39,23 @@ export function NavDropdown({ group }: NavDropdownProps) {
           <GroupIcon className="h-4 w-4" />
           <span>{group.label}</span>
           <ChevronDown className="h-4 w-4 opacity-50" />
-          {groupIsActive && (
-            <motion.div
-              layoutId="active-indicator"
-              className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#fbc107] shadow-[0_0_8px_rgba(251,193,7,0.5)]"
-              transition={{ type: "spring", stiffness: 380, damping: 30 }}
-            />
-          )}
         </motion.div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="mt-2 w-64 bg-card border border-outline-variant text-foreground shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-2">
+      <DropdownMenuContent className="mt-2 w-64 bg-[#0a0d16]/95 backdrop-blur-2xl border-white/10 text-white shadow-[0_20px_50px_-15px_rgba(0,0,0,0.8)] p-2">
         {group.items.map((item: any) => {
           const ItemIcon = item.icon;
           return (
-            <DropdownMenuItem key={item.href} asChild className="focus:bg-[#fbc107]/10 focus:text-[#fbc107] cursor-pointer rounded p-3 transition-colors">
+            <DropdownMenuItem key={item.href} asChild className="focus:bg-primary/20 focus:text-blue-400 cursor-pointer rounded-lg p-3 transition-colors">
               <Link
                 href={item.href}
                 className={cn(
                   "flex items-center space-x-4",
-                  isActive(item.href) ? "text-[#fbc107] font-bold" : "text-white/80 hover:text-[#fbc107]",
+                  isActive(item.href) ? "text-blue-400 font-bold" : "text-gray-300",
                 )}
               >
                 <div className={cn(
-                  "w-8 h-8 rounded flex items-center justify-center transition-colors",
-                  isActive(item.href) ? "bg-[#fbc107]/10 text-[#fbc107]" : "bg-surface-variant text-white/80"
+                  "w-8 h-8 rounded-lg flex items-center justify-center transition-colors",
+                  isActive(item.href) ? "bg-primary/20 text-blue-400" : "bg-white/5 text-gray-400"
                 )}>
                   {ItemIcon && <ItemIcon className="h-4 w-4" />}
                 </div>
