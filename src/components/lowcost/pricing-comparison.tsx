@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, ArrowRightCircle } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { PriceRange } from '../../../generated/prisma/client/client';
+import type { PriceRange } from '../../../generated/prisma/client';
 
 export type PriceRangeClient = Omit<PriceRange, 'distanciaMinKm' | 'distanciaMaxKm' | 'precioRango'> & {
   distanciaMinKm: number;
@@ -119,34 +119,34 @@ export function PricingComparison({ priceRanges }: PricingComparisonProps) {
         </div>
 
         <motion.div
-           initial={{ opacity: 0, y: 30 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           className="mt-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12"
         >
           <Card className="bg-[#0a0d16]/60 border-white/10 backdrop-blur-md rounded-3xl overflow-hidden p-8 md:p-12">
-             <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-label-sm font-bold tracking-widest mb-6 uppercase">
-                    COTIZACIÓN ESPECIAL
-                  </div>
-                  <h3 className="font-display text-display-md font-black text-foreground uppercase tracking-tighter mb-4 italic">
-                    ZONA 5: <span className="text-secondary">$700 / KM</span>
-                  </h3>
-                  <p className="text-gray-400 font-sans leading-relaxed text-body-lg">
-                    Para envíos de larga distancia fuera del ejido urbano masivo, ofrecemos la tarifa más competitiva por kilómetro.
-                  </p>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-label-sm font-bold tracking-widest mb-6 uppercase">
+                  COTIZACIÓN ESPECIAL
                 </div>
-                <div className="flex justify-center md:justify-end">
-                   <Button
-                    onClick={handleWhatsAppClick}
-                    className="bg-secondary hover:bg-yellow-400 text-black font-display font-black px-10 py-6 rounded-xl transition-all uppercase tracking-tight shadow-[0_0_20px_rgba(251,191,36,0.3)] h-auto text-label-md"
-                  >
-                    <Image src="/icon/icon-whatsapp.svg" alt="WhatsApp Icon" width={24} height={24} className="w-6 h-6 mr-3" />
-                    CONSULTAR POR WHATSAPP
-                  </Button>
-                </div>
-             </div>
+                <h3 className="font-display text-display-md font-black text-foreground uppercase tracking-tighter mb-4 italic">
+                  ZONA 5: <span className="text-secondary">$700 / KM</span>
+                </h3>
+                <p className="text-gray-400 font-sans leading-relaxed text-body-lg">
+                  Para envíos de larga distancia fuera del ejido urbano masivo, ofrecemos la tarifa más competitiva por kilómetro.
+                </p>
+              </div>
+              <div className="flex justify-center md:justify-end">
+                <Button
+                  onClick={handleWhatsAppClick}
+                  className="bg-secondary hover:bg-yellow-400 text-black font-display font-black px-10 py-6 rounded-xl transition-all uppercase tracking-tight shadow-[0_0_20px_rgba(251,191,36,0.3)] h-auto text-label-md"
+                >
+                  <Image src="/icon/icon-whatsapp.svg" alt="WhatsApp Icon" width={24} height={24} className="w-6 h-6 mr-3" />
+                  CONSULTAR POR WHATSAPP
+                </Button>
+              </div>
+            </div>
           </Card>
         </motion.div>
       </div>

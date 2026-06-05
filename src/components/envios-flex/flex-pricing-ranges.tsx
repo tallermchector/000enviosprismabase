@@ -6,16 +6,16 @@ import { Button } from "@/components/ui/button";
 import { Coins, ArrowRightCircle, HelpCircle } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { PriceRange } from '../../../generated/prisma/client/client';
+import type { PriceRange } from '../../../generated/prisma/client';
 
 export type PriceRangeClient = Omit<PriceRange, 'distanciaMinKm' | 'distanciaMaxKm' | 'precioRango'> & {
-  distanciaMinKm: number;
-  distanciaMaxKm: number;
-  precioRango: number;
+    distanciaMinKm: number;
+    distanciaMaxKm: number;
+    precioRango: number;
 };
 
 interface FlexPricingRangesProps {
-  priceRanges: PriceRangeClient[];
+    priceRanges: PriceRangeClient[];
 }
 
 export function FlexPricingRanges({ priceRanges }: FlexPricingRangesProps) {
@@ -89,7 +89,7 @@ export function FlexPricingRanges({ priceRanges }: FlexPricingRangesProps) {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {flexTiers.map((tier, index) => {
                         return (
-                             <motion.div
+                            <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -142,28 +142,28 @@ export function FlexPricingRanges({ priceRanges }: FlexPricingRangesProps) {
                     className="mt-12"
                 >
                     <Card className="bg-gradient-to-r from-primary/10 to-secondary/5 border-white/10 backdrop-blur-md rounded-3xl overflow-hidden p-8 md:p-12">
-                         <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div>
-                              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-xxs font-bold tracking-widest mb-6 uppercase">
-                                BENEFICIO CLIMA
-                              </div>
-                              <h3 className="font-[family-name:var(--font-orbitron)] text-3xl font-black text-slate-900 uppercase tracking-tighter mb-4 italic">
-                                RECARGO POR LLUVIA: <span className="text-secondary">SOLO 30%</span>
-                              </h3>
-                              <p className="text-gray-400 font-[family-name:var(--font-roboto)] leading-relaxed">
-                                Para nuestros clientes Flex, el recargo por días de lluvia es reducido. Minimizamos el impacto en tus costos operativos.
-                              </p>
+                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-xxs font-bold tracking-widest mb-6 uppercase">
+                                    BENEFICIO CLIMA
+                                </div>
+                                <h3 className="font-[family-name:var(--font-orbitron)] text-3xl font-black text-slate-900 uppercase tracking-tighter mb-4 italic">
+                                    RECARGO POR LLUVIA: <span className="text-secondary">SOLO 30%</span>
+                                </h3>
+                                <p className="text-gray-400 font-[family-name:var(--font-roboto)] leading-relaxed">
+                                    Para nuestros clientes Flex, el recargo por días de lluvia es reducido. Minimizamos el impacto en tus costos operativos.
+                                </p>
                             </div>
                             <div className="flex justify-center md:justify-end">
-                               <Button
-                                onClick={handleWhatsAppClick}
-                                className="bg-secondary hover:bg-secondary/90 text-black font-[family-name:var(--font-orbitron)] font-black px-10 py-6 rounded-2xl transition-all uppercase tracking-tight shadow-[0_0_20px_rgba(251,191,36,0.3)] h-auto text-lg"
-                              >
-                                <Image src="/icon/icon-whatsapp.svg" alt="WhatsApp Icon" width={24} height={24} className="w-6 h-6 mr-3" />
-                                MÁS INFORMACIÓN FLEX
-                              </Button>
+                                <Button
+                                    onClick={handleWhatsAppClick}
+                                    className="bg-secondary hover:bg-secondary/90 text-black font-[family-name:var(--font-orbitron)] font-black px-10 py-6 rounded-2xl transition-all uppercase tracking-tight shadow-[0_0_20px_rgba(251,191,36,0.3)] h-auto text-lg"
+                                >
+                                    <Image src="/icon/icon-whatsapp.svg" alt="WhatsApp Icon" width={24} height={24} className="w-6 h-6 mr-3" />
+                                    MÁS INFORMACIÓN FLEX
+                                </Button>
                             </div>
-                         </div>
+                        </div>
                     </Card>
                 </motion.div>
             </div>

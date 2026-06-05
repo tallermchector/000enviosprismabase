@@ -18,10 +18,10 @@ importers:
         specifier: ^5.2.8
         version: 5.2.8
       '@genkit-ai/google-genai':
-        specifier: ^1.35.0
+        specifier: ^1.36.0
         version: 1.36.0(genkit@1.36.0(@google-cloud/firestore@7.11.6)(firebase-admin@13.10.0))
       '@genkit-ai/next':
-        specifier: ^1.35.0
+        specifier: ^1.36.0
         version: 1.36.0(genkit@1.36.0(@google-cloud/firestore@7.11.6)(firebase-admin@13.10.0))(next@16.2.4(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(zod@4.4.3)
       '@hookform/resolvers':
         specifier: ^5.4.0
@@ -144,7 +144,7 @@ importers:
         specifier: ^1.1.1
         version: 1.1.1(@types/react-dom@19.2.3(@types/react@19.2.16))(@types/react@19.2.16)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       date-fns:
-        specifier: ^4.3.0
+        specifier: ^4.4.0
         version: 4.4.0
       dotenv:
         specifier: ^17.4.2
@@ -156,7 +156,7 @@ importers:
         specifier: ^12.40.0
         version: 12.40.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       genkit:
-        specifier: ^1.35.0
+        specifier: ^1.36.0
         version: 1.36.0(@google-cloud/firestore@7.11.6)(firebase-admin@13.10.0)
       input-otp:
         specifier: ^1.4.2
@@ -165,7 +165,7 @@ importers:
         specifier: ^1.9.4
         version: 1.9.4
       lucide-react:
-        specifier: ^1.16.0
+        specifier: ^1.17.0
         version: 1.17.0(react@19.2.7)
       next:
         specifier: 16.2.4
@@ -180,16 +180,16 @@ importers:
         specifier: ^8.21.0
         version: 8.21.0
       react:
-        specifier: ^19.2.6
+        specifier: ^19.2.7
         version: 19.2.7
       react-day-picker:
         specifier: ^9.14.0
         version: 9.14.0(react@19.2.7)
       react-dom:
-        specifier: ^19.2.6
+        specifier: ^19.2.7
         version: 19.2.7(react@19.2.7)
       react-hook-form:
-        specifier: ^7.76.1
+        specifier: ^7.77.0
         version: 7.77.0(react@19.2.7)
       react-leaflet:
         specifier: ^5.0.0
@@ -198,7 +198,7 @@ importers:
         specifier: ^4.11.2
         version: 4.11.2(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       react-zxing:
-        specifier: ^2.1.0
+        specifier: ^2.2.0
         version: 2.2.0(react@19.2.7)
       recharts:
         specifier: ^3.8.1
@@ -235,7 +235,7 @@ importers:
         specifier: ^8.20.0
         version: 8.20.0
       '@types/react':
-        specifier: ^19.2.15
+        specifier: ^19.2.16
         version: 19.2.16
       '@types/react-dom':
         specifier: ^19.2.3
@@ -250,7 +250,7 @@ importers:
         specifier: 16.2.4
         version: 16.2.4(@typescript-eslint/parser@8.60.1(eslint@9.39.4(jiti@1.21.7))(typescript@6.0.3))(eslint@9.39.4(jiti@1.21.7))(typescript@6.0.3)
       genkit-cli:
-        specifier: ^1.35.0
+        specifier: ^1.36.0
         version: 1.36.0(@cfworker/json-schema@4.1.1)(@types/node@25.9.1)(zod@4.4.3)
       postcss:
         specifier: ^8.5.15
@@ -262,7 +262,7 @@ importers:
         specifier: ^3.4.19
         version: 3.4.19(tsx@4.22.4)(yaml@2.9.0)
       tsx:
-        specifier: ^4.7.1
+        specifier: ^4.22.4
         version: 4.22.4
       typescript:
         specifier: ^6.0.3

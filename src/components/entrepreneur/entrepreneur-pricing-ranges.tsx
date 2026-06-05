@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Coins, ArrowRightCircle, Calculator } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { PriceRange } from '../../../generated/prisma/client/client';
+import type { PriceRange } from '../../../generated/prisma/client';
 
 export type PriceRangeClient = Omit<PriceRange, 'distanciaMinKm' | 'distanciaMaxKm' | 'precioRango'> & {
   distanciaMinKm: number;
@@ -83,47 +83,47 @@ export function EntrepreneurPricingRanges({ priceRanges }: EntrepreneurPricingRa
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {entrepreneurTiers.map((tier, index) => {
             return (
-               <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
               >
-                  <Card className="relative bg-white/5 border-white/10 backdrop-blur-md hover:border-primary/50 transition-all duration-300 rounded-3xl overflow-hidden h-full flex flex-col group">
-                      <Badge className="absolute top-4 right-4 bg-primary/20 text-primary border-primary/30 py-1 px-3 rounded-full text-xxs font-bold uppercase tracking-widest">
-                          {tier.badgeText}
-                      </Badge>
+                <Card className="relative bg-white/5 border-white/10 backdrop-blur-md hover:border-primary/50 transition-all duration-300 rounded-3xl overflow-hidden h-full flex flex-col group">
+                  <Badge className="absolute top-4 right-4 bg-primary/20 text-primary border-primary/30 py-1 px-3 rounded-full text-xxs font-bold uppercase tracking-widest">
+                    {tier.badgeText}
+                  </Badge>
 
-                      <CardHeader className="text-center pt-12 pb-6">
-                          <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                              <Coins className="w-8 h-8 text-primary" />
-                          </div>
-                          <CardTitle className="font-[family-name:var(--font-orbitron)] text-2xl font-bold text-slate-900 uppercase tracking-tight">
-                              {tier.name}
-                          </CardTitle>
-                          <p className="text-xs text-primary font-bold uppercase tracking-widest mt-1">
-                              {tier.distanceRange}
-                          </p>
-                          <div className="text-4xl font-black text-slate-900 mt-6 font-[family-name:var(--font-orbitron)] italic tracking-tighter">
-                              {tier.price}
-                          </div>
-                      </CardHeader>
+                  <CardHeader className="text-center pt-12 pb-6">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                      <Coins className="w-8 h-8 text-primary" />
+                    </div>
+                    <CardTitle className="font-[family-name:var(--font-orbitron)] text-2xl font-bold text-slate-900 uppercase tracking-tight">
+                      {tier.name}
+                    </CardTitle>
+                    <p className="text-xs text-primary font-bold uppercase tracking-widest mt-1">
+                      {tier.distanceRange}
+                    </p>
+                    <div className="text-4xl font-black text-slate-900 mt-6 font-[family-name:var(--font-orbitron)] italic tracking-tighter">
+                      {tier.price}
+                    </div>
+                  </CardHeader>
 
-                      <CardContent className="flex-grow pb-12">
-                          <p className="text-gray-400 mb-8 text-center text-sm font-[family-name:var(--font-roboto)] leading-relaxed">
-                              {tier.description}
-                          </p>
-                          <ul className="space-y-4 font-[family-name:var(--font-roboto)]">
-                              {tier.features.map((feature, featureIndex) => (
-                                  <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                                      <ArrowRightCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
-                                      {feature}
-                                  </li>
-                              ))}
-                          </ul>
-                      </CardContent>
-                  </Card>
+                  <CardContent className="flex-grow pb-12">
+                    <p className="text-gray-400 mb-8 text-center text-sm font-[family-name:var(--font-roboto)] leading-relaxed">
+                      {tier.description}
+                    </p>
+                    <ul className="space-y-4 font-[family-name:var(--font-roboto)]">
+                      {tier.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                          <ArrowRightCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
               </motion.div>
             );
           })}

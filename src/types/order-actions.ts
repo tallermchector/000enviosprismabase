@@ -1,5 +1,5 @@
 // src/types/order-actions.ts
-import type { Client, Prisma, ServiceTypeEnum as PrismaServiceTypeEnum } from '../../generated/prisma/client/client';
+import type { Client, Prisma, ServiceTypeEnum as PrismaServiceTypeEnum } from '../../generated/prisma/client.ts';
 import type { z } from 'zod';
 
 // --- Types for searchClientByPhone ---
@@ -10,7 +10,7 @@ export interface ClientSearchResult {
   success: boolean;
   data?: Client | null; // Client type is from Prisma
   error?: string;
-  message?: string; 
+  message?: string;
   fieldErrors?: z.ZodIssue[];
 }
 
@@ -33,16 +33,16 @@ export interface RegisterClientResult {
 export interface QuoteShipmentInput {
   originAddress: string;
   destinationAddress: string;
-  serviceType: PrismaServiceTypeEnum; 
+  serviceType: PrismaServiceTypeEnum;
 }
 export interface QuoteDetails {
-  price: number | null; 
+  price: number | null;
   distanceText: string;
   durationText: string;
-  originLat: number; 
-  originLng: number; 
-  destinationLat: number; 
-  destinationLng: number; 
+  originLat: number;
+  originLng: number;
+  destinationLat: number;
+  destinationLng: number;
 }
 export interface QuoteShipmentResult {
   success: boolean;
@@ -55,38 +55,38 @@ export interface QuoteShipmentResult {
 // Input now expects numbers for prices and coordinates, matching Zod schema.
 // The Server Action will handle conversion to Decimal for Prisma.
 export interface SaveShipmentInput {
-  clientId?: number; 
+  clientId?: number;
 
   originFullName: string;
   originPhone: string;
   originAddress: string;
-  originLat: number; 
-  originLng: number; 
+  originLat: number;
+  originLng: number;
 
   destinationContactName: string;
   destinationContactPhone: string;
   destinationContactEmail?: string;
   destinationAddress: string;
-  destinationLat: number; 
-  destinationLng: number; 
-  
-  serviceType: PrismaServiceTypeEnum; 
-  quotedPrice: number; 
+  destinationLat: number;
+  destinationLng: number;
+
+  serviceType: PrismaServiceTypeEnum;
+  quotedPrice: number;
   distanceText?: string;
   durationText?: string;
-  
-  clientNameAtOrder?: string; 
+
+  clientNameAtOrder?: string;
   clientPhoneAtOrder?: string;
 
   pickupDate: Date;
-  pickupTimeFrom: string; 
-  pickupTimeTo: string; 
+  pickupTimeFrom: string;
+  pickupTimeTo: string;
   deliveryDate: Date;
-  deliveryTimeFrom: string; 
+  deliveryTimeFrom: string;
   deliveryTimeTo: string;
-  
-  shippingCost?: number; 
-  totalCost?: number; 
+
+  shippingCost?: number;
+  totalCost?: number;
 }
 
 export interface SaveShipmentResult {
@@ -94,5 +94,5 @@ export interface SaveShipmentResult {
   message?: string;
   error?: string;
   fieldErrors?: z.ZodIssue[];
-  shipmentId?: number; 
+  shipmentId?: number;
 }
