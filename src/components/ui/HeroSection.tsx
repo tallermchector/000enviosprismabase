@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Button, type buttonVariants } from '@/components/ui/button';
 import Link from 'next/link';
@@ -5,30 +6,18 @@ import type { VariantProps } from 'class-variance-authority';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { MeshGradientBackground } from '@/components/ui/MeshGradientBackground';
-import {
-  ArrowRight,
-  Mail,
-  Star,
-  Home,
-  Truck,
-  Calculator as CalculatorIcon,
-  Users,
-  ChevronDown,
-  Menu,
-  X,
-  Play
-} from 'lucide-react';
+import { ArrowRight, Calculator as CalculatorIcon, CaretDown, Envelope, House, List, Play, Star, Truck, Users, X } from '@phosphor-icons/react';
 
 const iconMap: Record<string, React.ElementType> = {
   ArrowRight,
-  Mail,
+  Envelope,
   Star,
-  Home,
+  House,
   Truck,
   Calculator: CalculatorIcon,
   Users,
-  ChevronDown,
-  Menu,
+  CaretDown,
+  List,
   X,
   Play,
 };
@@ -84,7 +73,7 @@ export function HeroSection({
   descriptionClassName = 'text-gray-300 text-lg md:text-xl mb-12 max-w-xl mx-auto leading-relaxed font-sans',
   visualElement,
   layout = 'center-stacked',
-  minHeight = 'min-h-screen',
+  minHeight = 'min-h-[100dvh]',
   contentMaxWidth = 'max-w-7xl',
   textAlignment = 'text-center',
   className = '',
@@ -98,7 +87,7 @@ export function HeroSection({
   else if (backgroundType === 'image') bgClasses = 'bg-surface-light';
 
   const sectionClasses = cn(
-    'relative flex items-center overflow-hidden pt-24 pb-12 md:pt-32 md:pb-20 px-6',
+    'relative flex items-center overflow-hidden pt-24 pb-12 md:pt-24 md:pb-20 px-6',
     minHeight,
     bgClasses,
     className

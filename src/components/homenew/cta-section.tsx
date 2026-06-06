@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calculator, ArrowRight, Zap, ShieldCheck, Clock, MousePointer2 } from 'lucide-react';
+import { ArrowRight, Calculator, Clock, Cursor, Lightning, ShieldCheck } from '@phosphor-icons/react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -48,7 +48,7 @@ export const CtaSection = () => {
               transition={{ delay: 0.2 }}
               className="inline-flex items-center gap-3 px-5 py-2 rounded-full glass-card text-white text-xxs font-black tracking-[0.4em] mb-12 uppercase"
             >
-              <Zap size={16} className="fill-yellow-400 text-yellow-400 animate-pulse" /> ¡Empezá Ahora!
+              <Lightning size={16} className="fill-yellow-400 text-yellow-400 animate-pulse" /> ¡Empezá Ahora!
             </motion.div>
 
             <h2 className="text-headline-lg-mobile md:text-display-lg text-white mb-10 uppercase italic">
@@ -81,7 +81,7 @@ export const CtaSection = () => {
               {[
                 { icon: <Clock aria-hidden="true" />, text: "Confianza local comprobada" },
                 { icon: <ShieldCheck aria-hidden="true" />, text: "Innovación constante en última milla" },
-                { icon: <MousePointer2 aria-hidden="true" />, text: "Motocicletas dedicadas para máxima agilidad urbana" }
+                { icon: <Cursor aria-hidden="true" />, text: "Motocicletas dedicadas para máxima agilidad urbana" }
               ].map((item, i) => (
                 <div key={i} className="flex flex-col items-center gap-4 text-label-sm text-blue-100/50 uppercase">
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 group-hover:text-white transition-all">

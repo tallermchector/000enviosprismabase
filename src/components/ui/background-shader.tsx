@@ -4,7 +4,7 @@ import { MeshGradient } from "@paper-design/shaders-react"
 
 export default function Waitlist() {
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-[100dvh] relative overflow-hidden">
       <div className="fixed inset-0 z-0">
         <MeshGradient
           style={{ height: "100vh", width: "100vw" }}
@@ -21,7 +21,7 @@ export default function Waitlist() {
 
       <div className="relative z-10">
         {/* Main content */}
-        <main className="flex items-center justify-center min-h-screen p-4 my-0">
+        <main className="flex items-center justify-center min-h-[100dvh] p-4 my-0">
           <div className="w-full max-w-2xl mx-auto text-center space-y-8">
             {/* Hero section */}
             <div className="text-4xl md:text-6xl font-bold tracking-tight text-white drop-shadow-2xl font-sans">

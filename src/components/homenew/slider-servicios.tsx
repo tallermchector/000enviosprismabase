@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Package, Truck, Clock, ShieldCheck, ChevronRight, LayoutGrid, Zap, Globe, MousePointer2 } from 'lucide-react';
+import { CaretRight, Clock, Globe, Lightning, Package, SquaresFour, Truck } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { cn } from "@/lib/utils";
 
@@ -11,7 +11,7 @@ const services = [
     title: "Envíos Express",
     bajada: "Prioridad absoluta y certeza total.",
     desc: "Diseñado para operaciones de alta criticidad horaria. Vos elegís el rango exacto de entrega con solo 2 horas de anticipación. Garantizamos precisión en el tiempo de tu cliente final.",
-    icon: <Zap />,
+    icon: <Lightning />,
     color: "hsl(221.2, 83.2%, 53.3%)",
     href: "/servicios/envios-express",
     badge: "ALTA PRIORIDAD",
@@ -67,7 +67,7 @@ export default function SliderServicios() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-blue-400 text-xxs font-black tracking-[0.25em] mb-8 uppercase font-sans">
-              <LayoutGrid size={12} className="text-primary animate-pulse" /> CAPACIDADES DINÁMICAS
+              <SquaresFour size={12} className="text-primary animate-pulse" /> CAPACIDADES DINÁMICAS
             </div>
             <h2 className="font-display text-orbitron text-4xl md:text-5xl lg:text-6xl font-black italic text-white uppercase tracking-tighter mb-4">
               SOLUCIONES A <span className="text-secondary drop-shadow-[0_0_20px_rgba(255,230,0,0.35)]">MEDIDA</span>
@@ -128,7 +128,7 @@ export default function SliderServicios() {
                 href={service.href}
                 className="flex items-center gap-4 text-white font-display text-orbitron text-xxs font-black uppercase tracking-[0.3em] opacity-30 group-hover:opacity-100 group-hover:text-secondary transition-all group-hover:gap-6 pt-6 mt-auto border-t border-white/5"
               >
-                {service.buttonText} <ChevronRight size={18} />
+                {service.buttonText} <CaretRight size={18} />
               </Link>
 
               {/* Decorative Side Accent */}
@@ -137,7 +137,7 @@ export default function SliderServicios() {
               {/* Specific Visual for certain cards */}
               {idx === 0 && (
                 <div className="absolute bottom-20 right-10 opacity-5 group-hover:opacity-10 transition-opacity">
-                  <Zap size={100} className="text-white/10" />
+                  <Lightning size={100} className="text-white/10" />
                 </div>
               )}
             </motion.div>
@@ -153,7 +153,7 @@ export default function SliderServicios() {
         >
           <div className="flex items-center gap-10">
             <div className="flex items-center gap-3 text-white/20">
-              <Zap size={14} />
+              <Lightning size={14} />
               <span className="text-[9px] font-black tracking-[0.5em] uppercase">MÁXIMO PODER</span>
             </div>
             <div className="w-2 h-2 rounded-full bg-primary/20" />

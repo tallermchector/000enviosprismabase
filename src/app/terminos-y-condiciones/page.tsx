@@ -1,10 +1,10 @@
+import { HandshakeIcon, ShieldIcon, FileTextIcon } from "@/components/ui/icons";
 import type { Metadata } from "next";
 import { OptimizedHeader } from "@/components/homenew/optimized-header";
 import { CarruselRedes } from "@/components/homenew/carrusel-redes";
 import { Footer } from "@/components/homenew/footer";
 import { HeroSection } from "@/components/ui/HeroSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, Handshake } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Términos y Condiciones",
@@ -58,13 +58,13 @@ export default function TerminosYCondicionesPage() {
     },
   ];
   return (
-    <div className="dark min-h-screen flex flex-col bg-background text-foreground selection:bg-primary/30">
+    <div className="dark min-h-[100dvh] flex flex-col bg-background text-foreground selection:bg-primary/30">
       <OptimizedHeader />
       <main className="flex-grow">
         <HeroSection
           preTitle={
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Handshake className="w-8 h-8 text-primary" />
+              <HandshakeIcon className="w-8 h-8 text-primary" />
             </div>
           }
           title={<span className="text-primary">Términos y Condiciones</span>}
@@ -80,7 +80,7 @@ export default function TerminosYCondicionesPage() {
           <Card className="shadow-2xl bg-card/60 border-border/50 backdrop-blur-xl rounded-3xl overflow-hidden border">
             <CardHeader>
                <CardTitle className="flex items-center gap-3 text-2xl font-display">
-                 <FileText className="h-6 w-6 text-primary" />
+                 <FileTextIcon className="h-6 w-6 text-primary" />
                  Acuerdo de Servicio
                </CardTitle>
                 <div className="text-sm text-muted-foreground pt-2 font-sans">

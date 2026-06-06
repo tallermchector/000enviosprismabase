@@ -27,6 +27,7 @@
     "@netlify/plugin-nextjs": "^5.15.11",
     "@opentelemetry/exporter-jaeger": "^2.7.1",
     "@paper-design/shaders-react": "^0.0.76",
+    "@phosphor-icons/react": "^2.1.10",
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "@prisma/client-runtime-utils": "^7.8.0",

@@ -2,32 +2,21 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  Zap,
-  DollarSign,
-  Calendar,
-  ArrowRight,
-  MapPin,
-  ChevronDown,
-  Menu,
-  Home,
-  Truck,
-  User
-} from 'lucide-react';
+import { ArrowRight, Calendar, CaretDown, CurrencyDollar, House, Lightning, List, MapPin, Truck, User } from '@phosphor-icons/react';
 
 const HeroPrototype = () => {
   return (
-    <div className="min-h-screen bg-surface-light text-slate-900 font-sans selection:bg-primary selection:text-slate-900">
+    <div className="min-h-[100dvh] bg-surface-light text-slate-900 font-sans selection:bg-primary selection:text-slate-900">
       {/* Header */}
       <header className="flex items-center justify-between p-4 bg-surface-light/50 backdrop-blur-md sticky top-0 z-50 border-b border-white/10">
         <div className="flex items-center gap-2">
           <div className="p-1.5 bg-primary rounded-lg">
-            <Zap className="w-6 h-6" />
+            <Lightning className="w-6 h-6" />
           </div>
           <span className="text-xl font-display font-bold tracking-tight uppercase italic">DosRuedas</span>
         </div>
         <button className="p-2 bg-surface-light rounded-lg border border-white/10">
-          <Menu className="w-6 h-6" />
+          <List className="w-6 h-6" />
         </button>
       </header>
 
@@ -81,7 +70,7 @@ const HeroPrototype = () => {
           transition={{ duration: 2, repeat: Infinity }}
           className="mt-16 opacity-50"
         >
-          <ChevronDown className="w-6 h-6 mx-auto" />
+          <CaretDown className="w-6 h-6 mx-auto" />
         </motion.div>
       </section>
 
@@ -97,7 +86,7 @@ const HeroPrototype = () => {
             className="p-8 bg-surface-light/40 rounded-3xl border border-white/5 backdrop-blur-sm group hover:border-primary/30 transition-all"
           >
             <div className="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-2xl mb-6 text-primary">
-              <Zap className="w-8 h-8" />
+              <Lightning className="w-8 h-8" />
             </div>
             <h3 className="text-2xl font-display font-black mb-4 uppercase italic">Express</h3>
             <p className="text-slate-500 mb-6 leading-relaxed">
@@ -114,7 +103,7 @@ const HeroPrototype = () => {
             className="p-8 bg-surface-light/40 rounded-3xl border border-white/5 backdrop-blur-sm group hover:border-primary/30 transition-all"
           >
             <div className="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-2xl mb-6 text-primary">
-              <DollarSign className="w-8 h-8" />
+              <CurrencyDollar className="w-8 h-8" />
             </div>
             <h3 className="text-2xl font-display font-black mb-4 uppercase italic">Low-Cost</h3>
             <p className="text-slate-500 mb-6 leading-relaxed">
@@ -171,7 +160,7 @@ const HeroPrototype = () => {
       <nav className="fixed bottom-0 left-0 right-0 p-4 pb-8 bg-surface-light/80 backdrop-blur-2xl border-t border-white/10 z-50">
         <div className="flex justify-around items-center">
           <button className="flex flex-col items-center gap-1 text-primary">
-            <Home className="w-6 h-6" />
+            <House className="w-6 h-6" />
             <span className="text-xxs font-bold uppercase tracking-wider">Inicio</span>
           </button>
           <button className="flex flex-col items-center gap-1 text-slate-500">

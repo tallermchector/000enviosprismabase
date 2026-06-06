@@ -1,5 +1,6 @@
+'use client';
 import Link from 'next/link';
-import { Play, ArrowRight, ShieldCheck, Zap, Globe } from 'lucide-react';
+import { ArrowRight, Globe, Lightning, Play, ShieldCheck } from '@phosphor-icons/react';
 import { HeroBackground } from './hero-background';
 import { HeroVisuals } from './hero-visuals';
 import { HeroScrollIndicator } from './hero-scroll-indicator';
@@ -58,7 +59,7 @@ export default function HeroAnimado() {
               <ShieldCheck size={14} className="text-primary" /> 100% SEGURO
             </div>
             <div className="flex items-center gap-2 text-label-sm uppercase text-white/40">
-              <Zap size={14} className="text-secondary" /> ULTRA RÁPIDO
+              <Lightning size={14} className="text-secondary" /> ULTRA RÁPIDO
             </div>
             <div className="flex items-center gap-2 text-label-sm uppercase text-white/40">
               <Globe size={14} className="text-blue-400" /> COBERTURA TOTAL

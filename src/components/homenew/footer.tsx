@@ -1,5 +1,6 @@
+'use client';
 import React from 'react';
-import { Truck, MapPin, Phone, Mail, ShieldCheck, Zap, Globe, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Envelope, Globe, Lightning, MapPin, Phone, ShieldCheck, Truck } from '@phosphor-icons/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FooterSocialLinks } from './footer-social-links';
@@ -116,7 +117,7 @@ export const Footer = () => {
 
               <li className="flex items-center gap-5 group">
                 <div className="w-12 h-12 rounded-2xl glass-card flex items-center justify-center shrink-0 group-hover:bg-primary/20 group-hover:border-primary/40 transition-all">
-                  <Mail size={22} className="text-primary" />
+                  <Envelope size={22} className="text-primary" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-white font-display text-orbitron text-xxs font-black uppercase tracking-widest mb-1 opacity-40">Email</span>
@@ -131,7 +132,7 @@ export const Footer = () => {
         <div className="mb-16 grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-y border-white/5 bg-white/[0.01]">
           {[
             { icon: <ShieldCheck className="text-primary" />, label: "SEGURIDAD", value: "CERTIFICADA" },
-            { icon: <Zap className="text-secondary" />, label: "VELOCIDAD", value: "MÁXIMA" },
+            { icon: <Lightning className="text-secondary" />, label: "VELOCIDAD", value: "MÁXIMA" },
             { icon: <Globe className="text-blue-400" />, label: "COBERTURA", value: "DISTRITAL" },
             { icon: <ArrowUpRight className="text-green-400" />, label: "STATUS", value: "ONLINE" }
           ].map((item, i) => (

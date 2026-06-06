@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
 import RotatingCard from '@/components/homenew/rotating-card';
-import { MousePointer2, ShieldCheck } from 'lucide-react';
+import { Cursor, ShieldCheck } from '@phosphor-icons/react';
 
 export function HeroVisuals() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -76,7 +76,7 @@ export function HeroVisuals() {
               className="absolute -top-8 -right-8 px-5 py-4 rounded-2xl bg-white/5 backdrop-blur-2xl border border-white/10 flex items-center gap-4 shadow-2xl z-20"
             >
               <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 border border-blue-500/20">
-                <MousePointer2 size={24} />
+                <Cursor size={24} />
               </div>
               <div>
                 <div className="text-[9px] text-gray-400 uppercase font-black tracking-[0.2em] mb-0.5">ESTADO REAL</div>

@@ -1,10 +1,11 @@
 'use client';
+import { CaretDown } from '@phosphor-icons/react';
 
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+;
 import { cn } from '@/lib/utils';
 import {
   DropdownMenu,
@@ -38,7 +39,7 @@ export function NavDropdown({ group }: NavDropdownProps) {
         >
           <GroupIcon className="h-4 w-4" />
           <span>{group.label}</span>
-          <ChevronDown className="h-4 w-4 opacity-50" />
+          <CaretDown className="h-4 w-4 opacity-50" />
         </motion.div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="mt-2 w-64 bg-[#0a0d16]/95 backdrop-blur-2xl border-white/10 text-white shadow-[0_20px_50px_-15px_rgba(0,0,0,0.8)] p-2">
