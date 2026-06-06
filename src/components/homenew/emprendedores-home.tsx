@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Rocket, CheckCircle2, ArrowRight, ShieldCheck, Zap, Globe, Package, Building2 } from 'lucide-react';
+import { ArrowRight, Buildings, CheckCircle, Globe, Lightning } from '@phosphor-icons/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,7 +11,7 @@ export const EmprendedoresHome = () => {
     {
       title: "Soluciones Corporativas",
       description: "Optimización logística para empresas con Cuenta Corriente Flexible y beneficios de escala",
-      icon: Building2,
+      icon: Buildings,
       features: ["Cuenta Corriente Flexible", "Facturación simplificada", "Gestión multi-usuario", "Reportes de impacto"],
       link: "/servicios/plan-emprendedores",
       image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=800",
@@ -20,7 +20,7 @@ export const EmprendedoresHome = () => {
     {
       title: "Envíos Flex MercadoLibre",
       description: "Socio estratégico para potenciar tus ventas con entregas en el día",
-      icon: Zap,
+      icon: Lightning,
       features: ["Cumplimiento de SLAs", "Mejora tu reputación", "Tarifas competitivas", "Soporte Flex dedicado"],
       link: "/servicios/enviosflex",
       image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800",
@@ -60,7 +60,7 @@ export const EmprendedoresHome = () => {
               viewport={{ once: true }}
               className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-xxs font-black tracking-[0.4em] mb-10 uppercase backdrop-blur-md"
             >
-              <Building2 size={16} className="animate-pulse" /> Soluciones Corporativas y PyME
+              <Buildings size={16} className="animate-pulse" /> Soluciones Corporativas y PyME
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -139,7 +139,7 @@ export const EmprendedoresHome = () => {
                   {solution.features.map((feature, fIdx) => (
                     <div key={fIdx} className="flex items-center gap-4 text-label-sm text-gray-400">
                       <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                        <CheckCircle2 size={12} className="text-primary" />
+                        <CheckCircle size={12} className="text-primary" />
                       </div>
                       <span className="uppercase">{feature}</span>
                     </div>

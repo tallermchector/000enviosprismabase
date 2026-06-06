@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Camera as Instagram, Share2 as Facebook, MessageCircle as Twitter, ExternalLink, Phone, Heart } from "lucide-react";
+import { ArrowSquareOut, Camera as Instagram, ChatCircle as Twitter, Heart, Phone, ShareNetwork as Facebook } from '@phosphor-icons/react';
 
 const socialNetworks = [
   {
@@ -136,7 +136,7 @@ export const CarruselRedes = () => {
                     </div>
                     <div className="text-center">
                       <div className="text-slate-900 font-[family-name:var(--font-orbitron)] font-bold uppercase tracking-tight mb-2">VER POST</div>
-                      <ExternalLink size={20} className="text-secondary mx-auto" />
+                      <ArrowSquareOut size={20} className="text-secondary mx-auto" />
                     </div>
                   </div>
                 </a>

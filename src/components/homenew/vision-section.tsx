@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Zap, ShieldCheck, CheckCircle2, Play, Globe, ArrowRight, MousePointer2 } from 'lucide-react';
+import { ArrowRight, CheckCircle, Cursor, Globe, Lightning, Play, ShieldCheck } from '@phosphor-icons/react';
 import Image from 'next/image';
 
 export const VisionSection = () => {
@@ -11,7 +11,7 @@ export const VisionSection = () => {
   const y = useTransform(scrollYProgress, [0, 0.5], [50, 0]);
 
   const features = [
-    { icon: <Zap className="text-secondary" />, title: "Entregas a Tiempo", text: "Puntualidad garantizada en cada envío" },
+    { icon: <Lightning className="text-secondary" />, title: "Entregas a Tiempo", text: "Puntualidad garantizada en cada envío" },
     { icon: <ShieldCheck className="text-primary" />, title: "Envíos Seguros", text: "Protección total de tus paquetes" }
   ];
 
@@ -114,7 +114,7 @@ export const VisionSection = () => {
                 <div>
                   <h3 className="font-display text-orbitron text-2xl font-black text-white uppercase tracking-tight mb-2">Conocé más sobre nosotros</h3>
                   <div className="flex items-center gap-3 text-xxs text-blue-400 font-black tracking-[0.2em] uppercase">
-                    <CheckCircle2 size={14} className="animate-pulse" aria-hidden="true" /> ¿Listo para formar parte de nuestra familia de clientes satisfechos?
+                    <CheckCircle size={14} className="animate-pulse" aria-hidden="true" /> ¿Listo para formar parte de nuestra familia de clientes satisfechos?
                   </div>
                 </div>
                 <motion.button

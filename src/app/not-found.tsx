@@ -1,14 +1,15 @@
+'use client';
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { OptimizedHeader } from "@/components/homenew/optimized-header"
 import { CarruselRedes } from "@/components/homenew/carrusel-redes"
 import { Footer } from "@/components/homenew/footer"
 import { NotFoundIllustration } from "@/components/error/not-found-illustration"
-import { Home, ArrowLeft } from "lucide-react"
+import { House, ArrowLeft } from "@phosphor-icons/react"
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-[100dvh] bg-gray-50 flex flex-col">
       <OptimizedHeader />
       <main className="flex-grow">
         <section className="py-20 px-4">
@@ -24,7 +25,7 @@ export default function NotFound() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
                   <Link href="/">
-                    <Home className="w-5 h-5 mr-2" />
+                    <House className="w-5 h-5 mr-2" />
                     Ir al Inicio
                   </Link>
                 </Button>

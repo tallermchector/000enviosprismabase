@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { Calculator, Mail, ArrowDown, Sparkles, Zap } from "lucide-react"
+import { ArrowDown, Calculator, Envelope, Lightning, Sparkle } from '@phosphor-icons/react'
 
 type RandomValue = {
   y1: number;
@@ -293,7 +293,7 @@ export function EnhancedHero() {
   }, [setupScene])
 
   return (
-    <section className="min-h-screen w-full relative flex items-center justify-center overflow-hidden hero-gradient-bg pt-20 md:pt-24">
+    <section className="min-h-[100dvh] w-full relative flex items-center justify-center overflow-hidden hero-gradient-bg pt-20 md:pt-24">
       {/* 3D Background */}
       <div ref={containerRef} className="absolute inset-0" />
 
@@ -432,9 +432,9 @@ export function EnhancedHero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400/20 to-blue-400/20 border border-white/20 backdrop-blur-sm mb-4"
             whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
           >
-            <Sparkles className="w-4 h-4 text-yellow-400" />
+            <Sparkle className="w-4 h-4 text-yellow-400" />
             <span className="text-sm font-medium text-slate-800">Tu Solución Confiable</span>
-            <Zap className="w-4 h-4 text-blue-400" />
+            <Lightning className="w-4 h-4 text-blue-400" />
           </motion.div>
 
           <motion.h1
@@ -500,7 +500,7 @@ export function EnhancedHero() {
               className="border-2 border-slate-300 text-slate-900 hover:bg-slate-100 hover:text-slate-900 font-bold shadow-2xl px-8 py-4 text-lg rounded-full backdrop-blur-sm transition-all duration-300 bg-transparent"
             >
               <Link href="/contacto" className="flex items-center gap-3">
-                <Mail className="w-5 h-5" />
+                <Envelope className="w-5 h-5" />
                 Contacto
               </Link>
             </Button>

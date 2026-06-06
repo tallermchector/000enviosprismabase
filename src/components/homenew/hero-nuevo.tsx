@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
-import { Sparkles, Zap } from "lucide-react"
+import { Lightning, Sparkle } from '@phosphor-icons/react'
 import Image from "next/image"
 
 function ElegantShape({
@@ -94,7 +94,7 @@ export default function HeroGeometric({
   }
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030812]">
+    <div className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-[#030812]">
       <div className="absolute inset-0 bg-gradient-to-br from-[#095FBA]/[0.1] via-transparent to-[#0B6FC3]/[0.05] blur-3xl" />
 
       <div className="absolute inset-0 overflow-hidden">
@@ -157,9 +157,9 @@ export default function HeroGeometric({
               <Image src="/LogoEnviosDosRuedas.webp" alt="Logo" width={100} height={100} className="rounded-full" />
             </div>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-white/[0.08]">
-              <Sparkles className="w-4 h-4 text-secondary" />
+              <Sparkle className="w-4 h-4 text-secondary" />
               <span className="text-sm font-medium text-slate-800">{badge}</span>
-              <Zap className="w-4 h-4 text-primary" />
+              <Lightning className="w-4 h-4 text-primary" />
             </div>
           </motion.div>
 
