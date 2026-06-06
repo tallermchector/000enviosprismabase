@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { TrendingUp, Users, Package, Sparkles, ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, Package, Sparkle, TrendUp, Users } from '@phosphor-icons/react'
 import Link from "next/link"
 import { motion } from "framer-motion"
 import Image from "next/image"
@@ -9,7 +9,7 @@ import Image from "next/image"
 export function EntrepreneurSolutions() {
   const solutions = [
     {
-      icon: TrendingUp,
+      icon: TrendUp,
       title: "Plan Emprendedores",
       description: "Tarifas preferenciales y servicios adaptados para hacer crecer tu negocio online",
       link: "/servicios/plan-emprendedores",
@@ -101,9 +101,9 @@ export function EntrepreneurSolutions() {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 backdrop-blur-sm mb-6"
             whileHover={{ scale: 1.05, backgroundColor: "rgba(59, 130, 246, 0.15)" }}
           >
-            <Sparkles className="w-5 h-5 text-primary" />
+            <Sparkle className="w-5 h-5 text-primary" />
             <span className="text-sm font-semibold text-primary">Especial para Emprendedores</span>
-            <TrendingUp className="w-5 h-5 text-secondary" />
+            <TrendUp className="w-5 h-5 text-secondary" />
           </motion.div>
 
           <motion.h2

@@ -5,13 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
-import {
-  Menu,
-  Home,
-  Mail,
-  Calculator as CalculatorIcon,
-  Phone,
-} from 'lucide-react';
+import { Calculator as CalculatorIcon, Envelope, House, List, Phone } from '@phosphor-icons/react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import {
@@ -78,7 +72,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 w-12 h-12 rounded-xl" aria-label="Abrir menú de navegación">
-            <Menu className="h-7 w-7" />
+            <List className="h-7 w-7" />
             <span className="sr-only">Abrir menú</span>
           </Button>
         </SheetTrigger>
@@ -109,7 +103,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                       : "text-gray-300 hover:text-white hover:bg-white/5",
                   )}
                 >
-                  <Home className="w-5 h-5" />
+                  <House className="w-5 h-5" />
                   <span className="font-black font-display text-orbitron text-xs tracking-[0.1em] uppercase">Inicio</span>
                 </Link>
               </SheetClose>
@@ -177,7 +171,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                       : "text-gray-300 hover:text-white hover:bg-white/5",
                   )}
                 >
-                  <Mail className="w-5 h-5" />
+                  <Envelope className="w-5 h-5" />
                   <span className="font-black font-display text-orbitron text-xs tracking-[0.1em] uppercase">Contacto</span>
                 </Link>
               </SheetClose>

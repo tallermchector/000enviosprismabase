@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
-import { Zap, Package, Truck, ChevronRight, Clock, MousePointer2 } from 'lucide-react';
+import { CaretRight, Clock, Cursor, Lightning, Package, Truck } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { cn } from "@/lib/utils";
 
@@ -73,7 +73,7 @@ export const ServicesOverview = () => {
       title: "Envíos Express",
       bajada: "Prioridad absoluta y certeza total.",
       desc: <>Diseñado para operaciones de alta criticidad horaria. <span className="font-bold">Vos elegís el rango exacto</span> de entrega con solo 2 horas de anticipación.</>,
-      icon: <Zap />,
+      icon: <Lightning />,
       href: "/servicios/envios-express",
       buttonText: "Solicitar Express",
       badge: "ALTA PRIORIDAD",
@@ -218,7 +218,7 @@ export const ServicesOverview = () => {
                     href={service.href}
                     className={cn("flex items-center gap-3 text-label-md transition-all", theme.button)}
                   >
-                    {service.buttonText} <ChevronRight size={16} />
+                    {service.buttonText} <CaretRight size={16} />
                   </Link>
 
                   {service.badge && (
@@ -234,7 +234,7 @@ export const ServicesOverview = () => {
                 {/* Specific Visual for the first card */}
                 {idx === 0 && (
                   <div className="absolute top-10 right-10 opacity-5 group-hover:opacity-10 transition-opacity" aria-hidden="true">
-                    <MousePointer2 size={120} className="rotate-12 text-white" />
+                    <Cursor size={120} className="rotate-12 text-white" />
                   </div>
                 )}
               </motion.div>

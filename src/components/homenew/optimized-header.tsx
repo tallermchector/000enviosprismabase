@@ -3,12 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import {
-  Home,
-  Mail,
-  Calculator as CalculatorIcon,
-  Phone,
-} from 'lucide-react';
+import { Calculator as CalculatorIcon, Envelope, House, Phone } from '@phosphor-icons/react';
 import { Button } from '@/components/ui/button';
 import { HeaderContainer } from './header-container';
 import { MobileMenu } from './mobile-menu';
@@ -36,7 +31,7 @@ export const OptimizedHeader = () => {
           className="text-gray-300 hover:text-white hover:bg-white/10"
           activeClassName="bg-primary/20 text-blue-400 border border-primary/30 shadow-lg"
         >
-          <Home className="h-4 w-4" />
+          <House className="h-4 w-4" />
           <span>Inicio</span>
         </ActiveLink>
 
@@ -49,7 +44,7 @@ export const OptimizedHeader = () => {
           className="text-gray-300 hover:text-white hover:bg-white/10"
           activeClassName="bg-primary/20 text-blue-400 border border-primary/30 shadow-lg"
         >
-          <Mail className="h-4 w-4" />
+          <Envelope className="h-4 w-4" />
           <span>Contacto</span>
         </ActiveLink>
 

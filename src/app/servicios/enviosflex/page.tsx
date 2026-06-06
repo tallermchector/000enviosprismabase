@@ -55,7 +55,7 @@ async function getPriceRanges(): Promise<PriceRangeClient[]> {
 export default async function EnviosFlexPage() {
   const priceRanges = await getPriceRanges();
   return (
-    <div className="dark min-h-screen flex flex-col bg-background text-foreground selection:bg-primary/30">
+    <div className="dark min-h-[100dvh] flex flex-col bg-background text-foreground selection:bg-primary/30">
       <OptimizedHeader />
       <main className="flex-grow">
         <EnviosFlexHero />
