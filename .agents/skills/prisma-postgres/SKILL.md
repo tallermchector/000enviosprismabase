@@ -1,10 +1,10 @@
 ---
 name: prisma-postgres
-description: Prisma Postgres setup and operations guidance across Console, create-db CLI, Management API, and Management API SDK. Use when creating Prisma Postgres databases, working in Prisma Console, provisioning with create-db/create-pg/create-postgres, or integrating programmatic provisioning with service tokens or OAuth.
-license: MIT
-metadata:
-  author: prisma
-  version: "7.6.0"
+description: Prisma Postgres setup and operations.
+version: 7.6.0
+author: prisma
+category: Prisma Integration
+tags: [prisma, postgres, cloud, management-api]
 ---
 
 # Prisma Postgres

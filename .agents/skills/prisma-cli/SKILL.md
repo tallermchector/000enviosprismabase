@@ -1,10 +1,10 @@
 ---
 name: prisma-cli
-description: Prisma CLI commands reference covering all available commands, options, and usage patterns. Use when running Prisma CLI commands, setting up projects, generating client, running migrations, managing databases, or starting Prisma's MCP server. Triggers on "prisma init", "prisma generate", "prisma migrate", "prisma db", "prisma studio", "prisma mcp".
-license: MIT
-metadata:
-  author: prisma
-  version: "7.6.0"
+description: Prisma CLI commands reference.
+version: 7.6.0
+author: prisma
+category: Prisma Integration
+tags: [prisma, cli, database, migration]
 ---
 
 # Prisma CLI Reference

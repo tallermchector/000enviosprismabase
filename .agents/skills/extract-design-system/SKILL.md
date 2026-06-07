@@ -1,6 +1,10 @@
 ---
 name: extract-design-system
-description: Extract design primitives from a public website and generate starter token files for your project.
+description: Extract design primitives from a public website and generate starter token files.
+version: 1.0.0
+author: claude
+category: Design and UI/UX
+tags: [design, extraction, design-system, tokens]
 ---
 
 # Extract Design System
