@@ -18,9 +18,9 @@ const platformIcons = {
 };
 
 const platformColors = {
-  facebook: "bg-[#1877F2]",
-  instagram: "bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF]",
-  whatsapp: "bg-[#25D366]",
+  facebook: "bg-primary",
+  instagram: "bg-tertiary",
+  whatsapp: "bg-secondary",
 };
 
 const PlatformIcon = ({ platform }: { platform: SocialPost['platform'] }) => {
@@ -31,7 +31,7 @@ const PlatformIcon = ({ platform }: { platform: SocialPost['platform'] }) => {
 export function SocialFeed({ posts }: SocialFeedProps) {
   if (!posts || posts.length === 0) {
     return (
-      <section className="py-20 px-4 bg-[#030710]">
+      <section className="py-20 px-4 bg-background">
         <div className="container mx-auto text-center">
           <p className="text-body-lg text-muted-foreground font-sans">Mantenete atento a nuestras próximas publicaciones.</p>
         </div>
@@ -40,7 +40,7 @@ export function SocialFeed({ posts }: SocialFeedProps) {
   }
 
   return (
-    <section className="py-20 px-4 bg-[#030710]">
+    <section className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-display-md text-foreground mb-6 font-display uppercase tracking-tight">Publicaciones Recientes</h2>
@@ -51,8 +51,8 @@ export function SocialFeed({ posts }: SocialFeedProps) {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <Card key={post.id} className="overflow-hidden hover:shadow-2xl transition-all duration-500 flex flex-col bg-[#0a0d16]/60 backdrop-blur-sm rounded-3xl border-white/10">
-              <CardHeader className="flex flex-row items-center space-x-4 p-6 border-b border-white/10">
+            <Card key={post.id} className="overflow-hidden hover:shadow-2xl transition-all duration-500 flex flex-col bg-muted/60 backdrop-blur-sm rounded-lg border-border">
+              <CardHeader className="flex flex-row items-center space-x-4 p-6 border-b border-border">
                 {post.user.avatarUrl ? (
                   <div className="relative">
                     <Image

@@ -30,7 +30,7 @@ export function PlanInformation() {
   };
 
   return (
-    <section className="py-24 px-4 bg-background relative overflow-hidden">
+    <section className="py-24 px-4 bg-surface relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto max-w-7xl relative z-10">
@@ -46,11 +46,11 @@ export function PlanInformation() {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-blue-400 text-label-sm font-bold tracking-widest mb-6 uppercase">
               SOLUCIONES CORPORATIVAS
             </div>
-            <h2 className="font-display text-display-lg md:text-[60px] font-black leading-[1] mb-8 uppercase text-foreground tracking-tighter">
+            <h2 className="font-display text-display-lg md:text-[60px] font-black leading-[1] mb-8 uppercase text-on-surface tracking-tighter">
               LOGÍSTICA 3PL <br />
               <span className="text-primary italic">PARA EMPRENDEDORES</span>
             </h2>
-            <p className="text-gray-400 text-body-lg mb-10 leading-relaxed font-sans max-w-xl">
+            <p className="text-on-surface/70 text-body-lg mb-10 leading-relaxed font-sans max-w-xl">
               Somos más que una empresa de envíos; nos convertimos en tu departamento de logística. Delegá el almacenamiento y la distribución en expertos y enfocate en hacer crecer tu negocio.
             </p>
 
@@ -67,8 +67,8 @@ export function PlanInformation() {
                     <Check className="w-3.5 h-3.5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-headline-lg-mobile font-bold text-foreground mb-2 font-display uppercase tracking-tight">{feature.title}</h3>
-                    <p className="text-gray-400 text-body-md leading-relaxed font-sans">{feature.description}</p>
+                    <h3 className="text-headline-lg-mobile font-bold text-on-surface mb-2 font-display uppercase tracking-tight">{feature.title}</h3>
+                    <p className="text-on-surface/70 text-body-md leading-relaxed font-sans">{feature.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -82,7 +82,7 @@ export function PlanInformation() {
           >
             <div className="text-center lg:text-right select-none opacity-20">
               <div className="space-y-2">
-                <div className="text-7xl md:text-8xl lg:text-9xl font-black italic text-foreground font-display tracking-tighter leading-none">
+                <div className="text-7xl md:text-8xl lg:text-9xl font-black italic text-on-surface font-display tracking-tighter leading-none">
                   CORE
                 </div>
                 <div className="text-7xl md:text-8xl lg:text-9xl font-black italic text-primary font-display tracking-tighter leading-none">

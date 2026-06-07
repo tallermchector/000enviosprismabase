@@ -56,7 +56,7 @@ export function ExpressPricingRanges({ priceRanges }: ExpressPricingRangesProps)
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-display-lg md:text-[60px] font-black italic mb-6 uppercase text-foreground tracking-tighter">
+            <h2 className="font-display text-display-lg md:text-display-md font-black italic mb-6 uppercase text-foreground tracking-tighter">
               TARIFAS 2026 <span className="text-primary">ENVÍOS EXPRESS</span>
             </h2>
             <div className="w-32 h-1.5 bg-primary mx-auto mb-8" />
@@ -75,13 +75,13 @@ export function ExpressPricingRanges({ priceRanges }: ExpressPricingRangesProps)
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="relative bg-[#0a0d16]/60 border-white/10 hover:border-primary/50 transition-all duration-300 rounded-3xl overflow-hidden h-full flex flex-col group shadow-xl">
+              <Card className="relative bg-muted/60 border-white/10 hover:border-primary/50 transition-all duration-300 rounded-lg overflow-hidden h-full flex flex-col group shadow-xl">
                 <Badge className="absolute top-0 right-0 bg-primary text-slate-900 border-none py-1 px-4 rounded-none text-xxs font-bold uppercase tracking-widest">
                   Tarifa 2026
                 </Badge>
 
                 <CardHeader className="text-center pt-16 pb-8">
-                  <div className="w-16 h-16 bg-slate-800 rounded-none flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors border border-slate-700">
+                  <div className="w-16 h-16 bg-background rounded-sm flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors border border-border">
                     <MapPin className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="font-display text-headline-lg font-bold text-foreground uppercase tracking-tight">
@@ -120,7 +120,7 @@ export function ExpressPricingRanges({ priceRanges }: ExpressPricingRangesProps)
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="bg-[#0a0d16]/60 border border-white/10 rounded-3xl overflow-hidden p-8 md:p-16 shadow-2xl relative">
+            <div className="bg-muted/60 border border-border rounded-lg overflow-hidden p-8 md:p-16 shadow-2xl relative">
                <div className="grid lg:grid-cols-3 gap-12 items-center">
                   <div className="lg:col-span-2">
                     <div className="inline-flex items-center gap-2 px-4 py-1 bg-secondary text-black text-xxs font-bold tracking-widest mb-6 uppercase">
@@ -163,36 +163,36 @@ export function ExpressPricingRanges({ priceRanges }: ExpressPricingRangesProps)
                <h4 className="font-display font-bold text-foreground text-headline-lg uppercase tracking-tight">Condiciones del Servicio Express</h4>
             </div>
 
-            <Accordion type="single" collapsible className="w-full bg-[#0a0d16]/60 border border-white/10 rounded-xl overflow-hidden">
-              <AccordionItem value="item-1" className="border-white/10 px-6">
+            <Accordion type="single" collapsible className="w-full bg-muted/60 border border-border rounded-lg overflow-hidden">
+              <AccordionItem value="item-1" className="border-border px-6">
                 <AccordionTrigger className="text-foreground hover:no-underline font-sans uppercase text-sm font-bold tracking-wider">
                   Tiempos y Tolerancia
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-400 font-sans leading-relaxed pb-6 text-body-md">
+                <AccordionContent className="text-muted-foreground font-sans leading-relaxed pb-6 text-body-md">
                   Contamos con una tolerancia de 10 minutos en puerta. Es fundamental que el receptor esté disponible para asegurar la eficiencia del servicio.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-2" className="border-white/10 px-6">
+              <AccordionItem value="item-2" className="border-border px-6">
                 <AccordionTrigger className="text-foreground hover:no-underline font-sans uppercase text-sm font-bold tracking-wider">
                   Recargos por Clima
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-400 font-sans leading-relaxed pb-6 text-body-md">
+                <AccordionContent className="text-muted-foreground font-sans leading-relaxed pb-6 text-body-md">
                   En días de lluvia, se aplica un recargo del 50% sobre el valor del envío para garantizar la seguridad de nuestros repartidores y la protección de tu carga.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-3" className="border-white/10 px-6">
+              <AccordionItem value="item-3" className="border-border px-6">
                 <AccordionTrigger className="text-foreground hover:no-underline font-sans uppercase text-sm font-bold tracking-wider">
                   Bultos y Pesos
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-400 font-sans leading-relaxed pb-6 text-body-md">
+                <AccordionContent className="text-muted-foreground font-sans leading-relaxed pb-6 text-body-md">
                   El servicio estándar incluye un bulto de hasta 5kg/40cm. Cada bulto excedente tiene un costo adicional de $1.800.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-4" className="border-white/10 px-6 last:border-0">
+              <AccordionItem value="item-4" className="border-border px-6 last:border-0">
                 <AccordionTrigger className="text-foreground hover:no-underline font-sans uppercase text-sm font-bold tracking-wider">
                   Anticipación Requerida
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-400 font-sans leading-relaxed pb-6 text-body-md">
+                <AccordionContent className="text-muted-foreground font-sans leading-relaxed pb-6 text-body-md">
                   Para coordinar un envío express con éxito, solicitamos una anticipación mínima de 2 horas.
                 </AccordionContent>
               </AccordionItem>
