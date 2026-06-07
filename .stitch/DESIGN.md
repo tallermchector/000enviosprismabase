@@ -1,128 +1,159 @@
 ---
-name: Envíos DosRuedas
+name: Envios DosRuedas
 colors:
-  primary: "#2563eb"
-  secondary: "#fbbf24"
-  background: "#050810"
-  foreground: "#f8fafc"
-  muted: "#1e293b"
-  accent: "#3b82f6"
-  destructive: "#ef4444"
+  surface: '#13131b'
+  surface-dim: '#13131b'
+  surface-bright: '#393842'
+  surface-container-lowest: '#0d0d16'
+  surface-container-low: '#1b1b23'
+  surface-container: '#1f1f28'
+  surface-container-high: '#292932'
+  surface-container-highest: '#34343d'
+  on-surface: '#e4e1ed'
+  on-surface-variant: '#c5c5db'
+  inverse-surface: '#e4e1ed'
+  inverse-on-surface: '#302f39'
+  outline: '#8f8fa4'
+  outline-variant: '#444557'
+  surface-tint: '#bdc2ff'
+  primary: '#bdc2ff'
+  on-primary: '#0012a1'
+  primary-container: '#0022ff'
+  on-primary-container: '#bbc1ff'
+  inverse-primary: '#2b3fff'
+  secondary: '#fff9ef'
+  on-secondary: '#3a3000'
+  secondary-container: '#ffdb3c'
+  on-secondary-container: '#725f00'
+  tertiary: '#00dbe9'
+  on-tertiary: '#00363a'
+  tertiary-container: '#005b61'
+  on-tertiary-container: '#00dae7'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#dfe0ff'
+  primary-fixed-dim: '#bdc2ff'
+  on-primary-fixed: '#000766'
+  on-primary-fixed-variant: '#001de0'
+  secondary-fixed: '#ffe16d'
+  secondary-fixed-dim: '#e9c400'
+  on-secondary-fixed: '#221b00'
+  on-secondary-fixed-variant: '#544600'
+  tertiary-fixed: '#7df4ff'
+  tertiary-fixed-dim: '#00dbe9'
+  on-tertiary-fixed: '#002022'
+  on-tertiary-fixed-variant: '#004f54'
+  background: '#13131b'
+  on-background: '#e4e1ed'
+  surface-variant: '#34343d'
+typography:
+  display-lg:
+    fontFamily: Anybody
+    fontSize: 72px
+    fontWeight: '800'
+    lineHeight: '1.1'
+    letterSpacing: -0.02em
+  display-lg-mobile:
+    fontFamily: Anybody
+    fontSize: 48px
+    fontWeight: '800'
+    lineHeight: '1.1'
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Anybody
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: '1.2'
+  headline-lg-mobile:
+    fontFamily: Anybody
+    fontSize: 32px
+    fontWeight: '700'
+    lineHeight: '1.2'
+  body-lg:
+    fontFamily: Hanken Grotesk
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: '1.6'
+  body-md:
+    fontFamily: Hanken Grotesk
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: '1.6'
+  label-md:
+    fontFamily: JetBrains Mono
+    fontSize: 14px
+    fontWeight: '500'
+    lineHeight: '1.2'
+    letterSpacing: 0.05em
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  base: 8px
+  gutter: 24px
+  margin-desktop: 64px
+  margin-mobile: 20px
 ---
 
-# Design System: Envíos DosRuedas
+## Brand & Style
 
-## 1. Visual Theme & Atmosphere
+This design system is built upon a high-energy, high-contrast aesthetic that pairs a hyper-saturated electric blue with a luminous gold. The target audience consists of dynamic, tech-forward users who value speed and visual impact. The emotional response is one of intense energy, precision, and confidence.
 
-Envíos DosRuedas project a **high-tech, futuristic, and ultra-reliable** visual identity. The design is centered around a "Logistics 2.0" aesthetic that combines the speed and efficiency of a courier service with the precision of a modern software platform. It leverages a dark-themed, glassmorphic interface that emphasizes depth, transparency, and vibrant interactive elements.
+The design style is **High-Contrast / Bold** with a touch of **Glassmorphism**. It utilizes massive typography and aggressive color pairings to create a sense of urgency and power. Surfaces are treated with subtle translucent effects to ensure the vibrant background colors interact with the UI, maintaining a sense of depth without sacrificing the primary color's dominance.
 
-The atmosphere is defined by **high-contrast visual hierarchies**, where deep navy backgrounds are punctuated by electric blue primary actions and warm amber secondary accents. The use of the Orbitron typeface for headings adds a mechanical, industrial-strength feel, while the Inter body type ensures readability and professionalism. Micro-animations and shader backgrounds provide a sense of constant motion and responsiveness, mirroring the core business value of rapid delivery.
+## Colors
 
-## 2. Color Palette & Roles
+The palette is centered around a "True Electric Blue" (#0022FF), pushed to the peak of digital saturation. This is balanced by "Cyber Gold" (#FFD700), used strategically for calls to action and critical information to ensure maximum visual friction and readability.
 
-### Primary Foundation
+- **Primary (Electric Blue):** Used for large surface areas, brand moments, and primary interactive states.
+- **Secondary (Cyber Gold):** Reserved for high-priority elements. The contrast ratio against the primary blue is maximized for immediate recognition.
+- **Tertiary (Neon Cyan):** Used for subtle accents, success states, or data visualization to provide a gradient path for the blue.
+- **Neutral:** A deep, near-black navy is used for backgrounds to allow the primary colors to "glow" against the dark canvas.
 
-- **Deep Void Background** (#050810): The canvas for the entire application. A dark, near-black blue that provides maximum contrast for text and interactive elements.
-- **Surface / Card Background** (HSL 225 57% 3.9% / rgba(255, 255, 255, 0.03)): Used for containers and navigation bars, often with backdrop-blur for a glassmorphic effect.
-- **Pure White / Slate 50** (#f8fafc): Primary text color for maximum legibility against dark backgrounds.
+## Typography
 
-### Accent & Interactive
+The typography system is aggressive and functional. **Anybody** provides a variable-width intensity for headlines, allowing the brand to feel expansive and loud. **Hanken Grotesk** serves as the workhorse for body copy, offering a sharp, contemporary professional feel. **JetBrains Mono** is used for labels and technical data, reinforcing the high-tech, precise nature of the system.
 
-- **Azul Intenso (Electric Blue)** (#2563eb): The brand's heartbeat. Used for primary CTAs, active navigation states, and critical highlights. Often paired with a glow or drop-shadow effect.
-- **Amarillo Ámbar (Amber)** (#fbbf24): Secondary brand color. Used for highlighting the "DosRuedas" suffix in branding, as well as for warnings, ratings, and secondary accents that need high visibility.
-- **Blue Gradient**: A dynamic transition from #2563eb through #3b82f6, used to give buttons and special sections a "powered-up" feel.
+On mobile, display sizes scale down aggressively to maintain layout integrity while preserving the heavy font weights that define the brand's voice.
 
-### Typography & Text Hierarchy
+## Layout & Spacing
 
-- **Primary Text**: Slate 50 (#f8fafc) for main content.
-- **Secondary Text**: Slate 400 (#94a3b8) for descriptions and metadata.
-- **Muted Text**: Slate 500 / 600 for less important information and placeholders.
+The layout follows a **Fluid Grid** philosophy based on an 8px square rhythm. 
 
-### Functional States
+- **Desktop:** 12-column grid with 24px gutters. Content is allowed to breathe with wide 64px margins, focusing the user's eye on the vibrant central elements.
+- **Mobile:** 4-column grid with 16px gutters and 20px safe-area margins. 
+- **Rhythm:** Spacing between sections should be generous (80px+) to prevent the high-contrast colors from becoming visually overwhelming. Component internal padding should be tight to maintain a "technical" and "dense" aesthetic.
 
-- **Success**: Emerald 500 (#10b981).
-- **Warning / Pending**: Amber 500 (#f59e0b).
-- **Error / Destructive**: Rose 600 (#e11d48).
+## Elevation & Depth
 
-## 3. Typography Rules
+Depth is achieved through **Tonal Layering** and **Luminous Outer Glows** rather than traditional drop shadows.
 
-### Hierarchy & Weights
+1.  **Level 0 (Base):** The neutral deep-navy background.
+2.  **Level 1 (Surface):** Slightly lighter navy with 5% opacity electric blue tint.
+3.  **Level 2 (Interactive):** Pure Electric Blue surfaces. These elements should have a "bloom" effect—a soft, 20px blur of the same color at low opacity (15%) to simulate light emission.
+4.  **Level 3 (Pop-overs):** Glassmorphic panels with a 12px backdrop-blur and a 1px solid border in a semi-transparent cyan to define the edges.
 
-- **Display (Headings)**: **Orbitron**. Used exclusively for titles, badges, and branding. It is often used with *italic* styling and *uppercase* transform to convey speed.
-  - **Display Large**: 48px, 900 weight, 1.1 line-height.
-  - **Headline Large**: 24px, 700 weight, 1.3 line-height.
-- **Sans (Body)**: **Inter**. Used for all descriptive text, form inputs, and UI controls.
-  - **Body Large**: 18px, 400 weight, 1.6 line-height.
-  - **Body Medium**: 16px, 400 weight, 1.5 line-height.
-  - **Label Small**: 12px, 700 weight, 0.1em tracking.
+## Shapes
 
-### Spacing Principles
+The shape language is **Soft (Level 1)**. This subtle rounding (4px - 12px) prevents the UI from feeling too hostile or "Brutalist," providing a modern, engineered feel. 
 
-- **Generous Tracking**: Labels and small badges use wide tracking (0.1em to 0.3em) to enhance the "technical" look.
-- **Tight Heading Leading**: Large display headings use tight line heights (1.1) to create a bold, impactful block of text.
+- **Buttons & Inputs:** Use the base 0.25rem (4px) radius for a sharp, precision-cut look.
+- **Cards & Containers:** Use `rounded-lg` (8px) to soften the large high-contrast blocks.
+- **Special Elements:** Tags or small badges can use `rounded-xl` (12px) to differentiate them from functional inputs.
 
-## 4. Component Stylings
+## Components
 
-### Buttons
-
-- **Shape**: Ranges from `rounded-md` (8px) for standard UI to `rounded-2xl` (16px) for Hero CTAs.
-- **Primary (Gradient)**: Uses a blue-to-blue gradient with a subtle white-to-transparent shine animation on hover. Shadow: `0 10px 40px -10px rgba(37,99,235,0.4)`.
-- **Secondary (Amber)**: Solid #fbbf24 with black text. Highly visible for "Request Service" actions.
-
-### Cards & Containers
-
-- **Glassmorphism**: Cards use a very subtle white border (`border-white/10`) and a semi-transparent background (`bg-white/[0.03]`) with `backdrop-blur-md`.
-- **Shadows**: Subtle but deep shadows to create depth on the dark background.
-- **Bento Grid**: Service overviews and features are organized in a grid layout with varying card sizes.
-
-### Navigation
-
-- **Floating Header**: A transparent, blurred container that "floats" at the top of the viewport.
-- **Active States**: Indicated by a glowing blue background and border (`bg-primary/20 text-blue-400 border-primary/30`).
-
-### Inputs & Forms
-
-- **Dark Insets**: Inputs have a dark, slightly inset appearance with a focus ring that matches the primary blue.
-- **Validation**: Errors are clearly marked with red borders and descriptive icons.
-
-## 5. Layout Principles
-
-### Grid & Structure
-
-- **8dp Grid**: All spacing, padding, and margins are based on an 8px increment system.
-- **Max Content Width**: 1280px (max-w-7xl) for main content areas.
-- **Responsive Breakpoints**: Standard Tailwind breakpoints (sm, md, lg, xl, 2xl).
-
-### Whitespace Strategy
-
-- **Breathable Sections**: Large vertical gaps (pt-24 to pt-32) between major sections to prevent information overload.
-- **Compact Components**: Internal component spacing is tighter to maintain a "dashboard-like" efficiency.
-
-### Alignment & Visual Balance
-
-- **Center-to-Left Transition**: Heroes are often centered on mobile and left-aligned on desktop to balance visuals and text.
-- **Motion Path**: Visual elements (like the Hero visuals) are placed to guide the eye from the headline to the primary CTA.
-
-## 6. Design System Notes for Stitch Generation
-
-### Language to Use
-
-- When generating screens, use terms like "Glassmorphism", "High-tech logistics", "Dark Mode", "Orbitron Typography", and "Electric Blue Accents".
-- Describe layouts as "Bento grids" or "Progressive disclosure forms".
-
-### Color References
-
-- `bg-background`: #050810
-- `text-primary`: #2563eb
-- `text-secondary`: #fbbf24
-- `border-white/10`: Subtle glass border.
-
-### Component Prompts
-
-- "Create a glassmorphic card with a 1px white/10 border, backdrop-blur, and an Orbitron heading in italic uppercase."
-- "Design a primary button with a blue gradient background and a glowing drop shadow."
-- "Generate a multi-step form using a progressive disclosure pattern with a dark, tech-oriented theme."
-
-### Incremental Iteration
-
-- To refine a screen, ask to "increase the glassmorphism blur" or "add an amber accent to the headline to match the DosRuedas branding".
+- **Buttons:**
+    - *Primary:* Cyber Gold background with black text. No shadow, but a 1px inner glow.
+    - *Secondary:* Transparent with a 2px Electric Blue border and Electric Blue text.
+- **Inputs:** Darker neutral backgrounds with a 1px Electric Blue border that "thickens" to 2px and glows when focused.
+- **Cards:** Use Level 1 surfaces with a subtle 1px border. Headlines inside cards should be uppercase for maximum impact.
+- **Chips/Badges:** High-saturation tertiary colors with black text for maximum legibility at small sizes.
+- **Lists:** Separated by thin, low-opacity blue lines. Hover states should trigger a full-row Electric Blue tint change.
+- **Data Visualization:** Use the full spectrum from Electric Blue to Neon Cyan to create a sense of "energy flow."
