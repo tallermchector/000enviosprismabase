@@ -4,148 +4,74 @@
 
 @layer base {
   :root {
-    /* Base Colors from DESIGN.md */
-    --background: 240 17% 9%;    /* #13131b */
-    --foreground: 228 22% 91%;   /* #e4e1ed */
+    /* Nueva paleta basada en azul solicitada */
+    --background: 210 20% 98%;    /* #f5f7fa */
+    --foreground: 228 30% 15%;   /* #1a2238 */
 
-    --primary: 228 100% 50%;     /* #0022FF - Electric Blue */
-    --primary-foreground: 228 22% 91%;
+    --primary: 221 47% 43%;     /* #3a5ba0 */
+    --primary-foreground: 54 100% 95%; /* #fffbe6 */
 
-    --secondary: 51 100% 50%;    /* #FFD700 - Cyber Gold */
-    --secondary-foreground: 240 17% 9%;
+    --secondary: 40 90% 72%;    /* #f7c873 */
+    --secondary-foreground: 228 30% 15%;
 
-    --tertiary: 184 100% 46%;    /* #00dbe9 - Neon Cyan */
-    --tertiary-foreground: 240 17% 9%;
+    --card: 220 25% 92%;        /* #e3eaf2 */
+    --card-foreground: 228 30% 15%;
 
-    /* Surface & Containers (Material 3 mappings) */
-    --card: 240 17% 9%;          /* surface */
-    --card-foreground: 228 22% 91%;
+    --popover: 54 100% 95%;     /* #fffbe6 */
+    --popover-foreground: 228 30% 15%;
 
-    --popover: 240 17% 9%;       /* surface */
-    --popover-foreground: 228 22% 91%;
+    --muted: 60 10% 90%;        /* #e5e5df */
+    --muted-foreground: 221 47% 43%; /* Azul como muted */
 
-    --muted: 240 11% 18%;        /* surface-container */
-    --muted-foreground: 240 14% 81%; /* on-surface-variant */
+    --accent: 202 33% 59%;      /* #6ea3c1 */
+    --accent-foreground: 54 100% 95%;
 
-    --accent: 228 100% 50%;      /* primary tint */
-    --accent-foreground: 228 22% 91%;
+    --destructive: 279 22% 15%; /* #2d1e2f */
+    --destructive-foreground: 54 100% 95%;
 
-    --destructive: 6 100% 83%;   /* error */
-    --destructive-foreground: 355 100% 21%;
+    --border: 216 10% 70%;       /* #b0b8c1 */
+    --input: 202 33% 59%;
+    --ring: 40 90% 72%;
 
-    --border: 240 11% 30%;       /* outline-variant */
-    --input: 240 11% 30%;
-    --ring: 228 100% 50%;
-
-    --radius: 0.25rem;           /* 4px base radius */
-    --whatsapp: 142 70% 49%;
-    --facebook: 214 89% 52%;
-    --instagram: 340 75% 54%;
+    --radius: 0.5rem;
   }
 
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Libre Baskerville', serif;
   }
 }
 
-/* Custom scrollbar */
+/* Scrollbar actualizado con tonos azules */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #1b1b23; /* surface-container-low */
+  background: #e3eaf2;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0022FF; /* primary */
+  background: #3a5ba0;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2b3fff; /* inverse-primary */
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+  background: #2b3fff;
 }
 
 /* Focus styles */
 *:focus-visible {
-  outline: 2px solid #0022FF;
+  outline: 2px solid #3a5ba0;
   outline-offset: 2px;
 }
 
 @layer utilities {
-  /* Typography Scale from DESIGN.md */
-  .text-display-lg {
-    font-family: var(--font-anybody);
-    font-size: clamp(48px, 8vw, 72px);
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-  }
-
-  .text-headline-lg {
-    font-family: var(--font-anybody);
-    font-size: clamp(32px, 5vw, 40px);
-    font-weight: 700;
-    line-height: 1.2;
-  }
-
-  .text-body-lg {
-    font-family: var(--font-hanken);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.6;
-  }
-
-  .text-body-md {
-    font-family: var(--font-hanken);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.6;
-  }
-
-  .text-label-md {
-    font-family: var(--font-jetbrains);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  /* Effects: Glassmorphism */
   .glass-panel {
-    background: rgba(19, 19, 27, 0.7);
+    background: rgba(227, 234, 242, 0.7);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(0, 219, 233, 0.1);
+    border: 1px solid rgba(176, 184, 193, 0.5);
   }
 
-  /* Effects: Luminous Outer Glow (Bloom) */
   .glow-primary {
-    box-shadow: 0 0 20px rgba(0, 34, 255, 0.15);
-  }
-
-  .glow-secondary {
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
-  }
-
-  .print-only {
-    display: none;
-  }
-
-  @media print {
-    body {
-      background-color: white !important;
-      color: black !important;
-    }
-    .no-print {
-      display: none !important;
-    }
-    .print-only {
-      display: block !important;
-    }
+    box-shadow: 0 0 20px rgba(58, 91, 160, 0.15);
   }
 }

@@ -50,10 +50,10 @@ const Footer = dynamic(() => import("@/components/homenew/footer").then(mod => m
 
 export default function HomePage() {
   return (
-    <div className="dark min-h-[100dvh] bg-background text-foreground selection:bg-primary/30 flex flex-col">
+    <div className="min-h-[100dvh] bg-background text-foreground selection:bg-primary/30 flex flex-col">
       <OptimizedHeader />
       <main className="flex-grow">
-        <div className="bg-gradient-to-b from-background via-slate-950/20 to-slate-950">
+        <div className="bg-gradient-to-b from-background via-blue-50/20 to-blue-100">
           {/* Above the fold (LCP Critical) - Renderizado estático inicial para performance extrema */}
           <HeroAnimado />
 
@@ -61,12 +61,12 @@ export default function HomePage() {
           <VisionSection />
         </div>
 
-        <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-background">
+        <div className="bg-gradient-to-b from-blue-100 via-blue-50 to-background">
           <ServicesOverview />
           <CtaSection />
         </div>
 
-        <div className="bg-gradient-to-b from-background via-slate-950 to-background">
+        <div className="bg-gradient-to-b from-background via-blue-50 to-background">
           <EmprendedoresHome />
           <SliderServicios />
           <CarruselRedes />

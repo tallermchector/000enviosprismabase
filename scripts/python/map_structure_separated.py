@@ -65,18 +65,12 @@ def get_route_from_path(page_path):
 
 def get_filename_from_path(page_path):
     """
-    Deduces a flat filename from the page path by replacing slashes with underscores.
-    e.g. 'src/app/cotizar/express/page.tsx' -> 'cotizar_express.json'
-    e.g. 'src/app/page.tsx' -> 'root.json'
+    Returns a flat filename representing the page's relative path.
+    e.g. 'src/app/cotizar/express/page.tsx' -> 'src_app_cotizar_express_page.json'
     """
-    parts = page_path.split('/')
-    if len(parts) >= 2 and parts[0] == 'src' and parts[1] == 'app':
-        route_parts = parts[2:-1]
-        route_parts = [p for p in route_parts if not (p.startswith('(') and p.endswith(')'))]
-        if not route_parts:
-            return "root.json"
-        return "_".join(route_parts) + ".json"
-    return "unknown.json"
+    name, _ = os.path.splitext(page_path)
+    flat_name = name.replace('/', '_').replace('\\', '_')
+    return flat_name + ".json"
 
 def build_dependency_tree(file_path, root_dir, current_stack=None, visited_global=None):
     """
