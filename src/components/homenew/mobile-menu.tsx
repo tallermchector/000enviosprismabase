@@ -23,7 +23,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-function InstagramIcon(props: any) {
+function InstagramIcon(props: unknown) {
   return (
     <svg
       {...props}
@@ -45,7 +45,7 @@ function InstagramIcon(props: any) {
 }
 
 interface MobileMenuProps {
-  navGroups: any[];
+  navGroups: unknown[];
 }
 
 export function MobileMenu({ navGroups }: MobileMenuProps) {
@@ -133,7 +133,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                       </AccordionTrigger>
                       <AccordionContent className="pt-2 pb-0">
                         <div className="flex flex-col space-y-1 pl-10 border-l border-white/5 ml-7 my-2">
-                          {group.items.map((item: any) => {
+                          {group.items.map((item: unknown) => {
                             const ItemIcon = item.icon;
                             return (
                               <SheetClose asChild key={item.href}>

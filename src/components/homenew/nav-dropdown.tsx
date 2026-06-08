@@ -15,7 +15,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 interface NavDropdownProps {
-  group: any;
+  group: unknown;
 }
 
 export function NavDropdown({ group }: NavDropdownProps) {
@@ -43,7 +43,7 @@ export function NavDropdown({ group }: NavDropdownProps) {
         </motion.div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="mt-2 w-64 bg-[background]/95 backdrop-blur-2xl border-white/10 text-white shadow-[0_20px_50px_-15px_rgba(0,0,0,0.8)] p-2">
-        {group.items.map((item: any) => {
+        {group.items.map((item: unknown) => {
           const ItemIcon = item.icon;
           return (
             <DropdownMenuItem key={item.href} asChild className="focus:bg-primary/20 focus:text-blue-400 cursor-pointer rounded-lg p-3 transition-colors">
