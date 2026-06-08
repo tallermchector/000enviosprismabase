@@ -64,3 +64,10 @@ tsconfig.tsbuildinfo
 # 9. Despliegue Local
 .netlify
 .netlify/**
+
+# 10. Archivos de mapeo de estructura (evitar consumo de tokens masivo)
+docs/estructura
+docs/estructura/**
+docs/estructura_txt
+docs/estructura_txt/**
+
