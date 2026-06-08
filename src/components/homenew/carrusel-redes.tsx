@@ -116,13 +116,13 @@ export const CarruselRedes = () => {
             <motion.div
               className="flex gap-6"
               animate={{ x: [0, -1000] }}
-              transition={{ repeat: Infinity, duration: 40, ease: "linear" as any }}
+              transition={{ repeat: Infinity, duration: 40, ease: "linear" as unknown }}
               whileHover={{ animationPlayState: 'paused' }}
             >
               {[...feedItems, ...feedItems, ...feedItems].map((item, idx) => (
                 <a
                   key={idx}
-                  href={(item as any).postUrl}
+                  href={(item as unknown).postUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-72 h-72 shrink-0 rounded-3xl overflow-hidden relative group border border-white/10 shadow-2xl transition-all hover:border-primary/50 block"
