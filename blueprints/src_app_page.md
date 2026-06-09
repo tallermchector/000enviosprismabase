@@ -1,0 +1,74 @@
+# / // HomePage
+
+## 1. MAIN TEXT CONTENT & COPYWRITING LABELS
+- Header Logo: "Envíos Dosruedas"
+- Navigation Link: "Inicio"
+- Navigation Dropdowns: (Defined in navGroups, typical service links)
+- Navigation Link: "Contacto"
+- Button Label: "Cotizar Envío"
+- Header Contact: "+54 223 660-2699"
+- Hero Badge: "Tu Solución Confiable"
+- Hero Title: "Mensajería y Logística E-Commerce en Mar del Plata"
+- Hero Description: "Somos tu solución confiable en servicios de mensajería y delivery en Mar del Plata. Ofrecemos soluciones rápidas, seguras y económicas para todas tus necesidades de envío."
+- Button Label: "Solicitar Servicio"
+- Button Label: "Ver Servicios"
+- Hero Features: "100% SEGURO", "ULTRA RÁPIDO", "COBERTURA TOTAL"
+- Section Badge (Vision): "Partner Logístico Especializado"
+- Section Title (Vision): "Nuestra Visión Logística"
+- Section Description (Vision): "Transformamos tus costos fijos en solutions flexibles que acompañan el crecimiento de tu negocio."
+- Feature Titles (Vision): "Entregas a Tiempo", "Envíos Seguros"
+- Feature Descriptions (Vision): "Puntualidad garantizada en cada envío", "Protección total de tus paquetes"
+- Statistics Labels (Vision): "Confianza local comprobada", "Innovación constante en última milla", "Motocicletas dedicadas para máxima agilidad urbana"
+- Statistics Values (Vision): "+5.000", "7 Años", "Flota Exclusiva"
+- Floating Hub Title (Vision): "Conocé más sobre nosotros"
+- Floating Hub Subtitle (Vision): "¿Listo para formar parte de nuestra familia?"
+- Holographic Status (Vision): "EN LÍNEA"
+- Section Title (Grid CTA): "Soluciones Inmediatas"
+- Section Description (Grid CTA): "Optimización de ruteo para [cobertura_local] con tarifas desde [tarifa_base]."
+- Button Label (Grid CTA): "Cotizar Ahora"
+- Social Proof Ticker Badge: "CONECTA CON NOSOTROS"
+- Social Proof Ticker Title: "SIGUE NUESTRO MOVIMIENTO"
+- Social Proof Ticker Subtitle: "Únete a nuestra comunidad digital y mantente al día con las últimas noticias de logística en Mar del Plata."
+- Social Network Buttons: "Instagram" ("Novedades diarias"), "Facebook" ("Comunidad activa"), "WhatsApp" ("Atención inmediata")
+- Ticker Post CTA (Hover): "VER POST"
+- Footer Logo: "Envios DosRuedas"
+- Footer Slogan: "tu solución confiable"
+- Footer Description: "Tu solución confiable para mensajería y delivery en Mar del Plata. Servicios rápidos, seguros y económicos."
+- Footer Column Title: "Nosotros"
+- Footer Links (Nosotros): "Sobre Nosotros", "Preguntas Frecuentes", "Nuestras Redes", "Términos y Condiciones", "Política de Privacidad"
+- Footer Column Title: "Servicios"
+- Footer Links (Servicios): "Envíos Express", "Envíos LowCost", "Envíos Flex (MeLi)", "E-Commerce & 3PL"
+- Footer Column Title: "Contacto Rápido"
+- Footer Contact Labels: "Ubicación", "Teléfono", "Email"
+- Footer Contact Values: "Friuli 1972, Mar del Plata", "+54 223 660-2699", "matiascejas@enviosdosruedas.com"
+- Footer Trust Banner Labels: "SEGURIDAD", "VELOCIDAD", "COBERTURA", "STATUS"
+- Footer Trust Banner Values: "CERTIFICADA", "MÁXIMA", "DISTRITAL", "ONLINE"
+- Footer Copyright: "© [YEAR] Envios DosRuedas. Todos los derechos reservados."
+- Footer Legal Links: "Privacidad", "Términos"
+
+## 2. INTERFACE ELEMENTS & CORE COMPONENTS TREE
+- [Navigation Bar]: `OptimizedHeader` with `ActiveLink` and `NavDropdown` elements, and a `MobileMenu`.
+- [Hero Anchor]: `HeroAnimado` containing an asymmetric title, descriptive text, and primary call-to-action buttons.
+- [Visual Section]: `VisionSection` displaying features, statistics, and an interactive floating hub linking to an "About Us" page.
+- [Services Matrix]: `SliderServicios` displaying specific shipping options: "Envíos Express", "Envíos LowCost", "Envíos Flex (MercadoLibre)", and "E-Commerce & 3PL". Includes badges and distinct CTAs for each.
+- [Corporate/SME Terminal]: `EmprendedoresHome` displaying "Soluciones Corporativas", "Envíos Flex MercadoLibre", and "Logística E-Commerce". Each card features a "CONFIGURAR PLAN" CTA.
+- [Data Terminal / Table]: Grid layout containing `SliderServicios` (8 columns) and a Contextual CTA block (4 columns).
+- [Social Proof Ticker]: `CarruselRedes` (Dynamic import, social media carousel).
+- [Matrix Footer]: `Footer` (Dynamic import, bottom utility matrix).
+
+## 3. TRANSMISSION & FORWARDING GOALS
+- Clicking the Logo redirects to `/`.
+- Clicking "Inicio" redirects to `/`.
+- Clicking "Contacto" redirects to `/contacto`.
+- Clicking "Cotizar Envío" in the header redirects to `/cotizar/express`.
+- Clicking the Header Contact link initiates a phone call (`tel:+5492236602699`).
+- Clicking "Solicitar Servicio" in the hero redirects to `/cotizar/express`.
+- Clicking "Ver Servicios" in the hero redirects to `/servicios/envios-express`.
+- Clicking the Play button in the Vision Section redirects to `/nosotros/sobre-nosotros`.
+- (Implied) Clicking "Cotizar Ahora" in the Grid CTA initiates a quoting flow.
+- Clicking "Instagram" opens `https://instagram.com/enviosdosruedas` in a new tab.
+- Clicking "Facebook" opens `https://facebook.com/enviosdosruedas` in a new tab.
+- Clicking "WhatsApp" initiates a WhatsApp chat with predefined message to `5492236602699`.
+- Clicking a ticker post opens the corresponding external social media URL in a new tab.
+- Clicking Footer Links redirect to their respective routes (`/nosotros/sobre-nosotros`, `/servicios/envios-express`, etc.).
+- Clicking the Location, Phone, or Email values initiate their respective actions (`tel:`, `mailto:`).
